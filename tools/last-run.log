@@ -9,11 +9,6 @@ how to fix it, please visit the web page mentioned above.
 aleph 000
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
-    retry 1 https://gutendex.com/books/26471: The read operation timed out
-    retry 2 https://gutendex.com/books/26471: The read operation timed out
-    retry 3 https://gutendex.com/books/26471: The read operation timed out
-    retry 1 https://gutendex.com/books/26296: The read operation timed out
-    retry 2 https://gutendex.com/books/26296: The read operation timed out
   17489 Les misérables Tome I: Fantine
   17493 Les misérables Tome II: Cosette
   17494 Les misérables Tome III: Marius
@@ -58,19 +53,28 @@ aleph 000
   19657 Notre-Dame de Paris
   12005 Les Chants de Maldoror
   15152 Saint-Pierre & Miquelon
+  skip 37683: not public domain under life+70
+  skip 1727: not public domain under life+70
+  skip 16328: not public domain under life+70
+  26471 Spoon River Anthology
+  skip 1497: not public domain under life+70
+  skip 78119: not public domain under life+70
+  skip 6130: not public domain under life+70
+  26296 Les mille et une nuits, tome premier
+  skip 2388: not public domain under life+70
+  skip 52927: not public domain under life+70
+  skip 12949: not public domain under life+70
   1342 Pride and Prejudice
   84 Frankenstein; or, The modern Prometheus
   2701 Moby Dick; Or, The Whale
   11 Alice's Adventures in Wonderland
   1661 The Adventures of Sherlock Holmes
-  skip 37683: not public domain under life+70
   1513 Romeo and Juliet
   345 Dracula
   100 The Complete Works of William Shakespeare
   43 The strange case of Dr. Jekyll and Mr. Hyde
   145 Middlemarch
   49297 The Works of William Shakespeare [Cambridge Edition] [Vol. 5 of 9]
-  skip 1727: not public domain under life+70
   67979 The Blue Castle: a novel
   2554 Crime and Punishment
   1260 Jane Eyre: An Autobiography
@@ -80,12 +84,10 @@ aleph 000
   98 A Tale of Two Cities
   64317 The Great Gatsby
   2680 Meditations
-  skip 16328: not public domain under life+70
   5197 My Life — Volume 1
   16389 The Enchanted April
   78027 Les enchantements de la forêt
   1952 The Yellow Wallpaper
-    retry 1 https://www.gutenberg.org/cache/epub/1952/pg1952.txt: Remote end closed connection without response
   1259 Twenty years after
   1232 The Prince
   2600 War and Peace
@@ -111,7 +113,6 @@ aleph 000
   76 Adventures of Huckleberry Finn
   768 Wuthering Heights
   78118 Barry Locke, half-back
-  26471 Spoon River Anthology
   205 Walden, and On The Duty Of Civil Disobedience
   4300 Ulysses
   2542 A Doll's House : a play
@@ -132,7 +133,6 @@ aleph 000
   35 The Time Machine
   2465 Carmen
   4363 Beyond Good and Evil
-  skip 1497: not public domain under life+70
   15399 The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African
   59892 Changeling, and Other Stories
   1695 The Man Who Was Thursday: A Nightmare
@@ -145,7 +145,6 @@ aleph 000
   78017 The Swiss family Robinson
   78122 The history of the Norman conquest of England, its causes and its results, Volume 3 (of 6)
   78105 Tales grotesque and curious
-  skip 78119: not public domain under life+70
   78041 En pays lointain
   78064 Lucifer
   78063 Le jeune Européen
@@ -157,8 +156,6 @@ aleph 000
   158 Emma
   78098 L'art d'aimer: ou conseils à un jeune homme qui se destine à l'amour
   78080 Journal de la société de 1789 - Nº II
-  skip 6130: not public domain under life+70
-  26296 Les mille et une nuits, tome premier
   36 The war of the worlds
   2814 Dubliners
   16643 Essays by Ralph Waldo Emerson
@@ -168,7 +165,6 @@ aleph 000
   18143 Roméo et Juliette
   28718 Les crimes de l'amour
   14287 L'île mystérieuse
-  skip 2388: not public domain under life+70
   19919 Maman Léo
   10661 A Selection from the Discourses of Epictetus with the Encheiridion
   15113 Vie de Jésus
@@ -189,7 +185,6 @@ aleph 000
   48529 Essais de Montaigne (self-édition) - Volume I
   52006 Les liaisons dangereuses
   74092 Missions au Sahara, tome 1
-  skip 52927: not public domain under life+70
   56327 Fables de La Fontaine
   17258 Oeuvres de Champlain
   24766 Étude Médico-Légale: Psychopathia Sexualis
@@ -211,7 +206,6 @@ aleph 000
   5781 Le grand Meaulnes
   55569 Calligrammes: Poèmes de la paix et de la guerre (1913-1916)
   5250 Nana
-  skip 12949: not public domain under life+70
   24850 Lourdes
   14790 Contes du jour et de la nuit
   48359 Œuvres complètes de Gustave Flaubert, tome 1 (of 8): Madame Bovary
@@ -222,122 +216,40 @@ aleph 000
   14082 Le Corbeau = The Raven
   46541 Le Tour du monde en quatre-vingts jours
   skip 13316: not public domain under life+70
-catalogue: 205 books
-  loading the Gutenberg catalogue (pg_catalog.csv)…
-  78423 texts in the catalogue
   5200 Metamorphosis
-  skip 1727: not public domain under life+70
-  skip 6130: not public domain under life+70
-  skip 37683: not public domain under life+70
-  skip 16328: not public domain under life+70
-  skip 1497: not public domain under life+70
-  skip 78119: not public domain under life+70
-  skip 2388: not public domain under life+70
-  skip 52927: not public domain under life+70
-  skip 12949: not public domain under life+70
-  skip 5712: not public domain under life+70
-  skip 28000: not public domain under life+70
-  skip 14138: not public domain under life+70
-  skip 13316: not public domain under life+70
-catalogue: 206 books
-  loading the Gutenberg catalogue (pg_catalog.csv)…
-  78423 texts in the catalogue
   132 The Art of War
-  skip 216: not public domain under life+70
-  skip 2388: not public domain under life+70
-  skip 13316: not public domain under life+70
-  skip 37683: not public domain under life+70
-  skip 1727: not public domain under life+70
-  skip 16328: not public domain under life+70
-  skip 1497: not public domain under life+70
-  skip 78119: not public domain under life+70
-  skip 6130: not public domain under life+70
-  skip 52927: not public domain under life+70
-  skip 12949: not public domain under life+70
-  skip 5712: not public domain under life+70
-  skip 28000: not public domain under life+70
-  skip 14138: not public domain under life+70
-catalogue: 207 books
-  loading the Gutenberg catalogue (pg_catalog.csv)…
-  78423 texts in the catalogue
   6318 L'Avare
-  ws-fe837a4e Le Tartuffe ou l'Imposteur
-    wikisource: 'Le Tartuffe ou l'Imposteur' -> 'Tartuffe ou l’Imposteur'
-  ws-290134d6 Le Malade imaginaire
-  ws-34624a83 Le Bourgeois gentilhomme
-  ws-5cd0056c Dom Juan ou le Festin de pierre
-  skip Dom Juan ou le Festin de pierre: too short (3 words)
-  ws-a1cf2d0c Le Cid (Corneille)
-    wikisource: 'Le Cid (Corneille)' -> 'Le Cid'
-  ws-80ff6da0 Phèdre (Racine)
-  skip Phèdre (Racine): too short (0 words)
-  ws-2198bd28 Andromaque (Racine)
-    wikisource: 'Andromaque (Racine)' -> 'Andromaque (Racine, éditions Didot, 1854)/À Madame'
-  skip Andromaque (Racine): too short (429 words)
-  ws-0c198ec4 Britannicus (Racine)
-    wikisource: 'Britannicus (Racine)' -> 'Britannicus (éditions Didot, 1854)'
   20577 La Folle Journée ou le Mariage de Figaro
   30268 Lettres persanes, tome I
-  ws-b5e384be Du contrat social
-  error [bac] Jean-Jacques Rousseau | Du contrat social: The page you specified doesn't exist.
   29843 Les contemplations: Autrefois, 1830-1843
   9976 Hernani
   60354 Ruy Blas: Drame
-  ws-fe251692 Le Père Goriot
-  skip Le Père Goriot: too short (0 words)
   11049 Eugénie Grandet
   6497 L'Assommoir
   16852 Au bonheur des dames
   10746 Boule de Suif
   17457 Une vie
-  ws-478af1eb Bel-Ami
   15462 Alcools
   15112 Œuvres complètes - Volume 1
   56668 Une saison en enfer
   17983 Manon Lescaut
   29772 Notes de Voltaire et de Condorcet sur les pensées de Pascal
   11770 Lettres de mon moulin
-  shelf bac: 36/41
   2376 Up from Slavery: An Autobiography
-  skip 408: not public domain under life+70
   11030 Incidents in the Life of a Slave Girl, Written by Herself
   17851 The History of Mary Prince, a West Indian Slave
-  unresolved [afrique] Cugoano | Thoughts and sentiments on the evil of slavery
   1452 Native Life in South Africa
   5266 Travels in the Interior of Africa — Volume 01
-  unresolved [afrique] Leo Africanus | The history and description of Africa
   74720 Du Niger au golfe de Guinée par le pays de Kong et le Mossi, tome 1 (de 2)
-  ws-6ffe193f Journal d'un voyage à Temboctou et à Jenné
-    wikisource: 'Journal d'un voyage à Temboctou et à Jenné' -> 'Voyage à Temboctou et à Jenné/01'
   77845 Haut-Sénégal-Niger (Soudan français), Tome 2 (de 3): l'histoire
-  ws-f2af66e4 L'Âme nègre
-    wikisource: 'L'Âme nègre' -> 'L’Âme nègre'
-  error [afrique] Maurice Delafosse | L'Âme nègre: The page you specified doesn't exist.
-  unresolved [afrique] Cousturier | Des inconnus chez moi
-  unresolved [afrique] Ibn Batoutah | Voyages
-  unresolved [afrique] Basset | Contes populaires d'Afrique
   15458 Essai sur la littérature merveilleuse des noirs, suivi de Contes indigènes de l'Ouest africain français - Tome premier
-  unresolved [afrique] Dubois | Tombouctou la mystérieuse
-  ws-fd0db64e Au soleil (Maupassant)
-  skip Au soleil (Maupassant): too short (0 words)
-  ws-c67905f5 Le Roman d'un spahi
-    wikisource: 'Le Roman d'un spahi' -> 'Le Roman d’un spahi'
-  ws-21ac5746 L'Art de la guerre (Sun Tzu)
-    wikisource: 'L'Art de la guerre (Sun Tzu)' -> 'L’Art de la guerre'
-  shelf afrique: 13/22
-  ws-e0af58c5 Les Contes de ma mère l'Oye
-    wikisource: 'Les Contes de ma mère l'Oye' -> 'Les Contes de ma mère l’Oye avant Perrault'
   15058 Les malheurs de Sophie
   15059 Les petites filles modèles
   12993 Un bon petit diable
   15057 Les vacances
   12979 Le Général Dourakine
-  ws-93eb3ee9 Sans famille
-  error [jeunesse] Hector Malot | Sans famille: The page you specified doesn't exist.
   13793 En famille
   10687 Tartarin de Tarascon
-  ws-fc09feff Deux ans de vacances
-  skip Deux ans de vacances: too short (0 words)
   7442 Michel Strogoff: De Moscou a Irkoutsk
   4548 Cinq Semaines En Ballon
   12250 Contes choisis de la famille
@@ -345,26 +257,14 @@ catalogue: 207 books
   38705 Robinson Crusoe (I/II)
   17640 Les Voyages de Gulliver
   54183 Le livre de la Jungle
-  ws-26e61f59 Les Aventures de Pinocchio
-    wikisource: 'Les Aventures de Pinocchio' -> 'La Littérature enfantine en Italie'
   27782 Le tour de la France par deux enfants
   30779 Les aventures de Télémaque suivies des aventures d'Aristonoüs
-  shelf jeunesse: 25/27
   45109 The Enchiridion
-  skip 56075: not public domain under life+70
   2944 Essays — First Series
   935 Self Help; with Illustrations of Conduct and Perseverance
   34258 Acres of Diamonds
-  skip 2388: not public domain under life+70
   14913 Réflexions ou sentences et maximes morales
-  ws-b5e384be Du contrat social
-  error [dev] Jean-Jacques Rousseau | Du contrat social: The page you specified doesn't exist.
-  ws-79507c32 Manuel d'Épictète
-  skip Manuel d'Épictète: too short (0 words)
-  ws-015ec8c0 Pensées pour moi-même
-  ws-8fb0c774 De la brièveté de la vie
   17980 Les caractères
-  shelf dev: 17/20
   79159 Jane Eyre
   730 Oliver Twist
   19337 A Christmas Carol
@@ -382,10 +282,97 @@ catalogue: 207 books
   1122 Hamlet
   1112 Romeo and Juliet
   1533 Macbeth
-  skip 3160: not public domain under life+70
   135 Les Misérables
   164 Twenty Thousand Leagues under the Sea
   103 Around the World in Eighty Days
+catalogue: 287 books
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
+  skip 1727: not public domain under life+70
+  skip 6130: not public domain under life+70
+  skip 37683: not public domain under life+70
+  skip 16328: not public domain under life+70
+  skip 1497: not public domain under life+70
+  skip 78119: not public domain under life+70
+  skip 2388: not public domain under life+70
+  skip 52927: not public domain under life+70
+  skip 12949: not public domain under life+70
+  skip 5712: not public domain under life+70
+  skip 28000: not public domain under life+70
+  skip 14138: not public domain under life+70
+  skip 13316: not public domain under life+70
+catalogue: 287 books
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
+  skip 216: not public domain under life+70
+  skip 2388: not public domain under life+70
+  skip 13316: not public domain under life+70
+  skip 37683: not public domain under life+70
+  skip 1727: not public domain under life+70
+  skip 16328: not public domain under life+70
+  skip 1497: not public domain under life+70
+  skip 78119: not public domain under life+70
+  skip 6130: not public domain under life+70
+  skip 52927: not public domain under life+70
+  skip 12949: not public domain under life+70
+  skip 5712: not public domain under life+70
+  skip 28000: not public domain under life+70
+  skip 14138: not public domain under life+70
+catalogue: 287 books
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
+  ws-fe837a4e Le Tartuffe ou l'Imposteur
+    wikisource: 'Le Tartuffe ou l'Imposteur' -> 'Tartuffe ou l’Imposteur'
+  ws-290134d6 Le Malade imaginaire
+  ws-34624a83 Le Bourgeois gentilhomme
+  ws-5cd0056c Dom Juan ou le Festin de pierre
+  skip Dom Juan ou le Festin de pierre: too short (3 words)
+  ws-a1cf2d0c Le Cid (Corneille)
+    wikisource: 'Le Cid (Corneille)' -> 'Le Cid'
+  ws-80ff6da0 Phèdre (Racine)
+    wikisource: 'Phèdre (Racine)' -> 'Phèdre (Racine), Didot, 1854' (edition page)
+  skip Phèdre (Racine): too short (647 words)
+  ws-2198bd28 Andromaque (Racine)
+    wikisource: 'Andromaque (Racine)' -> 'Andromaque (Racine, éditions Didot, 1854)/À Madame'
+  skip Andromaque (Racine): too short (429 words)
+  ws-0c198ec4 Britannicus (Racine)
+    wikisource: 'Britannicus (Racine)' -> 'Britannicus (éditions Didot, 1854)'
+  ws-b5e384be Du contrat social
+  ws-fe251692 Le Père Goriot
+  skip Le Père Goriot: too short (0 words)
+  ws-478af1eb Bel-Ami
+  shelf bac: 37/41
+  skip 408: not public domain under life+70
+  unresolved [afrique] Cugoano | Thoughts and sentiments on the evil of slavery
+  unresolved [afrique] Leo Africanus | The history and description of Africa
+  ws-f2af66e4 L'Âme nègre
+    wikisource: 'L'Âme nègre' -> 'L’Âme nègre'
+  skip L'Âme nègre: too short (7 words)
+  unresolved [afrique] Cousturier | Des inconnus chez moi
+  unresolved [afrique] Ibn Batoutah | Voyages
+  unresolved [afrique] Basset | Contes populaires d'Afrique
+  unresolved [afrique] Dubois | Tombouctou la mystérieuse
+  ws-fd0db64e Au soleil (Maupassant)
+    wikisource: 'Au soleil (Maupassant)' -> 'Au soleil (recueil)/Au soleil' (edition page)
+  skip Au soleil (Maupassant): too short (807 words)
+  ws-c67905f5 Le Roman d'un spahi
+    wikisource: 'Le Roman d'un spahi' -> 'Le Roman d’un spahi'
+  ws-21ac5746 L'Art de la guerre (Sun Tzu)
+    wikisource: 'L'Art de la guerre (Sun Tzu)' -> 'L’Art de la guerre'
+  shelf afrique: 12/21
+  ws-93eb3ee9 Sans famille
+  ws-fc09feff Deux ans de vacances
+  skip Deux ans de vacances: too short (0 words)
+  unresolved [jeunesse] Perrault | Contes
+  shelf jeunesse: 25/27
+  skip 56075: not public domain under life+70
+  skip 2388: not public domain under life+70
+  ws-79507c32 Manuel d'Épictète
+  skip Manuel d'Épictète: too short (0 words)
+  ws-015ec8c0 Pensées pour moi-même
+  ws-8fb0c774 De la brièveté de la vie
+  shelf dev: 18/20
+  skip 3160: not public domain under life+70
   shelf classiques-en: 39/40
   skip 37683: not public domain under life+70
   skip 1727: not public domain under life+70
@@ -400,4 +387,4 @@ catalogue: 207 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 287 books
+catalogue: 289 books
