@@ -285,7 +285,7 @@ aleph 000
   135 Les Misérables
   164 Twenty Thousand Leagues under the Sea
   103 Around the World in Eighty Days
-catalogue: 289 books
+catalogue: 286 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 1727: not public domain under life+70
@@ -301,7 +301,7 @@ catalogue: 289 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 289 books
+catalogue: 286 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 216: not public domain under life+70
@@ -318,17 +318,20 @@ catalogue: 289 books
   skip 5712: not public domain under life+70
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
-catalogue: 289 books
+catalogue: 286 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   ws-fe837a4e Le Tartuffe ou l'Imposteur
     wikisource: 'Le Tartuffe ou l'Imposteur' -> 'Tartuffe ou l’Imposteur'
+    keeping edition 'Édition Louandre, 1910' of 2 (Édition Louandre, 1910, Édition Chasles, 1888…)
   ws-290134d6 Le Malade imaginaire
   ws-34624a83 Le Bourgeois gentilhomme
+    keeping edition 'Édition Louandre, 1910' of 2 (Édition Garnier, 1904, Édition Louandre, 1910…)
   ws-5cd0056c Dom Juan ou le Festin de pierre
   skip Dom Juan ou le Festin de pierre: too short (3 words)
   ws-a1cf2d0c Le Cid (Corneille)
     wikisource: 'Le Cid (Corneille)' -> 'Le Cid'
+    keeping edition 'Édition Ginn' of 2 (Édition Ginn, Édition Marty-Laveaux…)
   ws-80ff6da0 Phèdre (Racine)
     wikisource: 'Phèdre (Racine)' -> 'Phèdre (Racine), Didot, 1854' (edition page)
   skip Phèdre (Racine): too short (647 words)
@@ -338,9 +341,11 @@ catalogue: 289 books
   ws-0c198ec4 Britannicus (Racine)
     wikisource: 'Britannicus (Racine)' -> 'Britannicus (éditions Didot, 1854)'
   ws-b5e384be Du contrat social
+    keeping edition 'Édition 1762' of 2 (Édition 1762, Édition Dreyfus-Brisac 1896…)
   ws-fe251692 Le Père Goriot
   skip Le Père Goriot: too short (0 words)
   ws-478af1eb Bel-Ami
+    keeping edition 'Édition Ollendorff, 1901' of 2 (Édition Ollendorff, 1901, Édition Conard, 1910…)
   shelf bac: 37/41
   skip 408: not public domain under life+70
   unresolved [afrique] Cugoano | Thoughts and sentiments on the evil of slavery
@@ -361,6 +366,7 @@ catalogue: 289 books
     wikisource: 'L'Art de la guerre (Sun Tzu)' -> 'L’Art de la guerre'
   shelf afrique: 12/21
   ws-93eb3ee9 Sans famille
+    keeping edition 'Dentu, 1887' of 2 (Dentu, 1887, Édition Thieme, 1902…)
   ws-fc09feff Deux ans de vacances
   skip Deux ans de vacances: too short (0 words)
   unresolved [jeunesse] Perrault | Contes
@@ -371,12 +377,10 @@ catalogue: 289 books
   skip Manuel d'Épictète: too short (0 words)
   ws-015ec8c0 Pensées pour moi-même
   ws-8fb0c774 De la brièveté de la vie
+    keeping edition 'Traduction Baillard' of 2 (Traduction Baillard, Traduction Charpentier…)
   shelf dev: 18/20
   skip 3160: not public domain under life+70
   shelf classiques-en: 39/40
-  removing ws-6ffe193f Journal d'un voyage à Temboctou et à Jenné (no longer on a shelf)
-  removing ws-e0af58c5 Les Contes de ma mère l'Oye (no longer on a shelf)
-  removing ws-26e61f59 Les Aventures de Pinocchio (no longer on a shelf)
   skip 37683: not public domain under life+70
   skip 1727: not public domain under life+70
   skip 16328: not public domain under life+70
