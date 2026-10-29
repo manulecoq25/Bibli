@@ -26,7 +26,7 @@ DATA = os.path.join(SITE, "data")
 CACHE = os.path.join(ROOT, "tools", "cache")
 PD_DEATH_BEFORE = 1956          # life + 70 as of 2026
 PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
-FMT = 3                         # bump to re-process every book with the current text pipeline
+FMT = 4                         # bump to re-process every book with the current text pipeline
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
 GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)
@@ -401,6 +401,13 @@ def main():
                     log(f"  error [{sh['key']}] {it.get('author','')} | {it['title']}: {e}")
             shelves_out.append({"key": sh["key"], "name": sh["name"], "desc": sh["desc"], "ids": ids_in_shelf})
             log(f"  shelf {sh['key']}: {len(ids_in_shelf)}/{len(sh['items'])}")
+        # Wikisource books only exist through shelves: drop the ones no shelf references any more
+        used = {gid for sh in shelves_out for gid in sh["ids"]}
+        import shutil
+        for gid in [g for g in catalogue if g.startswith("ws-") and g not in used]:
+            log(f"  removing {gid} {catalogue[gid]['title']} (no longer on a shelf)")
+            del catalogue[gid]
+            shutil.rmtree(os.path.join(DATA, "books", gid), ignore_errors=True)
         os.makedirs(DATA, exist_ok=True)
         with open(os.path.join(DATA, "shelves.json"), "w", encoding="utf-8") as f:
             json.dump(shelves_out, f, ensure_ascii=False, separators=(",", ":"))

@@ -111,6 +111,9 @@ def walk(title, depth=0, seen=None, root=None):
         if len(nested) >= 2:
             keep = nested[0]
             subs = [l for l in subs if l.startswith(f"{root}/{keep}/") or l == f"{root}/{keep}"]
+        elif len(nested) == 1:  # one real edition plus flat sibling edition pages: drop the siblings
+            keep = nested[0]
+            subs = [l for l in subs if l.startswith(f"{root}/{keep}") or not re.match(r"(?i)^(édition|edition|traduction|texte)", l[len(root) + 1:])]
     if subs and depth < 3:
         for s in subs:
             yield from walk(s, depth + 1, seen, root)
@@ -149,6 +152,12 @@ def ingest_ws(title, author="", lang="fr", genres=("fiction",)):
     gid = "ws-" + hashlib.sha1(title.encode()).hexdigest()[:8]
     ingest.log(f"  {gid} {title}")
     chapters, display = chapters_of(title)
+    # drop a chapter-title prefix shared by every chapter ("Édition Louandre, 1910 · Acte I" -> "Acte I")
+    titles = [c["title"] or "" for c in chapters]
+    while len(chapters) > 1 and all(" · " in t for t in titles) and len({t.split(" · ")[0] for t in titles}) == 1:
+        for c in chapters:
+            c["title"] = c["title"].split(" · ", 1)[1]
+        titles = [c["title"] for c in chapters]
     words = sum(len(" ".join(c["paras"]).split()) for c in chapters)
     if words < 1500:
         ingest.log(f"  skip {title}: too short ({words} words)"); return None
