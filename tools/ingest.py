@@ -26,6 +26,7 @@ DATA = os.path.join(SITE, "data")
 CACHE = os.path.join(ROOT, "tools", "cache")
 PD_DEATH_BEFORE = 1956          # life + 70 as of 2026
 PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
+FMT = 2                         # bump to re-process every book with the current text pipeline
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
 GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)
@@ -129,14 +130,22 @@ def genres_of(meta):
     return out[:3] or ["fiction"]
 
 def authors_ok(meta):
-    """All authors dead before PD_DEATH_BEFORE (or unknown and born before 1850)."""
+    """Every author with dates died before PD_DEATH_BEFORE; an author with no dates at all is
+    accepted only alongside a dated public-domain author (ancient authors, anonymous editors)."""
+    dated_ok, unknown = 0, 0
     for a in meta.get("authors", []):
         d, b = a.get("death_year"), a.get("birth_year")
-        if d is not None and d >= PD_DEATH_BEFORE:
-            return False
-        if d is None and (b is None or b >= 1850):
-            return False
-    return True
+        if d is not None:
+            if d >= PD_DEATH_BEFORE:
+                return False
+            dated_ok += 1
+        elif b is not None:
+            if b >= 1850:
+                return False
+            dated_ok += 1
+        else:
+            unknown += 1
+    return dated_ok > 0 or unknown == 0
 
 def author_name(a):
     n = a.get("name", "")
@@ -231,7 +240,8 @@ def para_html(p):
     p = p.strip()
     if not p:
         return ""
-    is_verse = p.count("\n") >= 2 and max(len(x) for x in p.split("\n")) < 70
+    lines = [x.strip() for x in p.split("\n") if x.strip()]
+    is_verse = len(lines) >= 3 and sum(len(x) for x in lines) / len(lines) < 48 and sum(x[:1].isupper() for x in lines) >= len(lines) * 0.6
     if is_verse:
         return "<p class=v>" + "<br>".join(html.escape(x.strip()) for x in p.split("\n")) + "</p>"
     text = html.escape(re.sub(r"\s*\n\s*", " ", p))
@@ -245,9 +255,7 @@ def ingest(meta, lang_hint=None):
     gid = meta["id"]
     if meta.get("copyright") is not False or (not meta.get("seeded") and not authors_ok(meta)):
         log(f"  skip {gid}: not public domain under life+70"); return None
-    url = text_url(meta)
-    if not url and not meta.get("seeded"):
-        log(f"  skip {gid}: no plain text"); return None
+    url = text_url(meta)  # may be None: fetch_text then tries the standard Gutenberg paths and mirrors
     log(f"  {gid} {clean_title(meta['title'])}")
     txt = strip_boilerplate(fetch_text(gid, url))
     chapters = split_chapters(txt)
@@ -289,6 +297,7 @@ def ingest(meta, lang_hint=None):
         "source_url": f"https://www.gutenberg.org/ebooks/{gid}",
         "epub_url": f"https://www.gutenberg.org/ebooks/{gid}.epub3.images",
         "license": "Domaine public / Public domain",
+        "fmt": FMT,
     }
 
 def parse_shelves(path):
@@ -310,8 +319,9 @@ def parse_shelves(path):
             author, _, title = v.partition("|")
             cur["items"].append({"src": "pg", "lang": k, "author": author.strip(), "title": title.strip()})
         elif k == "ws":
-            lang, _, title = v.partition("|")
-            cur["items"].append({"src": "ws", "lang": lang.strip(), "title": title.strip()})
+            lang, _, rest = v.partition("|")
+            title, _, author = rest.partition("|")
+            cur["items"].append({"src": "ws", "lang": lang.strip(), "title": title.strip(), "author": author.strip()})
     return shelves
 
 def main():
@@ -329,6 +339,7 @@ def main():
         for b in json.load(open(cat_path, encoding="utf-8"))["books"]:
             catalogue[b["id"]] = b
 
+    fresh = lambda gid: gid in catalogue and catalogue[gid].get("fmt") == FMT
     metas = []
     if args.lang:
         metas = gutendex_list(args.lang, args.count)
@@ -346,7 +357,7 @@ def main():
         return pgcat
 
     for gid in ids:
-        if str(gid) not in catalogue:
+        if not fresh(str(gid)):
             m = None
             try:
                 m = catalog().get(gid)
@@ -354,6 +365,12 @@ def main():
                 log(f"  catalogue unavailable ({e}); falling back to Gutendex/header")
             metas.append(m or gutendex_one(gid))
 
+    for gid, b in list(catalogue.items()):
+        if b.get("fmt") != FMT and b.get("source") == "Project Gutenberg" and not any(str(m["id"]) == gid for m in metas):
+            try:
+                metas.append(catalog().get(int(gid)) or gutendex_one(int(gid)))
+            except Exception as e:
+                log(f"  cannot refresh {gid}: {e}")
     shelves_out = []
     if args.shelves:
         import ingest_wikisource
@@ -364,7 +381,7 @@ def main():
                     if it["src"] == "ws":
                         gid = "ws-" + hashlib.sha1(it["title"].encode()).hexdigest()[:8]
                         if gid not in catalogue:
-                            b = ingest_wikisource.ingest_ws(it["title"], lang=it["lang"])
+                            b = ingest_wikisource.ingest_ws(it["title"], author=it.get("author", ""), lang=it["lang"])
                             if b:
                                 catalogue[b["id"]] = b
                         if gid in catalogue:
@@ -374,7 +391,7 @@ def main():
                     if not m:
                         log(f"  unresolved [{sh['key']}] {it['author']} | {it['title']}"); continue
                     gid = str(m["id"])
-                    if gid not in catalogue:
+                    if not fresh(gid):
                         b = ingest(m, it["lang"])
                         if b:
                             catalogue[gid] = b
@@ -389,7 +406,7 @@ def main():
             json.dump(shelves_out, f, ensure_ascii=False, separators=(",", ":"))
 
     for m in metas:
-        if str(m["id"]) in catalogue:
+        if fresh(str(m["id"])):
             continue
         try:
             b = ingest(m, args.lang)

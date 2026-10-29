@@ -43,7 +43,6 @@ jobs:
           git config user.name "bibli-bot"
           git config user.email "bibli-bot@users.noreply.github.com"
           git add site/data tools/last-run.log
-          git rm -q --cached -r site/data/books 2>/dev/null; git add site/data
           git diff --cached --quiet || git commit -m "data: refresh catalogue ($(date -u +%F))"
           git push
       - name: Deploy the site

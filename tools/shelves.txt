@@ -10,25 +10,25 @@ desc_fr: Les œuvres qui reviennent dans les programmes de français en Côte d'
 desc_en: The works that keep coming back in French-language school programmes: drama, novels, poetry, ideas.
 fr: Voltaire | Candide
 fr: Molière | L'avare
-fr: Molière | Tartuffe
-fr: Molière | Le malade imaginaire
-fr: Molière | Le bourgeois gentilhomme
-fr: Molière | Dom Juan
-fr: Corneille | Le Cid
-fr: Racine | Phèdre
-fr: Racine | Andromaque
-fr: Racine | Britannicus
+ws: fr | Le Tartuffe ou l'Imposteur | Molière
+ws: fr | Le Malade imaginaire | Molière
+ws: fr | Le Bourgeois gentilhomme | Molière
+ws: fr | Dom Juan ou le Festin de pierre | Molière
+ws: fr | Le Cid (Corneille) | Pierre Corneille
+ws: fr | Phèdre (Racine) | Jean Racine
+ws: fr | Andromaque (Racine) | Jean Racine
+ws: fr | Britannicus (Racine) | Jean Racine
 fr: La Fontaine | Fables
 fr: Beaumarchais | Le mariage de Figaro
 fr: Montesquieu | Lettres persanes
-fr: Rousseau | Du contrat social
+ws: fr | Du contrat social | Jean-Jacques Rousseau
 fr: Hugo | Les misérables Tome I
 fr: Hugo | Notre-Dame de Paris
 fr: Hugo | Les contemplations
 fr: Hugo | Hernani
 fr: Hugo | Ruy Blas
 fr: Stendhal | Le rouge et le noir
-fr: Balzac | Le père Goriot
+ws: fr | Le Père Goriot | Honoré de Balzac
 fr: Balzac | Eugénie Grandet
 fr: Flaubert | Madame Bovary
 fr: Zola | Germinal
@@ -36,7 +36,7 @@ fr: Zola | L'assommoir
 fr: Zola | Au bonheur des dames
 fr: Maupassant | Boule de suif
 fr: Maupassant | Une vie
-fr: Maupassant | Bel-Ami
+ws: fr | Bel-Ami | Guy de Maupassant
 fr: Maupassant | Le Horla
 fr: Baudelaire | Les fleurs du mal
 fr: Rostand | Cyrano de Bergerac
@@ -66,37 +66,37 @@ en: Plaatje | Native life in South Africa
 en: Park | Travels in the interior of Africa
 en: Leo Africanus | The history and description of Africa
 fr: Binger | Du Niger au golfe de Guinée
-fr: Caillié | Journal d'un voyage à Temboctou
+ws: fr | Journal d'un voyage à Temboctou et à Jenné | René Caillié
 fr: Delafosse | Haut-Sénégal-Niger
-fr: Delafosse | L'âme nègre
+ws: fr | L'Âme nègre | Maurice Delafosse
 fr: Cousturier | Des inconnus chez moi
 fr: Ibn Batoutah | Voyages
 fr: Basset | Contes populaires d'Afrique
 fr: Equilbecq | Contes indigènes
 fr: Dubois | Tombouctou la mystérieuse
-fr: Maupassant | Au soleil
-fr: Loti | Le roman d'un spahi
-ws: fr | L'Art de la guerre (Sun Tzu, trad. Amiot)
+ws: fr | Au soleil (Maupassant) | Guy de Maupassant
+ws: fr | Le Roman d'un spahi | Pierre Loti
+ws: fr | L'Art de la guerre (Sun Tzu) | Sun Tzu, trad. J.-M. Amiot (1772)
 
 [jeunesse]
 name_fr: Livres pour enfants, en français
 name_en: Children's books, in French
 desc_fr: Contes, fables et grands romans d'aventure à lire à voix haute ou seul, dès 8 ans.
 desc_en: Tales, fables and adventure novels to read aloud or alone, from age 8.
-fr: Perrault | Les contes de Perrault
+ws: fr | Les Contes de ma mère l'Oye | Charles Perrault
 fr: La Fontaine | Fables
 fr: Ségur | Les malheurs de Sophie
 fr: Ségur | Les petites filles modèles
 fr: Ségur | Un bon petit diable
 fr: Ségur | Les vacances
 fr: Ségur | Le général Dourakine
-fr: Malot | Sans famille
+ws: fr | Sans famille | Hector Malot
 fr: Malot | En famille
 fr: Daudet | Lettres de mon moulin
 fr: Daudet | Tartarin de Tarascon
 fr: Verne | Le tour du monde en quatre-vingts jours
 fr: Verne | Vingt mille lieues sous les mers
-fr: Verne | Deux ans de vacances
+ws: fr | Deux ans de vacances | Jules Verne
 fr: Verne | Michel Strogoff
 fr: Verne | Voyage au centre de la terre
 fr: Verne | Cinq semaines en ballon
@@ -106,7 +106,7 @@ fr: Andersen | Contes
 fr: Defoe | Robinson Crusoé
 fr: Swift | Voyages de Gulliver
 fr: Kipling | Le livre de la jungle
-fr: Collodi | Pinocchio
+ws: fr | Les Aventures de Pinocchio | Carlo Collodi
 fr: Bruno | Le tour de la France par deux enfants
 fr: Fénelon | Les aventures de Télémaque
 fr: Dumas | Les trois mousquetaires
@@ -118,7 +118,7 @@ desc_fr: Les textes que les livres de développement personnel citent encore : s
 desc_en: The texts that today's self-help books still quote: Stoics, moralists, the philosophy of action.
 en: Marcus Aurelius | Meditations
 en: Epictetus | The Enchiridion
-en: Seneca | Letters from a Stoic
+en: Seneca | Seneca's morals of a happy life
 en: Machiavelli | The prince
 en: Allen | As a man thinketh
 en: Emerson | Essays
@@ -131,10 +131,10 @@ fr: Montaigne | Essais
 fr: Pascal | Pensées
 fr: La Rochefoucauld | Réflexions ou sentences et maximes morales
 fr: Descartes | Discours de la méthode
-fr: Rousseau | Du contrat social
-fr: Épictète | Manuel
-fr: Marc Aurèle | Pensées pour moi-même
-fr: Sénèque | De la brièveté de la vie
+ws: fr | Du contrat social | Jean-Jacques Rousseau
+ws: fr | Manuel d'Épictète | Épictète
+ws: fr | Pensées pour moi-même | Marc Aurèle
+ws: fr | De la brièveté de la vie | Sénèque
 fr: La Bruyère | Les caractères
 
 [classiques-en]

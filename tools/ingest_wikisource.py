@@ -50,21 +50,44 @@ def html_to_paras(h):
             out.append(txt)
     return out
 
+def resolve(title):
+    """Exact page, else the best search hit on fr.wikisource (main namespace)."""
+    try:
+        page_html(title); return title
+    except Exception:
+        pass
+    r = api({"action": "query", "list": "search", "srsearch": title, "srnamespace": 0, "srlimit": 5})
+    hits = [h["title"] for h in r.get("query", {}).get("search", [])]
+    if not hits:
+        raise RuntimeError("not found on Wikisource: " + title)
+    ingest.log(f"    wikisource: '{title}' -> '{hits[0]}'")
+    return hits[0]
+
+def walk(title, depth=0, seen=None):
+    """Yield (page title, html) for the work, following subpages in link order, up to 3 levels."""
+    seen = seen if seen is not None else set()
+    text, links, _ = page_html(title)
+    subs = []
+    for l in links:
+        if l.startswith(title + "/") and l not in seen:
+            seen.add(l); subs.append(l)
+    if subs and depth < 3:
+        for s in subs:
+            yield from walk(s, depth + 1, seen)
+    else:
+        yield title, text
+
 def chapters_of(title):
+    title = resolve(title)
     text, links, display = page_html(title)
-    subs = [l for l in links if l.startswith(title + "/")]
-    seen, order = set(), []
-    for s in subs:
-        if s not in seen:
-            seen.add(s); order.append(s)
+    pages = list(walk(title))
     chapters = []
-    if order:
-        for s in order:
-            t, _, _ = page_html(s)
+    if len(pages) > 1:
+        for s, t in pages:
             paras = html_to_paras(t)
             if sum(len(p) for p in paras) < 300:
                 continue
-            ctitle = s.split("/", 1)[1].replace("_", " ")
+            ctitle = s.split("/", 1)[1].replace("_", " ").replace("/", " · ") if "/" in s else s
             chapters.append({"title": ctitle, "paras": paras})
     else:
         paras = html_to_paras(text)
