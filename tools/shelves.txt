@@ -66,7 +66,6 @@ en: Plaatje | Native life in South Africa
 en: Park | Travels in the interior of Africa
 en: Leo Africanus | The history and description of Africa
 fr: Binger | Du Niger au golfe de Guinée
-ws: fr | Journal d'un voyage à Temboctou et à Jenné | René Caillié
 fr: Delafosse | Haut-Sénégal-Niger
 ws: fr | L'Âme nègre | Maurice Delafosse
 fr: Cousturier | Des inconnus chez moi
@@ -83,7 +82,6 @@ name_fr: Livres pour enfants, en français
 name_en: Children's books, in French
 desc_fr: Contes, fables et grands romans d'aventure à lire à voix haute ou seul, dès 8 ans.
 desc_en: Tales, fables and adventure novels to read aloud or alone, from age 8.
-ws: fr | Les Contes de ma mère l'Oye | Charles Perrault
 fr: La Fontaine | Fables
 fr: Ségur | Les malheurs de Sophie
 fr: Ségur | Les petites filles modèles
@@ -106,9 +104,10 @@ fr: Andersen | Contes
 fr: Defoe | Robinson Crusoé
 fr: Swift | Voyages de Gulliver
 fr: Kipling | Le livre de la jungle
-ws: fr | Les Aventures de Pinocchio | Carlo Collodi
 fr: Bruno | Le tour de la France par deux enfants
 fr: Fénelon | Les aventures de Télémaque
+fr: Perrault | Contes
+fr: Verne | L'île mystérieuse
 fr: Dumas | Les trois mousquetaires
 
 [dev]
