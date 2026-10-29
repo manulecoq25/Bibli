@@ -1,4 +1,4 @@
-name: Ingest books and deploy
+name: Ingest books
 
 on:
   workflow_dispatch:
@@ -11,8 +11,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: ingest
@@ -44,12 +42,3 @@ jobs:
           git add site/data tools/last-run.log
           git diff --cached --quiet || git commit -m "data: refresh catalogue ($(date -u +%F))"
           git push
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - id: deploy
-        uses: actions/deploy-pages@v4
-      - run: echo "Deployed to ${{ steps.deploy.outputs.page_url }}"
