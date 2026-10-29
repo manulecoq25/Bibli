@@ -52,9 +52,19 @@ def fetch(url, binary=False):
         with open(key, "rb") as f:
             raw = f.read()
     else:
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            raw = r.read()
+        raw, last = None, None
+        for attempt in range(4):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA})
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    raw = r.read()
+                break
+            except Exception as e:  # network hiccup, 429, 5xx: back off and retry
+                last = e
+                log(f"    retry {attempt+1} {url}: {e}")
+                time.sleep(3 * (attempt + 1))
+        if raw is None:
+            raise last
         with open(key, "wb") as f:
             f.write(raw)
         time.sleep(1.0)
@@ -72,7 +82,11 @@ def fetch(url, binary=False):
 def gutendex_list(lang, count):
     books, url = [], f"https://gutendex.com/books?languages={lang}&copyright=false&sort=popular"
     while url and len(books) < count:
-        page = json.loads(fetch(url))
+        try:
+            page = json.loads(fetch(url))
+        except Exception as e:
+            log(f"  gutendex unavailable ({e}); keeping {len(books)} listed so far")
+            break
         books += page["results"]
         url = page.get("next")
     return books[:count]
@@ -111,6 +125,28 @@ def author_name(a):
         last, first = n.split(",", 1)
         return f"{first.strip()} {last.strip()}"
     return n
+
+MIRRORS = [  # gutenberg.org sometimes blocks cloud IP ranges; the mirrors carry the same files
+    "https://www.gutenberg.org/cache/epub/{id}/pg{id}.txt",
+    "https://aleph.gutenberg.org/cache/epub/{id}/pg{id}.txt",
+    "https://gutenberg.pglaf.org/cache/epub/{id}/pg{id}.txt",
+    "https://aleph.gutenberg.org/{path}/{id}/{id}-0.txt",
+    "https://aleph.gutenberg.org/{path}/{id}/{id}-8.txt",
+    "https://aleph.gutenberg.org/{path}/{id}/{id}.txt",
+]
+
+def fetch_text(gid, preferred=None):
+    s = str(gid); path = "/".join(s[:-1]) if len(s) > 1 else "0"
+    urls = ([preferred] if preferred else []) + [m.format(id=gid, path=path) for m in MIRRORS]
+    last = None
+    for u in urls:
+        try:
+            t = fetch(u)
+            if "PROJECT GUTENBERG" in t.upper()[:3000] or len(t) > 20000:
+                return t
+        except Exception as e:
+            last = e
+    raise RuntimeError(f"no text source reachable for {gid}: {last}")
 
 # ---------- text processing ----------
 
@@ -194,7 +230,7 @@ def ingest(meta, lang_hint=None):
     if not url:
         log(f"  skip {gid}: no plain text"); return None
     log(f"  {gid} {clean_title(meta['title'])}")
-    txt = strip_boilerplate(fetch(url))
+    txt = strip_boilerplate(fetch_text(gid, url))
     chapters = split_chapters(txt)
     words = sum(len(" ".join(c["paras"]).split()) for c in chapters)
     if words < 1500:
