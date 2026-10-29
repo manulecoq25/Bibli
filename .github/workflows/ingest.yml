@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: ingest
@@ -45,3 +46,7 @@ jobs:
           git add site/data tools/last-run.log
           git diff --cached --quiet || git commit -m "data: refresh catalogue ($(date -u +%F))"
           git push
+      - name: Deploy the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
