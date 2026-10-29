@@ -1,0 +1,72 @@
+# French classics — Project Gutenberg ids (one per line; unknown ids are skipped by the script)
+# Hugo
+17489
+17493
+17494
+17518
+17519
+2610
+# Zola
+5711
+5712
+# Flaubert
+14155
+# Maupassant
+2419
+3090
+11188
+# Verne
+4791
+5097
+800
+2083
+3526
+# Dumas
+13951
+17989
+17990
+17991
+17992
+# Balzac
+1968
+28000
+# Stendhal
+798
+# Voltaire
+4650
+# Rousseau
+46333
+# Molière
+14138
+# Racine
+15019
+# Baudelaire
+6099
+# Proust
+2650
+# Leroux
+62215
+# Leblanc
+32854
+# Sand
+11283
+# Perrault
+17062
+# Daudet
+14013
+# Mérimée
+4694
+# Rimbaud
+29302
+# La Fontaine
+17941
+# Montaigne
+3600
+# Pascal
+18269
+# Chateaubriand
+19657
+# Lautréamont
+12005
+# Verlaine
+15152

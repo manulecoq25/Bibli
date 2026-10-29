@@ -31,6 +31,8 @@ jobs:
           { curl -sS -o /dev/null -w "gutendex %{http_code}\n" https://gutendex.com/books/4650 || true
             curl -sS -o /dev/null -w "gutenberg %{http_code}\n" https://www.gutenberg.org/cache/epub/4650/pg4650.txt || true
             curl -sS -o /dev/null -w "aleph %{http_code}\n" https://aleph.gutenberg.org/cache/epub/4650/pg4650.txt || true
+            python3 tools/ingest.py --from-file tools/seed-fr.txt
+            python3 tools/ingest.py --from-file tools/seed-en.txt
             python3 tools/ingest.py --lang fr --count "$N"
             python3 tools/ingest.py --lang en --count "$N"
           } 2>&1 | tee tools/last-run.log
