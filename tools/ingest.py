@@ -291,12 +291,36 @@ def ingest(meta, lang_hint=None):
         "license": "Domaine public / Public domain",
     }
 
+def parse_shelves(path):
+    shelves, cur = [], None
+    for raw in open(path, encoding="utf-8"):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            cur = {"key": line[1:-1], "name": {}, "desc": {}, "items": []}
+            shelves.append(cur); continue
+        k, _, v = line.partition(":")
+        k, v = k.strip(), v.strip()
+        if k in ("name_fr", "name_en"):
+            cur["name"][k[-2:]] = v
+        elif k in ("desc_fr", "desc_en"):
+            cur["desc"][k[-2:]] = v
+        elif k in ("fr", "en"):
+            author, _, title = v.partition("|")
+            cur["items"].append({"src": "pg", "lang": k, "author": author.strip(), "title": title.strip()})
+        elif k == "ws":
+            lang, _, title = v.partition("|")
+            cur["items"].append({"src": "ws", "lang": lang.strip(), "title": title.strip()})
+    return shelves
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", choices=["fr", "en"])
     ap.add_argument("--count", type=int, default=100)
     ap.add_argument("--ids", nargs="*", type=int)
     ap.add_argument("--from-file")
+    ap.add_argument("--shelves", help="tools/shelves.txt: resolve titles, ingest, write site/data/shelves.json")
     args = ap.parse_args()
 
     cat_path = os.path.join(DATA, "catalogue.json")
@@ -311,9 +335,58 @@ def main():
     ids = list(args.ids or [])
     if args.from_file:
         ids += [int(x) for x in open(args.from_file) if x.strip().isdigit()]
+    pgcat = None
+    def catalog():
+        nonlocal pgcat
+        if pgcat is None:
+            import pg_catalog
+            log("  loading the Gutenberg catalogue (pg_catalog.csv)…")
+            pgcat = pg_catalog.load(fetch)
+            log(f"  {len(pgcat.rows)} texts in the catalogue")
+        return pgcat
+
     for gid in ids:
         if str(gid) not in catalogue:
-            metas.append(gutendex_one(gid))
+            m = None
+            try:
+                m = catalog().get(gid)
+            except Exception as e:
+                log(f"  catalogue unavailable ({e}); falling back to Gutendex/header")
+            metas.append(m or gutendex_one(gid))
+
+    shelves_out = []
+    if args.shelves:
+        import ingest_wikisource
+        for sh in parse_shelves(args.shelves):
+            ids_in_shelf = []
+            for it in sh["items"]:
+                try:
+                    if it["src"] == "ws":
+                        gid = "ws-" + hashlib.sha1(it["title"].encode()).hexdigest()[:8]
+                        if gid not in catalogue:
+                            b = ingest_wikisource.ingest_ws(it["title"], lang=it["lang"])
+                            if b:
+                                catalogue[b["id"]] = b
+                        if gid in catalogue:
+                            ids_in_shelf.append(gid)
+                        continue
+                    m = catalog().find(it["author"], it["title"], it["lang"])
+                    if not m:
+                        log(f"  unresolved [{sh['key']}] {it['author']} | {it['title']}"); continue
+                    gid = str(m["id"])
+                    if gid not in catalogue:
+                        b = ingest(m, it["lang"])
+                        if b:
+                            catalogue[gid] = b
+                    if gid in catalogue and gid not in ids_in_shelf:
+                        ids_in_shelf.append(gid)
+                except Exception as e:
+                    log(f"  error [{sh['key']}] {it.get('author','')} | {it['title']}: {e}")
+            shelves_out.append({"key": sh["key"], "name": sh["name"], "desc": sh["desc"], "ids": ids_in_shelf})
+            log(f"  shelf {sh['key']}: {len(ids_in_shelf)}/{len(sh['items'])}")
+        os.makedirs(DATA, exist_ok=True)
+        with open(os.path.join(DATA, "shelves.json"), "w", encoding="utf-8") as f:
+            json.dump(shelves_out, f, ensure_ascii=False, separators=(",", ":"))
 
     for m in metas:
         if str(m["id"]) in catalogue:
@@ -328,6 +401,10 @@ def main():
             with open(cat_path, "w", encoding="utf-8") as f:
                 json.dump({"generated": time.strftime("%Y-%m-%d"), "books": sorted(catalogue.values(), key=lambda x: -x["downloads"])},
                           f, ensure_ascii=False, separators=(",", ":"))
+    os.makedirs(DATA, exist_ok=True)
+    with open(cat_path, "w", encoding="utf-8") as f:
+        json.dump({"generated": time.strftime("%Y-%m-%d"), "books": sorted(catalogue.values(), key=lambda x: -x["downloads"])},
+                  f, ensure_ascii=False, separators=(",", ":"))
     log(f"catalogue: {len(catalogue)} books")
 
 if __name__ == "__main__":

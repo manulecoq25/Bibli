@@ -1,0 +1,184 @@
+# Bibli — editorial shelves. One shelf per [key]. Lines "fr: Author | Title words" or "en: …" are
+# resolved against the Gutenberg catalogue (title words must all appear; shortest matching title wins).
+# "ws: fr | Page title" lines come from Wikisource (tools/ingest_wikisource.py).
+# Order in a shelf = display order. Unresolved lines are listed in tools/last-run.log.
+
+[bac]
+name_fr: À lire pour le BAC et le BEPC
+name_en: French school classics (BAC/BEPC)
+desc_fr: Les œuvres qui reviennent dans les programmes de français en Côte d'Ivoire et dans la francophonie : théâtre, roman, poésie, idées.
+desc_en: The works that keep coming back in French-language school programmes: drama, novels, poetry, ideas.
+fr: Voltaire | Candide
+fr: Molière | L'avare
+fr: Molière | Tartuffe
+fr: Molière | Le malade imaginaire
+fr: Molière | Le bourgeois gentilhomme
+fr: Molière | Dom Juan
+fr: Corneille | Le Cid
+fr: Racine | Phèdre
+fr: Racine | Andromaque
+fr: Racine | Britannicus
+fr: La Fontaine | Fables
+fr: Beaumarchais | Le mariage de Figaro
+fr: Montesquieu | Lettres persanes
+fr: Rousseau | Du contrat social
+fr: Hugo | Les misérables Tome I
+fr: Hugo | Notre-Dame de Paris
+fr: Hugo | Les contemplations
+fr: Hugo | Hernani
+fr: Hugo | Ruy Blas
+fr: Stendhal | Le rouge et le noir
+fr: Balzac | Le père Goriot
+fr: Balzac | Eugénie Grandet
+fr: Flaubert | Madame Bovary
+fr: Zola | Germinal
+fr: Zola | L'assommoir
+fr: Zola | Au bonheur des dames
+fr: Maupassant | Boule de suif
+fr: Maupassant | Une vie
+fr: Maupassant | Bel-Ami
+fr: Maupassant | Le Horla
+fr: Baudelaire | Les fleurs du mal
+fr: Rostand | Cyrano de Bergerac
+fr: Apollinaire | Alcools
+fr: Verlaine | Poèmes saturniens
+fr: Rimbaud | Une saison en enfer
+fr: Prévost | Manon Lescaut
+fr: Laclos | Les liaisons dangereuses
+fr: Pascal | Pensées
+fr: Descartes | Discours de la méthode
+fr: Daudet | Lettres de mon moulin
+fr: Proust | Du côté de chez Swann
+
+[afrique]
+name_fr: Afrique : récits, contes et voix libres
+name_en: Africa: free narratives, tales and voices
+desc_fr: Peu de littérature africaine est déjà libre de droits : ses grands auteurs sont trop récents. Voici ce qui l'est : récits d'Africains et de descendants d'Africains, contes recueillis, relations de voyage. Les textes d'époque coloniale portent le regard de leur temps.
+desc_en: Little African literature is in the public domain yet: its great authors are too recent. Here is what is free: narratives by Africans and people of African descent, collected tales, travel accounts. Colonial-era texts carry the views of their time.
+en: Equiano | The interesting narrative of the life of Olaudah Equiano
+en: Douglass | Narrative of the life of Frederick Douglass
+en: Washington | Up from slavery
+en: Du Bois | The souls of Black folk
+en: Jacobs | Incidents in the life of a slave girl
+en: Prince | The history of Mary Prince
+en: Cugoano | Thoughts and sentiments on the evil of slavery
+en: Plaatje | Native life in South Africa
+en: Park | Travels in the interior of Africa
+en: Leo Africanus | The history and description of Africa
+fr: Binger | Du Niger au golfe de Guinée
+fr: Caillié | Journal d'un voyage à Temboctou
+fr: Delafosse | Haut-Sénégal-Niger
+fr: Delafosse | L'âme nègre
+fr: Cousturier | Des inconnus chez moi
+fr: Ibn Batoutah | Voyages
+fr: Basset | Contes populaires d'Afrique
+fr: Equilbecq | Contes indigènes
+fr: Dubois | Tombouctou la mystérieuse
+fr: Maupassant | Au soleil
+fr: Loti | Le roman d'un spahi
+ws: fr | L'Art de la guerre (Sun Tzu, trad. Amiot)
+
+[jeunesse]
+name_fr: Livres pour enfants, en français
+name_en: Children's books, in French
+desc_fr: Contes, fables et grands romans d'aventure à lire à voix haute ou seul, dès 8 ans.
+desc_en: Tales, fables and adventure novels to read aloud or alone, from age 8.
+fr: Perrault | Les contes de Perrault
+fr: La Fontaine | Fables
+fr: Ségur | Les malheurs de Sophie
+fr: Ségur | Les petites filles modèles
+fr: Ségur | Un bon petit diable
+fr: Ségur | Les vacances
+fr: Ségur | Le général Dourakine
+fr: Malot | Sans famille
+fr: Malot | En famille
+fr: Daudet | Lettres de mon moulin
+fr: Daudet | Tartarin de Tarascon
+fr: Verne | Le tour du monde en quatre-vingts jours
+fr: Verne | Vingt mille lieues sous les mers
+fr: Verne | Deux ans de vacances
+fr: Verne | Michel Strogoff
+fr: Verne | Voyage au centre de la terre
+fr: Verne | Cinq semaines en ballon
+fr: Carroll | Alice au pays des merveilles
+fr: Grimm | Contes
+fr: Andersen | Contes
+fr: Defoe | Robinson Crusoé
+fr: Swift | Voyages de Gulliver
+fr: Kipling | Le livre de la jungle
+fr: Collodi | Pinocchio
+fr: Bruno | Le tour de la France par deux enfants
+fr: Fénelon | Les aventures de Télémaque
+fr: Dumas | Les trois mousquetaires
+
+[dev]
+name_fr: Développement personnel et sagesse
+name_en: Personal development and wisdom
+desc_fr: Les textes que les livres de développement personnel citent encore : stoïciens, moralistes, pensée de l'action.
+desc_en: The texts that today's self-help books still quote: Stoics, moralists, the philosophy of action.
+en: Marcus Aurelius | Meditations
+en: Epictetus | The Enchiridion
+en: Seneca | Letters from a Stoic
+en: Machiavelli | The prince
+en: Allen | As a man thinketh
+en: Emerson | Essays
+en: Franklin | Autobiography of Benjamin Franklin
+en: Thoreau | Walden
+en: Smiles | Self-help
+en: Conwell | Acres of diamonds
+en: Arnold | The song celestial
+fr: Montaigne | Essais
+fr: Pascal | Pensées
+fr: La Rochefoucauld | Réflexions ou sentences et maximes morales
+fr: Descartes | Discours de la méthode
+fr: Rousseau | Du contrat social
+fr: Épictète | Manuel
+fr: Marc Aurèle | Pensées pour moi-même
+fr: Sénèque | De la brièveté de la vie
+fr: La Bruyère | Les caractères
+
+[classiques-en]
+name_fr: Classiques anglais
+name_en: English classics
+desc_fr: Les romans anglais et américains que tout le monde devrait lire une fois.
+desc_en: The English and American novels everyone should read once.
+en: Austen | Pride and prejudice
+en: Austen | Emma
+en: Brontë | Jane Eyre
+en: Brontë | Wuthering heights
+en: Dickens | Great expectations
+en: Dickens | A tale of two cities
+en: Dickens | Oliver Twist
+en: Dickens | A Christmas carol
+en: Shelley | Frankenstein
+en: Stoker | Dracula
+en: Stevenson | Treasure island
+en: Stevenson | Strange case of Dr. Jekyll and Mr. Hyde
+en: Wilde | The picture of Dorian Gray
+en: Doyle | The adventures of Sherlock Holmes
+en: Doyle | The hound of the Baskervilles
+en: Twain | Adventures of Huckleberry Finn
+en: Twain | The adventures of Tom Sawyer
+en: Carroll | Alice's adventures in Wonderland
+en: Melville | Moby Dick
+en: Hawthorne | The scarlet letter
+en: Fitzgerald | The great Gatsby
+en: Conrad | Heart of darkness
+en: Wells | The war of the worlds
+en: Wells | The time machine
+en: Kipling | The jungle book
+en: Barrie | Peter Pan
+en: Baum | The wonderful wizard of Oz
+en: Alcott | Little women
+en: Burnett | The secret garden
+en: London | The call of the wild
+en: Defoe | Robinson Crusoe
+en: Swift | Gulliver's travels
+en: Shakespeare | Hamlet
+en: Shakespeare | Romeo and Juliet
+en: Shakespeare | Macbeth
+en: Homer | The Odyssey
+en: Dumas | The count of Monte Cristo
+en: Hugo | Les misérables
+en: Verne | Twenty thousand leagues under the sea
+en: Verne | Around the world in eighty days
