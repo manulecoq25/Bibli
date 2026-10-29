@@ -1,0 +1,156 @@
+gutendex 403
+gutenberg 200
+curl: (60) SSL: no alternative certificate subject name matches target host name 'aleph.gutenberg.org'
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+aleph 000
+    retry 1 https://gutendex.com/books?languages=fr&copyright=false&sort=popular: The read operation timed out
+    retry 2 https://gutendex.com/books?languages=fr&copyright=false&sort=popular: The read operation timed out
+    retry 1 https://gutendex.com/books/?copyright=false&languages=fr&page=2&sort=popular: HTTP Error 503: Service Unavailable
+    retry 2 https://gutendex.com/books/?copyright=false&languages=fr&page=2&sort=popular: HTTP Error 503: Service Unavailable
+    retry 3 https://gutendex.com/books/?copyright=false&languages=fr&page=2&sort=popular: HTTP Error 503: Service Unavailable
+    retry 4 https://gutendex.com/books/?copyright=false&languages=fr&page=2&sort=popular: HTTP Error 503: Service Unavailable
+  gutendex unavailable (HTTP Error 503: Service Unavailable); keeping 32 listed so far
+  78027 Les enchantements de la forêt
+  62215 Le Fantôme de l'Opéra
+  78041 En pays lointain
+  78064 Lucifer : $b roman moderne
+  skip 78074: not public domain under life+70
+  78063 Le jeune Européen
+  78069 Deux générations
+  78021 L'imposture
+  78101 L'homme à l'Hispano : $b roman
+  78036 Quand le rideau s'est baissé
+  78059 L'homme tout nu
+  skip 78037: no plain text
+  78098 L'art d'aimer: ou conseils à un jeune homme qui se destine à l'amour
+  78080 Journal de la société de 1789 - Nº II
+  26296 Les mille et une nuits, tome premier
+  17989 Le comte de Monte-Cristo, Tome I
+  13951 Les trois mousquetaires
+  76412 Le cas étrange du docteur Jekyll; Un logement pour la nuit
+  4791 Voyage au Centre de la Terre
+    retry 1 https://www.gutenberg.org/ebooks/4791.txt.utf-8: Remote end closed connection without response
+  18143 Roméo et Juliette: Tragédie
+  2650 Du côté de chez Swann
+  28718 Les crimes de l'amour: Précédé d'un avant-propos, suivi des idées sur les romans, de l'auteur des crimes de l'amour à Villeterque, d'une notice bio-bibliographique du marquis de Sade: l'homme et ses écrits et du discours prononcé par le marquis de Sade à la section des piques.
+  32854 Arsène Lupin, gentleman-cambrioleur
+  17489 Les misérables Tome I: Fantine
+  14287 L'île mystérieuse
+  19919 Maman Léo: Les Habits Noirs Tome V
+  2419 La dame aux camélias
+  5097 Vingt mille Lieues Sous Les Mers — Complete
+  15113 Vie de Jésus
+  76540 Les Mémoires d'un Parapluie
+  76433 La marque des quatre
+  25335 Robert Burns. Vol. 1, La Vie
+catalogue: 30 books
+    retry 1 https://gutendex.com/books/?copyright=false&languages=en&page=2&sort=popular: The read operation timed out
+    retry 2 https://gutendex.com/books/?copyright=false&languages=en&page=2&sort=popular: The read operation timed out
+    retry 1 https://gutendex.com/books/?copyright=false&languages=en&page=3&sort=popular: The read operation timed out
+    retry 1 https://gutendex.com/books/?copyright=false&languages=en&page=4&sort=popular: The read operation timed out
+    retry 2 https://gutendex.com/books/?copyright=false&languages=en&page=4&sort=popular: The read operation timed out
+  1342 Pride and Prejudice
+  84 Frankenstein; or, The modern Prometheus
+  2701 Moby Dick; Or, The Whale
+  11 Alice's Adventures in Wonderland
+  1661 The Adventures of Sherlock Holmes
+  37683 Chambers's Twentieth Century Dictionary (part 1 of 4: A-D)
+  1513 Romeo and Juliet
+  345 Dracula
+  100 The Complete Works of William Shakespeare
+  43 The strange case of Dr. Jekyll and Mr. Hyde
+  skip 2641: not public domain under life+70
+  145 Middlemarch
+  49297 The Works of William Shakespeare [Cambridge Edition] [Vol. 5 of 9]
+  1727 The Odyssey: Rendered into English prose for the use of those who cannot read the original
+  67979 The Blue Castle: a novel
+  2554 Crime and Punishment
+  1260 Jane Eyre: An Autobiography
+  37106 Little Women; Or, Meg, Jo, Beth, and Amy
+  1184 The Count of Monte Cristo
+  174 The Picture of Dorian Gray
+  98 A Tale of Two Cities
+  64317 The Great Gatsby
+  2680 Meditations
+  16328 Beowulf: An Anglo-Saxon Epic Poem
+  skip 65238: not public domain under life+70
+  5197 My Life — Volume 1
+  16389 The Enchanted April
+  1952 The Yellow Wallpaper
+  1259 Twenty years after
+  1232 The Prince
+  2600 War and Peace
+  394 Cranford
+  8492 The King in Yellow
+  2160 The Expedition of Humphry Clinker
+  6761 The Adventures of Ferdinand Count Fathom — Complete
+  6593 History of Tom Jones, a Foundling
+  74 The Adventures of Tom Sawyer, Complete
+  4085 The Adventures of Roderick Random
+  23 Narrative of the Life of Frederick Douglass, an American Slave
+  49008 The Works of William Shakespeare [Cambridge Edition] [Vol. 8 of 9]
+  59828 The String of Pearls; Or, The Barber of Fleet Street. A Domestic Romance.
+  25344 The Scarlet Letter
+  3296 The Confessions of St. Augustine
+  55 The Wonderful Wizard of Oz
+  1400 Great Expectations
+  2591 Grimms' Fairy Tales
+  1080 A Modest Proposal: For preventing the children of poor people in Ireland, from being a burden on their parents or country, and for making them beneficial to the publick
+  skip 78033: not public domain under life+70
+  161 Sense and Sensibility
+  244 A Study in Scarlet
+  3207 Leviathan
+  76 Adventures of Huckleberry Finn
+  768 Wuthering Heights
+  78118 Barry Locke, half-back
+  26471 Spoon River Anthology
+  205 Walden, and On The Duty Of Civil Disobedience
+  4300 Ulysses
+  2542 A Doll's House : a play
+  41 The Legend of Sleepy Hollow
+  844 The Importance of Being Earnest: A Trivial Comedy for Serious People
+  120 Treasure Island
+  45 Anne of Green Gables
+  7370 Second Treatise of Government
+  2148 The Works of Edgar Allan Poe — Volume 2
+  3268 The Mysteries of Udolpho
+  28054 The Brothers Karamazov
+  skip 69087: not public domain under life+70
+  68283 The call of Cthulhu
+  skip 408: not public domain under life+70
+  skip 61262: not public domain under life+70
+  20203 Autobiography of Benjamin Franklin
+  skip 58866: not public domain under life+70
+  209 The Turn of the Screw
+  skip 61168: not public domain under life+70
+  46 A Christmas Carol in Prose; Being a Ghost Story of Christmas
+  1998 Thus Spake Zarathustra: A Book for All and None
+  57669 The problem of Cell 13
+  35 The Time Machine
+  2465 Carmen
+  skip 58820: not public domain under life+70
+  4363 Beyond Good and Evil
+  1497 The Republic
+  15399 The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African: Written By Himself
+  59892 Changeling, and Other Stories
+  skip 63469: not public domain under life+70
+  1695 The Man Who Was Thursday: A Nightmare
+  skip 78102: not public domain under life+70
+  skip 78084: not public domain under life+70
+  16 Peter Pan : $b [Peter and Wendy]
+  12342 The Nuttall encyclopædia : $b being a concise and comprehensive dictionary of general knowledge
+  skip 78016: not public domain under life+70
+  204 The innocence of Father Brown
+  78009 A guide to the history of physical education
+  34901 On Liberty
+  2852 The Hound of the Baskervilles
+  78017 The Swiss family Robinson
+  skip 78065: not public domain under life+70
+  78122 The history of the Norman conquest of England, its causes and its results, Volume 3 (of 6)
+  78105 Tales grotesque and curious
+  78119 Humanism and America : $b Essays on the outlook of modern civilisation
+catalogue: 116 books
