@@ -1,0 +1,49 @@
+name: Ingest books and deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Books per language"
+        default: "100"
+  schedule:
+    - cron: "0 3 * * 1"   # every Monday 03:00 UTC: pick up new Gutenberg titles
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull public-domain books from Project Gutenberg
+        run: |
+          N="${{ github.event.inputs.count || '100' }}"
+          python3 tools/ingest.py --lang fr --count "$N"
+          python3 tools/ingest.py --lang en --count "$N"
+      - name: Commit the catalogue
+        run: |
+          git config user.name "bibli-bot"
+          git config user.email "bibli-bot@users.noreply.github.com"
+          git add site/data
+          git diff --cached --quiet || git commit -m "data: refresh catalogue ($(date -u +%F))"
+          git push
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+      - run: echo "Deployed to ${{ steps.deploy.outputs.page_url }}"
