@@ -9,282 +9,21 @@ how to fix it, please visit the web page mentioned above.
 aleph 000
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
-  17489 Les misérables Tome I: Fantine
-  17493 Les misérables Tome II: Cosette
-  17494 Les misérables Tome III: Marius
-  17518 Les misérables Tome IV: L'idylle rue Plumet et l'épopée rue Saint-Denis
-  17519 Les misérables Tome V: Jean Valjean
-  2610 Notre-Dame de Paris
-  5711 Germinal
   skip 5712: not public domain under life+70
-  14155 Madame Bovary
-  2419 La dame aux camélias
-  3090 Complete Original Short Stories of Guy De Maupassant
-  11188 The Temptation of Samuel Burge
-  4791 Voyage au Centre de la Terre
-  5097 Vingt mille Lieues Sous Les Mers — Complete
-  800 Le tour du monde en quatre-vingts jours
-  2083 In Search of the Castaways; Or, The Children of Captain Grant
-  3526 Five Weeks in a Balloon
-  13951 Les trois mousquetaires
-  17989 Le comte de Monte-Cristo, Tome I
-  17990 Le comte de Monte-Cristo, Tome II
-  17991 Le comte de Monte-Cristo, Tome III
-  17992 Le comte de Monte-Cristo, Tome IV
-  1968 The Human Comedy: Introductions and Appendix
   skip 28000: not public domain under life+70
-  798 Le rouge et le noir: chronique du XIXe siècle
-  4650 Candide, ou l'optimisme
-  46333 The social contract & discourses
   skip 14138: not public domain under life+70
   skip 15019: not public domain under life+70
-  6099 Les Fleurs du Mal
-  2650 Du côté de chez Swann
-  62215 Le Fantôme de l'Opéra
-  32854 Arsène Lupin, gentleman-cambrioleur
   skip 11283: not public domain under life+70
-  17062 The Crock of Gold: A Rural Novel
-  14013 Almoran and Hamet: An Oriental Tale
-  4694 Mademoiselle of Monte Carlo
-  29302 Poésies complètes,
-  17941 Fables de La Fontaine. Tome Premier
-  3600 Essays of Michel de Montaigne — Complete
-  18269 Pascal's Pensées
-  19657 Notre-Dame de Paris
-  12005 Les Chants de Maldoror
-  15152 Saint-Pierre & Miquelon
   skip 37683: not public domain under life+70
   skip 1727: not public domain under life+70
   skip 16328: not public domain under life+70
-  26471 Spoon River Anthology
   skip 1497: not public domain under life+70
   skip 78119: not public domain under life+70
   skip 6130: not public domain under life+70
-  26296 Les mille et une nuits, tome premier
   skip 2388: not public domain under life+70
   skip 52927: not public domain under life+70
   skip 12949: not public domain under life+70
-  1342 Pride and Prejudice
-  84 Frankenstein; or, The modern Prometheus
-  2701 Moby Dick; Or, The Whale
-  11 Alice's Adventures in Wonderland
-  1661 The Adventures of Sherlock Holmes
-  1513 Romeo and Juliet
-  345 Dracula
-  100 The Complete Works of William Shakespeare
-  43 The strange case of Dr. Jekyll and Mr. Hyde
-  145 Middlemarch
-  49297 The Works of William Shakespeare [Cambridge Edition] [Vol. 5 of 9]
-  67979 The Blue Castle: a novel
-  2554 Crime and Punishment
-  1260 Jane Eyre: An Autobiography
-  37106 Little Women; Or, Meg, Jo, Beth, and Amy
-  1184 The Count of Monte Cristo
-  174 The Picture of Dorian Gray
-  98 A Tale of Two Cities
-  64317 The Great Gatsby
-  2680 Meditations
-  5197 My Life — Volume 1
-  16389 The Enchanted April
-  78027 Les enchantements de la forêt
-  1952 The Yellow Wallpaper
-  1259 Twenty years after
-  1232 The Prince
-  2600 War and Peace
-  394 Cranford
-  8492 The King in Yellow
-  2160 The Expedition of Humphry Clinker
-  6761 The Adventures of Ferdinand Count Fathom — Complete
-  6593 History of Tom Jones, a Foundling
-  74 The Adventures of Tom Sawyer, Complete
-  4085 The Adventures of Roderick Random
-  23 Narrative of the Life of Frederick Douglass, an American Slave
-  49008 The Works of William Shakespeare [Cambridge Edition] [Vol. 8 of 9]
-  59828 The String of Pearls; Or, The Barber of Fleet Street. A Domestic Romance.
-  25344 The Scarlet Letter
-  3296 The Confessions of St. Augustine
-  55 The Wonderful Wizard of Oz
-  1400 Great Expectations
-  2591 Grimms' Fairy Tales
-  1080 A Modest Proposal
-  161 Sense and Sensibility
-  244 A Study in Scarlet
-  3207 Leviathan
-  76 Adventures of Huckleberry Finn
-  768 Wuthering Heights
-  78118 Barry Locke, half-back
-  205 Walden, and On The Duty Of Civil Disobedience
-  4300 Ulysses
-  2542 A Doll's House : a play
-  41 The Legend of Sleepy Hollow
-  844 The Importance of Being Earnest: A Trivial Comedy for Serious People
-  120 Treasure Island
-  45 Anne of Green Gables
-  7370 Second Treatise of Government
-  2148 The Works of Edgar Allan Poe — Volume 2
-  3268 The Mysteries of Udolpho
-  28054 The Brothers Karamazov
-  68283 The call of Cthulhu
-  20203 Autobiography of Benjamin Franklin
-  209 The Turn of the Screw
-  46 A Christmas Carol in Prose; Being a Ghost Story of Christmas
-  1998 Thus Spake Zarathustra: A Book for All and None
-  57669 The problem of Cell 13
-  35 The Time Machine
-  2465 Carmen
-  4363 Beyond Good and Evil
-  15399 The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African
-  59892 Changeling, and Other Stories
-  1695 The Man Who Was Thursday: A Nightmare
-  16 Peter Pan
-  12342 The Nuttall encyclopædia
-  204 The innocence of Father Brown
-  78009 A guide to the history of physical education
-  34901 On Liberty
-  2852 The Hound of the Baskervilles
-  78017 The Swiss family Robinson
-  78122 The history of the Norman conquest of England, its causes and its results, Volume 3 (of 6)
-  78105 Tales grotesque and curious
-  78041 En pays lointain
-  78064 Lucifer
-  78063 Le jeune Européen
-  78069 Deux générations
-  78021 L'imposture
-  78101 L'homme à l'Hispano
-  78036 Quand le rideau s'est baissé
-  78059 L'homme tout nu
-  158 Emma
-  78098 L'art d'aimer: ou conseils à un jeune homme qui se destine à l'amour
-  78080 Journal de la société de 1789 - Nº II
-  36 The war of the worlds
-  2814 Dubliners
-  16643 Essays by Ralph Waldo Emerson
-  4507 As a man thinketh
-  59 Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth in the Sciences
-  76412 Le cas étrange du docteur Jekyll; Un logement pour la nuit
-  18143 Roméo et Juliette
-  28718 Les crimes de l'amour
-  14287 L'île mystérieuse
-  19919 Maman Léo
-  10661 A Selection from the Discourses of Epictetus with the Encheiridion
-  15113 Vie de Jésus
-  76540 Les Mémoires d'un Parapluie
-  76433 La marque des quatre
-  25335 Robert Burns. Vol. 1, La Vie
-  76724 La chasse au météore
-  38674 De la terre à la lune, trajet direct en 97 heures 20 minutes
-  77086 Les cœurs les plus farouches
-  26859 Histoire de France 1724-1759 (Volume 18/19)
-  29049 Histoire amoureuse des Gaules; suivie des Romans historico-satiriques du XVIIe siècle, Tome I
-  27573 Esprit des lois
-  36635 Amitié amoureuse
-  70891 Notre-Dame de Paris - Tome 1
-  13846 Discours de la méthode
-  31628 Œuvres de P. Corneille, Tome 01
-  25097 Cités et ruines américaines: Mitla, Palenqué, Izamal, Chichen-Itza, Uxmal
-  48529 Essais de Montaigne (self-édition) - Volume I
-  52006 Les liaisons dangereuses
-  74092 Missions au Sahara, tome 1
-  56327 Fables de La Fontaine
-  17258 Oeuvres de Champlain
-  24766 Étude Médico-Légale: Psychopathia Sexualis
-  36708 Soeur Thérèse de l'Enfant-Jésus et de la Sainte Face
-  10775 Le Horla
-  45864 La vie en France au moyen âge d'après quelques moralistes du temps
-  23520 Mon oncle et mon curé; Le voeu de Nadia
-  26370 Mémoires de Hector Berlioz
-  54873 Vingt mille lieues sous les mers
-  70954 Trois femmes
-  42525 Anciennes loix des François, conservées dans les coutumes angloises, recueillies par Littleton, Vol. I
-  70998 The complete works of John Gower, volume 1
-  55456 Aventures d'Alice au pays des merveilles
-  60052 Comment on Prononce le Français
-  33931 Popular Tales
-  45150 Dictionnaire érotique moderne
-  27451 Robert Burns. Vol. 2, Les Oeuvres
-  71062 Charmes
-  5781 Le grand Meaulnes
-  55569 Calligrammes: Poèmes de la paix et de la guerre (1913-1916)
-  5250 Nana
-  24850 Lourdes
-  14790 Contes du jour et de la nuit
-  48359 Œuvres complètes de Gustave Flaubert, tome 1 (of 8): Madame Bovary
-  79599 Sahara et Soudan, tome premier
-  41112 Histoire de la Littérature Anglaise (Volume 4 de 5)
-  1256 Cyrano de Bergerac
-  43901 Lettres de Madame de Sévigné
-  14082 Le Corbeau = The Raven
-  46541 Le Tour du monde en quatre-vingts jours
   skip 13316: not public domain under life+70
-  5200 Metamorphosis
-  132 The Art of War
-  6318 L'Avare
-  20577 La Folle Journée ou le Mariage de Figaro
-  30268 Lettres persanes, tome I
-  29843 Les contemplations: Autrefois, 1830-1843
-  9976 Hernani
-  60354 Ruy Blas: Drame
-  11049 Eugénie Grandet
-  6497 L'Assommoir
-  16852 Au bonheur des dames
-  10746 Boule de Suif
-  17457 Une vie
-  15462 Alcools
-  15112 Œuvres complètes - Volume 1
-  56668 Une saison en enfer
-  17983 Manon Lescaut
-  29772 Notes de Voltaire et de Condorcet sur les pensées de Pascal
-  11770 Lettres de mon moulin
-  2376 Up from Slavery: An Autobiography
-  11030 Incidents in the Life of a Slave Girl, Written by Herself
-  17851 The History of Mary Prince, a West Indian Slave
-  1452 Native Life in South Africa
-  5266 Travels in the Interior of Africa — Volume 01
-  74720 Du Niger au golfe de Guinée par le pays de Kong et le Mossi, tome 1 (de 2)
-  77845 Haut-Sénégal-Niger (Soudan français), Tome 2 (de 3): l'histoire
-  15458 Essai sur la littérature merveilleuse des noirs, suivi de Contes indigènes de l'Ouest africain français - Tome premier
-  15058 Les malheurs de Sophie
-  15059 Les petites filles modèles
-  12993 Un bon petit diable
-  15057 Les vacances
-  12979 Le Général Dourakine
-  13793 En famille
-  10687 Tartarin de Tarascon
-  7442 Michel Strogoff: De Moscou a Irkoutsk
-  4548 Cinq Semaines En Ballon
-  12250 Contes choisis de la famille
-  18244 Contes merveilleux, Tome I
-  38705 Robinson Crusoe (I/II)
-  17640 Les Voyages de Gulliver
-  54183 Le livre de la Jungle
-  27782 Le tour de la France par deux enfants
-  30779 Les aventures de Télémaque suivies des aventures d'Aristonoüs
-  45109 The Enchiridion
-  2944 Essays — First Series
-  935 Self Help; with Illustrations of Conduct and Perseverance
-  34258 Acres of Diamonds
-  14913 Réflexions ou sentences et maximes morales
-  17980 Les caractères
-  79159 Jane Eyre
-  730 Oliver Twist
-  19337 A Christmas Carol
-  42 The strange case of Dr. Jekyll and Mr. Hyde
-  7193 The Adventures of Tom Sawyer, Part 1.
-  15 Moby-Dick; or, The Whale
-  33 The Scarlet Letter
-  219 Heart of Darkness
-  236 The Jungle Book
-  514 Little Women
-  113 The Secret Garden
-  215 The call of the wild
-  70841 Robinson Crusoe
-  65473 Gulliver's Travels
-  1122 Hamlet
-  1112 Romeo and Juliet
-  1533 Macbeth
-  135 Les Misérables
-  164 Twenty Thousand Leagues under the Sea
-  103 Around the World in Eighty Days
 catalogue: 286 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
@@ -321,32 +60,17 @@ catalogue: 286 books
 catalogue: 286 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
-  ws-fe837a4e Le Tartuffe ou l'Imposteur
-    wikisource: 'Le Tartuffe ou l'Imposteur' -> 'Tartuffe ou l’Imposteur'
-    keeping edition 'Édition Louandre, 1910' of 2 (Édition Louandre, 1910, Édition Chasles, 1888…)
-  ws-290134d6 Le Malade imaginaire
-  ws-34624a83 Le Bourgeois gentilhomme
-    keeping edition 'Édition Louandre, 1910' of 2 (Édition Garnier, 1904, Édition Louandre, 1910…)
   ws-5cd0056c Dom Juan ou le Festin de pierre
   skip Dom Juan ou le Festin de pierre: too short (3 words)
-  ws-a1cf2d0c Le Cid (Corneille)
-    wikisource: 'Le Cid (Corneille)' -> 'Le Cid'
-    keeping edition 'Édition Ginn' of 2 (Édition Ginn, Édition Marty-Laveaux…)
   ws-80ff6da0 Phèdre (Racine)
     wikisource: 'Phèdre (Racine)' -> 'Phèdre (Racine), Didot, 1854' (edition page)
   skip Phèdre (Racine): too short (647 words)
   ws-2198bd28 Andromaque (Racine)
     wikisource: 'Andromaque (Racine)' -> 'Andromaque (Racine, éditions Didot, 1854)/À Madame'
   skip Andromaque (Racine): too short (429 words)
-  ws-0c198ec4 Britannicus (Racine)
-    wikisource: 'Britannicus (Racine)' -> 'Britannicus (éditions Didot, 1854)'
-  ws-b5e384be Du contrat social
-    keeping edition 'Édition 1762' of 2 (Édition 1762, Édition Dreyfus-Brisac 1896…)
   ws-fe251692 Le Père Goriot
   skip Le Père Goriot: too short (0 words)
-  ws-478af1eb Bel-Ami
-    keeping edition 'Édition Ollendorff, 1901' of 2 (Édition Ollendorff, 1901, Édition Conard, 1910…)
-  shelf bac: 37/41
+  shelf bac: 35/39
   skip 408: not public domain under life+70
   unresolved [afrique] Cugoano | Thoughts and sentiments on the evil of slavery
   unresolved [afrique] Leo Africanus | The history and description of Africa
@@ -360,13 +84,7 @@ catalogue: 286 books
   ws-fd0db64e Au soleil (Maupassant)
     wikisource: 'Au soleil (Maupassant)' -> 'Au soleil (recueil)/Au soleil' (edition page)
   skip Au soleil (Maupassant): too short (807 words)
-  ws-c67905f5 Le Roman d'un spahi
-    wikisource: 'Le Roman d'un spahi' -> 'Le Roman d’un spahi'
-  ws-21ac5746 L'Art de la guerre (Sun Tzu)
-    wikisource: 'L'Art de la guerre (Sun Tzu)' -> 'L’Art de la guerre'
   shelf afrique: 12/21
-  ws-93eb3ee9 Sans famille
-    keeping edition 'Dentu, 1887' of 2 (Dentu, 1887, Édition Thieme, 1902…)
   ws-fc09feff Deux ans de vacances
   skip Deux ans de vacances: too short (0 words)
   unresolved [jeunesse] Perrault | Contes
@@ -375,12 +93,11 @@ catalogue: 286 books
   skip 2388: not public domain under life+70
   ws-79507c32 Manuel d'Épictète
   skip Manuel d'Épictète: too short (0 words)
-  ws-015ec8c0 Pensées pour moi-même
-  ws-8fb0c774 De la brièveté de la vie
-    keeping edition 'Traduction Baillard' of 2 (Traduction Baillard, Traduction Charpentier…)
   shelf dev: 18/20
   skip 3160: not public domain under life+70
   shelf classiques-en: 39/40
+  removing ws-a1cf2d0c Le Cid (no longer on a shelf)
+  removing ws-0c198ec4 Britannicus (no longer on a shelf)
   skip 37683: not public domain under life+70
   skip 1727: not public domain under life+70
   skip 16328: not public domain under life+70
@@ -394,4 +111,4 @@ catalogue: 286 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 286 books
+catalogue: 284 books
