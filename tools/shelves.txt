@@ -14,10 +14,10 @@ ws: fr | Le Tartuffe ou l'Imposteur | Molière
 ws: fr | Le Malade imaginaire | Molière
 ws: fr | Le Bourgeois gentilhomme | Molière
 ws: fr | Dom Juan ou le Festin de pierre | Molière
-ws: fr | Le Cid (Corneille) | Pierre Corneille
+# TODO incomplete on Wikisource import (3k words): ws: fr | Le Cid (Corneille) | Pierre Corneille
 ws: fr | Phèdre (Racine) | Jean Racine
 ws: fr | Andromaque (Racine) | Jean Racine
-ws: fr | Britannicus (Racine) | Jean Racine
+# TODO incomplete: ws: fr | Britannicus (Racine) | Jean Racine
 fr: La Fontaine | Fables
 fr: Beaumarchais | Le mariage de Figaro
 fr: Montesquieu | Lettres persanes
