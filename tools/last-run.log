@@ -7,286 +7,128 @@ curl failed to verify the legitimacy of the server and therefore could not
 establish a secure connection to it. To learn more about this situation and
 how to fix it, please visit the web page mentioned above.
 aleph 000
-    retry 1 https://gutendex.com/books/17493: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/17493: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/17493: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/17493: The read operation timed out
-  gutendex unavailable for 17493 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/17494: The read operation timed out
-    retry 2 https://gutendex.com/books/17494: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/17494: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/17494: The read operation timed out
-  gutendex unavailable for 17494 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/17519: The read operation timed out
-    retry 2 https://gutendex.com/books/17519: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/17519: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/17519: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 17519 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/2610: The read operation timed out
-    retry 1 https://gutendex.com/books/5711: The read operation timed out
-    retry 2 https://gutendex.com/books/5711: The read operation timed out
-    retry 3 https://gutendex.com/books/5711: The read operation timed out
-    retry 1 https://gutendex.com/books/5712: The read operation timed out
-    retry 2 https://gutendex.com/books/5712: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/5712: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/5712: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 5712 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/14155: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/14155: The read operation timed out
-    retry 3 https://gutendex.com/books/14155: The read operation timed out
-    retry 4 https://gutendex.com/books/14155: The read operation timed out
-  gutendex unavailable for 14155 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/3090: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/3090: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/3090: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/3090: The read operation timed out
-  gutendex unavailable for 3090 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/11188: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/11188: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/11188: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/11188: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 11188 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/800: The read operation timed out
-    retry 2 https://gutendex.com/books/800: The read operation timed out
-    retry 1 https://gutendex.com/books/2083: The read operation timed out
-    retry 2 https://gutendex.com/books/2083: The read operation timed out
-    retry 3 https://gutendex.com/books/2083: The read operation timed out
-    retry 1 https://gutendex.com/books/3526: The read operation timed out
-    retry 1 https://gutendex.com/books/17990: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/17990: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/17990: The read operation timed out
-    retry 4 https://gutendex.com/books/17990: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 17990 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/17991: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/17991: The read operation timed out
-    retry 3 https://gutendex.com/books/17991: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/17991: The read operation timed out
-  gutendex unavailable for 17991 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/17992: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/17992: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/17992: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/17992: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 17992 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/1968: The read operation timed out
-    retry 2 https://gutendex.com/books/1968: The read operation timed out
-    retry 3 https://gutendex.com/books/1968: The read operation timed out
-    retry 4 https://gutendex.com/books/1968: The read operation timed out
-  gutendex unavailable for 1968 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/28000: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/28000: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/28000: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/28000: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 28000 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/798: The read operation timed out
-    retry 2 https://gutendex.com/books/798: The read operation timed out
-    retry 3 https://gutendex.com/books/798: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/798: The read operation timed out
-  gutendex unavailable for 798 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/4650: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/4650: The read operation timed out
-    retry 3 https://gutendex.com/books/4650: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/4650: The read operation timed out
-  gutendex unavailable for 4650 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/46333: The read operation timed out
-    retry 2 https://gutendex.com/books/46333: The read operation timed out
-    retry 3 https://gutendex.com/books/46333: The read operation timed out
-    retry 1 https://gutendex.com/books/14138: The read operation timed out
-    retry 2 https://gutendex.com/books/14138: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/14138: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/14138: The read operation timed out
-  gutendex unavailable for 14138 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/6099: The read operation timed out
-    retry 2 https://gutendex.com/books/6099: The read operation timed out
-    retry 3 https://gutendex.com/books/6099: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/6099: The read operation timed out
-  gutendex unavailable for 6099 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/11283: HTTP Error 503: Service Unavailable
-    retry 1 https://gutendex.com/books/17062: The read operation timed out
-    retry 2 https://gutendex.com/books/17062: The read operation timed out
-    retry 3 https://gutendex.com/books/17062: The read operation timed out
-    retry 1 https://gutendex.com/books/14013: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/14013: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/14013: The read operation timed out
-    retry 4 https://gutendex.com/books/14013: The read operation timed out
-  gutendex unavailable for 14013 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/4694: HTTP Error 503: Service Unavailable
-    retry 1 https://gutendex.com/books/29302: The read operation timed out
-    retry 2 https://gutendex.com/books/29302: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/29302: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/29302: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 29302 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/17941: The read operation timed out
-    retry 2 https://gutendex.com/books/17941: The read operation timed out
-    retry 3 https://gutendex.com/books/17941: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/17941: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 17941 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-    retry 1 https://gutendex.com/books/3600: The read operation timed out
-    retry 1 https://gutendex.com/books/18269: The read operation timed out
-    retry 2 https://gutendex.com/books/18269: The read operation timed out
-    retry 3 https://gutendex.com/books/18269: The read operation timed out
-    retry 1 https://gutendex.com/books/19657: The read operation timed out
-    retry 2 https://gutendex.com/books/19657: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/19657: HTTP Error 503: Service Unavailable
-    retry 1 https://gutendex.com/books/12005: The read operation timed out
-    retry 2 https://gutendex.com/books/12005: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/12005: The read operation timed out
-    retry 4 https://gutendex.com/books/12005: The read operation timed out
-  gutendex unavailable for 12005 (The read operation timed out); reading the header of the text instead
-    retry 1 https://gutendex.com/books/15152: The read operation timed out
-    retry 2 https://gutendex.com/books/15152: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/15152: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/15152: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 15152 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-  17493 Les misérables Tome II: Cosette
-  17494 Les misérables Tome III: Marius
-  17518 Les misérables Tome IV: L'idylle rue Plumet et l'épopée rue Saint-Denis
-  17519 Les misérables Tome V: Jean Valjean
-  2610 Notre-Dame de Paris
-  5711 Germinal
-  5712 Sculpture of the Exposition Palaces and Courts
-  14155 Madame Bovary
-  3090 Complete Original Short Stories of Guy De Maupassant
-  11188 The Temptation of Samuel Burge
-  800 Le tour du monde en quatre-vingts jours
-  2083 In Search of the Castaways; Or, The Children of Captain Grant
-  3526 Five Weeks in a Balloon: Or, Journeys and Discoveries in Africa by Three Englishmen
-  17990 Le comte de Monte-Cristo, Tome II
-  17991 Le comte de Monte-Cristo, Tome III
-  17992 Le comte de Monte-Cristo, Tome IV
-  1968 The Human Comedy: Introductions and Appendix
-  28000 Inaugural Presidential Address
-  798 Le rouge et le noir: chronique du XIXe siècle
-  4650 Candide, ou l'optimisme
-  46333 The social contract & discourses
-  14138 Dew Drops, Vol. 37, No. 18, May 3, 1914
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
   skip 15019: not public domain under life+70
-  6099 Les Fleurs du Mal
   skip 11283: not public domain under life+70
-  17062 The Crock of Gold: A Rural Novel
-  14013 Almoran and Hamet: An Oriental Tale
-  4694 Mademoiselle of Monte Carlo
-  29302 Poésies complètes,
-  17941 Fables de La Fontaine. Tome Premier
-  3600 Essays of Michel de Montaigne — Complete
-  18269 Pascal's Pensées
-  19657 Notre-Dame de Paris
-  12005 Les Chants de Maldoror
-  15152 Saint-Pierre & Miquelon
-catalogue: 149 books
-    retry 1 https://gutendex.com/books/36: The read operation timed out
-    retry 2 https://gutendex.com/books/36: The read operation timed out
-    retry 3 https://gutendex.com/books/36: The read operation timed out
-    retry 1 https://gutendex.com/books/5200: The read operation timed out
-    retry 2 https://gutendex.com/books/5200: The read operation timed out
-    retry 3 https://gutendex.com/books/5200: The read operation timed out
-    retry 1 https://gutendex.com/books/6130: The read operation timed out
-    retry 2 https://gutendex.com/books/6130: The read operation timed out
-    retry 3 https://gutendex.com/books/6130: The read operation timed out
-  158 Emma
-  36 The war of the worlds
-  2814 Dubliners
-  skip 5200: not public domain under life+70
-  6130 The Iliad
-catalogue: 153 books
-    retry 1 https://gutendex.com/books/132: The read operation timed out
-    retry 2 https://gutendex.com/books/132: The read operation timed out
-    retry 1 https://gutendex.com/books/2388: The read operation timed out
-    retry 1 https://gutendex.com/books/13316: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/13316: HTTP Error 503: Service Unavailable
-    retry 3 https://gutendex.com/books/13316: HTTP Error 503: Service Unavailable
-    retry 4 https://gutendex.com/books/13316: HTTP Error 503: Service Unavailable
-  gutendex unavailable for 13316 (HTTP Error 503: Service Unavailable); reading the header of the text instead
-  skip 132: not public domain under life+70
-  4507 As a man thinketh
-  16643 Essays by Ralph Waldo Emerson
-  10661 A Selection from the Discourses of Epictetus with the Encheiridion
-  skip 216: not public domain under life+70
-  2388 The Song Celestial; Or, Bhagavad-Gîtâ (from the Mahâbhârata): Being a discourse between Arjuna, Prince of India, and the Supreme Being under the form of Krishna
-  13316 The Theological Tractates and The Consolation of Philosophy
-  59 Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth in the Sciences
-catalogue: 159 books
-    retry 1 https://gutendex.com/books?languages=fr&copyright=false&sort=popular: The read operation timed out
-    retry 2 https://gutendex.com/books?languages=fr&copyright=false&sort=popular: The read operation timed out
-    retry 1 https://gutendex.com/books/?copyright=false&languages=fr&page=2&sort=popular: The read operation timed out
-    retry 2 https://gutendex.com/books/?copyright=false&languages=fr&page=2&sort=popular: The read operation timed out
-    retry 1 https://gutendex.com/books/?copyright=false&languages=fr&page=3&sort=popular: HTTP Error 503: Service Unavailable
-    retry 2 https://gutendex.com/books/?copyright=false&languages=fr&page=3&sort=popular: The read operation timed out
-    retry 3 https://gutendex.com/books/?copyright=false&languages=fr&page=3&sort=popular: The read operation timed out
-    retry 1 https://gutendex.com/books/?copyright=false&languages=fr&page=4&sort=popular: The read operation timed out
-    retry 2 https://gutendex.com/books/?copyright=false&languages=fr&page=4&sort=popular: The read operation timed out
-  skip 78074: not public domain under life+70
-  skip 78037: no plain text
-  76724 La chasse au météore
-  38674 De la terre à la lune, trajet direct en 97 heures 20 minutes
-  20973 Le tour du monde en quatre-vingts jours
-  skip 20973: too short
-  77086 Les cœurs les plus farouches
-  26859 Histoire de France 1724-1759 (Volume 18/19)
-  29049 Histoire amoureuse des Gaules; suivie des Romans historico-satiriques du XVIIe siècle, Tome I
-  27573 Esprit des lois: livres I à V, précédés d'une introduction de l'éditeur
-  36635 Amitié amoureuse
-  20971 Fables de La Fontaine, livre premier
-  skip 20971: too short
-  70891 Notre-Dame de Paris - Tome 1
-  13846 Discours de la méthode
-  31628 Œuvres de P. Corneille, Tome 01
-  25097 Cités et ruines américaines: Mitla, Palenqué, Izamal, Chichen-Itza, Uxmal
-  48529 Essais de Montaigne (self-édition) - Volume I
-  52006 Les liaisons dangereuses: Lettres recueillies dans une Société et publiées pour l'instruction de quelques autres
-  skip 44070: not public domain under life+70
-  74092 Missions au Sahara, tome 1 : $b Sahara algérien
-  52927 L'Odyssée
-  56327 Fables de La Fontaine
-  17258 Oeuvres de Champlain
-  24766 Étude Médico-Légale: Psychopathia Sexualis: avec recherches spéciales sur l'inversion sexuelle
-  20972 Histoires ou Contes du temps passé avec des moralités
-  skip 20972: too short
-  36708 Soeur Thérèse de l'Enfant-Jésus et de la Sainte Face: Histoire d'une âme écrite par elle-même
-  10775 Le Horla
-  45864 La vie en France au moyen âge d'après quelques moralistes du temps
-  23520 Mon oncle et mon curé; Le voeu de Nadia
-  26370 Mémoires de Hector Berlioz: comprenant ses voyages en Italie, en Allemagne, en Russie et en Angleterre, 1803-1865
-  skip 16816: not public domain under life+70
-  54873 Vingt mille lieues sous les mers
-  70954 Trois femmes
-  42525 Anciennes loix des François, conservées dans les coutumes angloises, recueillies par Littleton, Vol. I
-  70998 The complete works of John Gower, volume 1 : $b The French works
-  55456 Aventures d'Alice au pays des merveilles
-  60052 Comment on Prononce le Français: Traité complet de prononciation pratique avec le noms propres et les mots étrangers
-  skip 44877: not public domain under life+70
-  33931 Popular Tales
-  45150 Dictionnaire érotique moderne
-  27451 Robert Burns. Vol. 2, Les Oeuvres
-  skip 21001: not public domain under life+70
-  skip 28788: not public domain under life+70
-  71062 Charmes
-  5781 Le grand Meaulnes
-  55569 Calligrammes: Poèmes de la paix et de la guerre (1913-1916)
-  5250 Nana
-  12949 Contes Français
-  24850 Lourdes
-  14790 Contes du jour et de la nuit
-  48359 Œuvres complètes de Gustave Flaubert, tome 1 (of 8): Madame Bovary
-  79599 Sahara et Soudan, tome premier : $b Tripolitaine, Fezzan, Tibesti, Kanem, Borkou et Bornou
-  41112 Histoire de la Littérature Anglaise (Volume 4 de 5)
-  1256 Cyrano de Bergerac
-  43901 Lettres de Madame de Sévigné: Précédées d'une notice sur sa vie et du traité sur le style épistolaire de Madame de Sévigné
-  14082 Le Corbeau = The Raven
-  46541 Le Tour du monde en quatre-vingts jours
 catalogue: 205 books
-    retry 1 https://gutendex.com/books/?copyright=false&languages=en&page=3&sort=popular: The read operation timed out
-  skip 2641: not public domain under life+70
-  skip 65238: not public domain under life+70
-  skip 78033: not public domain under life+70
-  skip 69087: not public domain under life+70
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
+  skip 5200: not public domain under life+70
+catalogue: 205 books
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
+  skip 132: not public domain under life+70
+  skip 216: not public domain under life+70
+catalogue: 205 books
+  loading the Gutenberg catalogue (pg_catalog.csv)…
+  78423 texts in the catalogue
+  skip 6318: no plain text
+  unresolved [bac] Molière | Tartuffe
+  unresolved [bac] Molière | Le malade imaginaire
+  unresolved [bac] Molière | Le bourgeois gentilhomme
+  unresolved [bac] Molière | Dom Juan
+  unresolved [bac] Corneille | Le Cid
+  unresolved [bac] Racine | Phèdre
+  unresolved [bac] Racine | Andromaque
+  unresolved [bac] Racine | Britannicus
+  skip 20577: no plain text
+  skip 30268: not public domain under life+70
+  unresolved [bac] Rousseau | Du contrat social
+  skip 29843: no plain text
+  skip 9976: no plain text
+  skip 60354: no plain text
+  unresolved [bac] Balzac | Le père Goriot
+  skip 11049: no plain text
+  skip 6497: no plain text
+  skip 16852: no plain text
+  skip 10746: no plain text
+  skip 17457: no plain text
+  unresolved [bac] Maupassant | Bel-Ami
+  skip 15462: no plain text
+  skip 15112: no plain text
+  skip 56668: no plain text
+  skip 17983: no plain text
+  skip 29772: no plain text
+  skip 11770: no plain text
+  shelf bac: 13/41
+  skip 2376: no plain text
   skip 408: not public domain under life+70
-  skip 61262: not public domain under life+70
-  skip 58866: not public domain under life+70
-  skip 61168: not public domain under life+70
-  skip 58820: not public domain under life+70
-  skip 63469: not public domain under life+70
-  skip 78102: not public domain under life+70
-  skip 78084: not public domain under life+70
-  skip 78016: not public domain under life+70
-  skip 78065: not public domain under life+70
+  skip 11030: not public domain under life+70
+  skip 17851: no plain text
+  unresolved [afrique] Cugoano | Thoughts and sentiments on the evil of slavery
+  skip 1452: no plain text
+  skip 5266: no plain text
+  unresolved [afrique] Leo Africanus | The history and description of Africa
+  skip 74720: not public domain under life+70
+  unresolved [afrique] Caillié | Journal d'un voyage à Temboctou
+  skip 77845: not public domain under life+70
+  unresolved [afrique] Delafosse | L'âme nègre
+  unresolved [afrique] Cousturier | Des inconnus chez moi
+  unresolved [afrique] Ibn Batoutah | Voyages
+  unresolved [afrique] Basset | Contes populaires d'Afrique
+  skip 15458: no plain text
+  unresolved [afrique] Dubois | Tombouctou la mystérieuse
+  unresolved [afrique] Maupassant | Au soleil
+  unresolved [afrique] Loti | Le roman d'un spahi
+  ws-9cbe02b6 L'Art de la guerre (Sun Tzu, trad. Amiot)
+  error [afrique]  | L'Art de la guerre (Sun Tzu, trad. Amiot): The page you specified doesn't exist.
+  shelf afrique: 2/22
+  unresolved [jeunesse] Perrault | Les contes de Perrault
+  skip 15058: no plain text
+  skip 15059: no plain text
+  skip 12993: no plain text
+  skip 15057: no plain text
+  skip 12979: no plain text
+  unresolved [jeunesse] Malot | Sans famille
+  skip 13793: no plain text
+  skip 11770: no plain text
+  skip 10687: not public domain under life+70
+  unresolved [jeunesse] Verne | Deux ans de vacances
+  skip 7442: no plain text
+  skip 4548: no plain text
+  skip 12250: no plain text
+  skip 18244: no plain text
+  skip 38705: not public domain under life+70
+  skip 17640: no plain text
+  skip 54183: not public domain under life+70
+  unresolved [jeunesse] Collodi | Pinocchio
+  skip 27782: no plain text
+  skip 30779: no plain text
+  shelf jeunesse: 6/27
+  skip 45109: not public domain under life+70
+  unresolved [dev] Seneca | Letters from a Stoic
+  skip 2944: no plain text
+  skip 935: no plain text
+  skip 34258: no plain text
+  skip 29772: no plain text
+  skip 14913: no plain text
+  unresolved [dev] Rousseau | Du contrat social
+  unresolved [dev] Épictète | Manuel
+  unresolved [dev] Marc Aurèle | Pensées pour moi-même
+  unresolved [dev] Sénèque | De la brièveté de la vie
+  skip 17980: no plain text
+  shelf dev: 8/20
+  skip 79159: no plain text
+  skip 730: no plain text
+  skip 19337: not public domain under life+70
+  skip 42: no plain text
+  skip 7193: no plain text
+  skip 15: no plain text
+  skip 33: no plain text
+  skip 219: no plain text
+  skip 236: no plain text
+  skip 514: no plain text
+  skip 113: no plain text
+  skip 215: no plain text
+  skip 70841: not public domain under life+70
+  skip 65473: not public domain under life+70
+  skip 1122: no plain text
+  skip 1112: no plain text
+  skip 1533: no plain text
+  skip 3160: not public domain under life+70
+  skip 135: not public domain under life+70
+  skip 164: no plain text
+  skip 103: not public domain under life+70
+  shelf classiques-en: 19/40
 catalogue: 205 books
