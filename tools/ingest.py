@@ -26,7 +26,7 @@ DATA = os.path.join(SITE, "data")
 CACHE = os.path.join(ROOT, "tools", "cache")
 PD_DEATH_BEFORE = 1956          # life + 70 as of 2026
 PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
-FMT = 4                         # bump to re-process every book with the current text pipeline
+FMT = 5                         # bump to re-process every book with the current text pipeline
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
 GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)

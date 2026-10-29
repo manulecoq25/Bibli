@@ -152,6 +152,21 @@ def ingest_ws(title, author="", lang="fr", genres=("fiction",)):
     gid = "ws-" + hashlib.sha1(title.encode()).hexdigest()[:8]
     ingest.log(f"  {gid} {title}")
     chapters, display = chapters_of(title)
+    # several editions or translations of the same work: keep the first one that has real chapters
+    def seg0(c):
+        t = c["title"] or ""
+        return t.split(" · ")[0] if " · " in t else t
+    groups = []
+    for c in chapters:
+        g = seg0(c)
+        if g not in groups:
+            groups.append(g)
+    ed = [g for g in groups if re.match(r"(?i)^(édition|edition|traduction|texte|dentu|[a-zé]+,? \d{4})", g)]
+    if len(ed) >= 2 or (len(ed) == 1 and len(groups) > 1 and any(" · " in (c["title"] or "") for c in chapters)):
+        sizes = {g: sum(1 for c in chapters if seg0(c) == g) for g in groups}
+        keep = next((g for g in groups if sizes[g] >= 2), groups[0])
+        ingest.log(f"    keeping edition '{keep}' of {len(groups)} ({', '.join(groups[:4])}…)")
+        chapters = [c for c in chapters if seg0(c) == keep]
     # drop a chapter-title prefix shared by every chapter ("Édition Louandre, 1910 · Acte I" -> "Acte I")
     titles = [c["title"] or "" for c in chapters]
     while len(chapters) > 1 and all(" · " in t for t in titles) and len({t.split(" · ")[0] for t in titles}) == 1:
