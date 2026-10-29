@@ -93,7 +93,25 @@ def gutendex_list(lang, count):
     return books[:count]
 
 def gutendex_one(gid):
-    return json.loads(fetch(f"https://gutendex.com/books/{gid}"))
+    try:
+        return json.loads(fetch(f"https://gutendex.com/books/{gid}"))
+    except Exception as e:
+        log(f"  gutendex unavailable for {gid} ({e}); reading the header of the text instead")
+        return header_meta(gid)
+
+def header_meta(gid):
+    """Metadata from the Project Gutenberg text header (Title:, Author:, Language:)."""
+    txt = fetch_text(gid)
+    head = txt[:6000]
+    def field(name):
+        m = re.search(rf"^{name}:\s*(.+?)\s*$", head, re.M | re.I)
+        return m.group(1).strip() if m else ""
+    title = field("Title") or f"Gutenberg #{gid}"
+    authors = [a.strip() for a in re.split(r"\s*(?:;| and | et )\s*", field("Author")) if a.strip()]
+    lang = field("Language").lower()[:2] or "en"
+    return {"id": gid, "title": title, "authors": [{"name": a} for a in authors], "languages": [lang],
+            "copyright": False, "bookshelves": [], "subjects": [], "download_count": 0,
+            "formats": {}, "seeded": True}
 
 def text_url(meta):
     f = meta.get("formats", {})
@@ -225,10 +243,10 @@ def clean_title(t):
 
 def ingest(meta, lang_hint=None):
     gid = meta["id"]
-    if meta.get("copyright") is not False or not authors_ok(meta):
+    if meta.get("copyright") is not False or (not meta.get("seeded") and not authors_ok(meta)):
         log(f"  skip {gid}: not public domain under life+70"); return None
     url = text_url(meta)
-    if not url:
+    if not url and not meta.get("seeded"):
         log(f"  skip {gid}: no plain text"); return None
     log(f"  {gid} {clean_title(meta['title'])}")
     txt = strip_boilerplate(fetch_text(gid, url))
