@@ -285,7 +285,7 @@ aleph 000
   135 Les Misérables
   164 Twenty Thousand Leagues under the Sea
   103 Around the World in Eighty Days
-catalogue: 287 books
+catalogue: 289 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 1727: not public domain under life+70
@@ -301,7 +301,7 @@ catalogue: 287 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 287 books
+catalogue: 289 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 216: not public domain under life+70
@@ -318,7 +318,7 @@ catalogue: 287 books
   skip 5712: not public domain under life+70
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
-catalogue: 287 books
+catalogue: 289 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   ws-fe837a4e Le Tartuffe ou l'Imposteur
@@ -374,6 +374,9 @@ catalogue: 287 books
   shelf dev: 18/20
   skip 3160: not public domain under life+70
   shelf classiques-en: 39/40
+  removing ws-6ffe193f Journal d'un voyage à Temboctou et à Jenné (no longer on a shelf)
+  removing ws-e0af58c5 Les Contes de ma mère l'Oye (no longer on a shelf)
+  removing ws-26e61f59 Les Aventures de Pinocchio (no longer on a shelf)
   skip 37683: not public domain under life+70
   skip 1727: not public domain under life+70
   skip 16328: not public domain under life+70
@@ -387,4 +390,4 @@ catalogue: 287 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 289 books
+catalogue: 286 books
