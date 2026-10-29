@@ -29,6 +29,7 @@ PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
 GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)
+    (r"conduct of life|self-help|success|stoic|ethics|maxims|strategy|military art|wisdom|happiness|meditations", "selfhelp"),
     (r"children|juvenile|fairy", "children"),
     (r"poetry|po[eé]sie|poems", "poetry"),
     (r"drama|plays|th[eé][aâ]tre", "drama"),
