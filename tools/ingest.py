@@ -394,6 +394,11 @@ def main():
                 metas.append(catalog().get(int(gid)) or gutendex_one(int(gid)))
             except Exception as e:
                 log(f"  cannot refresh {gid}: {e}")
+    # hand-maintained block list: wrong editions picked up by earlier runs (stage adaptations, partial volumes)
+    for gid in ("79159", "7193"):
+        if gid in catalogue:
+            log(f"  removing {gid} {catalogue[gid]['title']} (blocked)"); del catalogue[gid]
+            import shutil; shutil.rmtree(os.path.join(DATA, "books", gid), ignore_errors=True)
     shelves_out = []
     if args.shelves:
         import ingest_wikisource
