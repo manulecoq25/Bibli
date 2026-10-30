@@ -172,3 +172,5 @@ body.selecting .tapzone{pointer-events:none}
 .install .btn{background:var(--gold);color:#182D3B;min-height:40px;padding:8px 14px}.install .pill{background:transparent;color:inherit;border-color:rgba(247,243,233,.3);min-height:36px;min-width:36px}
 @media(min-width:1000px){.install{left:auto;right:24px;bottom:24px;max-width:420px}}
 @media(display-mode:standalone){.install{display:none!important}}
+
+.inp{display:block;width:100%;font:16px var(--sf);padding:12px 14px;border:1px solid var(--line);border-radius:var(--r2);background:var(--surface);color:var(--ink);min-height:48px;margin-top:4px}.inp:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px color-mix(in srgb,var(--forest) 18%,transparent)}
