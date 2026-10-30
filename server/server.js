@@ -22,7 +22,10 @@ async function migrate() {
       created TIMESTAMPTZ NOT NULL DEFAULT now(), last_used TIMESTAMPTZ NOT NULL DEFAULT now());
     CREATE TABLE IF NOT EXISTS itanva.states (
       reader_id BIGINT PRIMARY KEY REFERENCES itanva.readers(id) ON DELETE CASCADE,
-      data JSONB NOT NULL, updated TIMESTAMPTZ NOT NULL DEFAULT now());`);
+      data JSONB NOT NULL, updated TIMESTAMPTZ NOT NULL DEFAULT now());
+    CREATE TABLE IF NOT EXISTS itanva.explanations (
+      key TEXT PRIMARY KEY, book_id TEXT, lang TEXT, kind TEXT, passage TEXT NOT NULL, answer TEXT NOT NULL,
+      model TEXT, hits INT NOT NULL DEFAULT 1, up INT NOT NULL DEFAULT 0, down INT NOT NULL DEFAULT 0, created TIMESTAMPTZ NOT NULL DEFAULT now());`);
 }
 
 // ---- helpers
@@ -109,6 +112,39 @@ app.post("/api/pin", auth, async (req, res) => {
   if (!(await checkHash(pin, r.rows[0].pin_hash))) return res.status(401).json({ error: "bad_credentials" });
   await pool.query("UPDATE itanva.readers SET pin_hash=$1 WHERE id=$2", [await makeHash(newPin), req.readerId]); res.json({ ok: true });
 });
+// ---- explanations (words in context, passages) — Anthropic API, cached per passage
+const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
+const MODEL = process.env.EXPLAIN_MODEL || "claude-haiku-5-5";
+const quota = new Map(); // ip|reader -> {day, n}
+function overQuota(key, limit) { const day = new Date().toISOString().slice(0, 10); const q = quota.get(key) || { day, n: 0 }; if (q.day !== day) { q.day = day; q.n = 0; } q.n++; quota.set(key, q); return q.n > limit; }
+setInterval(() => { const day = new Date().toISOString().slice(0, 10); for (const [k, q] of quota) if (q.day !== day) quota.delete(k); }, 3600e3).unref();
+async function optionalAuth(req) { const m = /^Bearer ([a-f0-9]{64})$/.exec(req.get("authorization") || ""); if (!m) return null; const r = await pool.query("SELECT reader_id FROM itanva.sessions WHERE token_hash=$1", [sha(m[1])]); return r.rowCount ? r.rows[0].reader_id : null; }
+const SYS = {
+  fr: `Tu es le dictionnaire et le guide de lecture d'Itanva, une bibliothèque de classiques lue sur téléphone par des lycéens et des adultes francophones d'Afrique de l'Ouest. On te donne un passage d'un livre (titre, auteur) et parfois un mot précis. Explique en français simple et direct, en 60 à 120 mots : (1) ce que le passage ou le mot veut dire ici, (2) les mots anciens ou rares, avec leur sens d'aujourd'hui, (3) si utile, l'allusion historique ou littéraire. Pas de préambule, pas de jugement sur le lecteur, pas de spoiler sur la suite du livre. Si le texte est en anglais, explique quand même en français et traduis l'essentiel. Si tu n'es pas sûr d'une référence, dis-le en une phrase.`,
+  en: `You are the dictionary and reading guide of Itanva, a library of classics read on phones by students and adults. You are given a passage from a book (title, author) and sometimes a specific word. Explain in plain, direct English, in 60 to 120 words: (1) what the passage or word means here, (2) old or rare words with their modern meaning, (3) if useful, the historical or literary allusion. No preamble, no judgement of the reader, no spoilers. If the text is in French, still explain in English and translate the essentials. If unsure about a reference, say so in one sentence.` };
+app.post("/api/explain", async (req, res) => {
+  if (!ANTHROPIC_KEY) return res.status(503).json({ error: "unavailable" });
+  const { text, word, book, author, lang, ui, bookId } = req.body || {};
+  if (typeof text !== "string" || text.trim().length < 2 || text.length > 900) return res.status(400).json({ error: "bad_text" });
+  const L = ui === "en" ? "en" : "fr"; const kind = word ? "word" : "passage";
+  const readerId = await optionalAuth(req);
+  if (overQuota(readerId ? "r:" + readerId : "ip:" + req.ip, readerId ? 150 : 40)) return res.status(429).json({ error: "quota" });
+  const key = sha([L, kind, (word || "").toLowerCase().trim(), text.trim().toLowerCase()].join("|"));
+  const c = await pool.query("UPDATE itanva.explanations SET hits=hits+1 WHERE key=$1 RETURNING answer", [key]);
+  if (c.rowCount) return res.json({ answer: c.rows[0].answer, cached: true, key });
+  const user = (word ? `Mot à expliquer : « ${word} »
+` : "") + `Livre : ${book || "?"} — ${author || "?"}
+Passage : « ${text.trim()} »`;
+  const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST", headers: { "content-type": "application/json", "x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01" },
+    body: JSON.stringify({ model: MODEL, max_tokens: 400, system: SYS[L], messages: [{ role: "user", content: user }] }) });
+  if (!r.ok) { console.error("anthropic", r.status, await r.text()); return res.status(502).json({ error: "upstream" }); }
+  const j = await r.json(); const answer = (j.content || []).map(x => x.text || "").join("").trim();
+  if (!answer) return res.status(502).json({ error: "upstream" });
+  await pool.query("INSERT INTO itanva.explanations(key,book_id,lang,kind,passage,answer,model) VALUES($1,$2,$3,$4,$5,$6,$7) ON CONFLICT (key) DO NOTHING", [key, String(bookId || ""), L, kind, (word ? word + " | " : "") + text.trim(), answer, MODEL]);
+  res.json({ answer, cached: false, key });
+});
+app.post("/api/explain/vote", async (req, res) => { const { key, up } = req.body || {}; if (typeof key !== "string" || !/^[a-f0-9]{64}$/.test(key)) return res.status(400).json({ error: "bad" }); await pool.query(up ? "UPDATE itanva.explanations SET up=up+1 WHERE key=$1" : "UPDATE itanva.explanations SET down=down+1 WHERE key=$1", [key]); res.json({ ok: true }); });
+
 app.delete("/api/account", auth, async (req, res) => { await pool.query("DELETE FROM itanva.readers WHERE id=$1", [req.readerId]); res.json({ ok: true }); });
 app.use((err, req, res, next) => { console.error(err); res.status(500).json({ error: "server" }); });
 

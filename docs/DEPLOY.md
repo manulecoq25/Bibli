@@ -26,3 +26,8 @@ GitHub → Settings → Pages → Custom domain (adds `site/CNAME`; keep that fi
 
 ## Analytics (optional, later)
 See `docs/ANALYTICS.md`; enabling is a one-line script in `index.html`.
+
+## Explanations and glossaries (AI)
+- `itanva-sync` needs `ANTHROPIC_API_KEY` (Render → itanva-sync → Environment). Optional `EXPLAIN_MODEL` (default `claude-haiku-5-5`). Without the key, "Expliquer" answers "not enabled yet"; everything else works.
+- Quotas: 40 explanations/day per IP without account, 150 with; answers cached per passage in `itanva.explanations` (with 👍/👎 counts).
+- Glossaries: GitHub secret `ANTHROPIC_API_KEY` → the weekly ingest generates `glossary.json` for 40 more books per run (most downloaded first). Served offline, free at read time.

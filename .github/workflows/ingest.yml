@@ -44,6 +44,10 @@ jobs:
             python3 tools/ingest.py --shelves tools/shelves.txt
           } 2>&1 | tee tools/last-run.log
           ITANVA_URL=https://itanva.com/ python3 tools/build_site.py
+      - name: Glossaries (needs ANTHROPIC_API_KEY secret; 40 books per run)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/glossary.py --limit 40 2>&1 | tail -5
       - name: Commit the catalogue
         if: always()
         run: |
