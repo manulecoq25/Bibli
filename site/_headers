@@ -1,6 +1,14 @@
 /data/books/*
   Cache-Control: public, max-age=31536000, immutable
-/data/catalogue.json
+/data/orig/*
+  Cache-Control: public, max-age=31536000, immutable
+/data/index.json
+  Cache-Control: public, max-age=600
+/data/*.json
   Cache-Control: public, max-age=600
 /sw.js
   Cache-Control: no-cache
+/js/app.js
+  Cache-Control: public, max-age=600
+/css/app.css
+  Cache-Control: public, max-age=600
