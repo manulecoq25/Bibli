@@ -22,7 +22,7 @@ aleph 000
   skip 52927: not public domain under life+70
   skip 12949: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 296 books
+catalogue: 295 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 1727: not public domain under life+70
@@ -36,7 +36,7 @@ catalogue: 296 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 296 books
+catalogue: 295 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 216: not public domain under life+70
@@ -51,7 +51,7 @@ catalogue: 296 books
   skip 5712: not public domain under life+70
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
-catalogue: 296 books
+catalogue: 295 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   ws-5cd0056c Dom Juan ou le Festin de pierre
@@ -65,57 +65,47 @@ catalogue: 296 books
   ws-fe251692 Le Père Goriot
   skip Le Père Goriot: too short (0 words)
   shelf bac: 35/39
+  unresolved [voix] Cugoano | Thoughts and sentiments on the evil of slavery
+  unresolved [voix] Leo Africanus | The history and description of Africa
+  unresolved [voix] Ibn Batoutah | Voyages
+  unresolved [voix] Mofolo | Chaka
+  unresolved [voix] Hayford | Ethiopia unbound
+  unresolved [voix] Crowther | Journal of an expedition up the Niger
+  unresolved [voix] Johnson | The history of the Yorubas
+  unresolved [voix] Blyden | Christianity, Islam and the Negro race
+  unresolved [voix] Horton | West African countries and peoples
+  skip 45631: not public domain under life+70
+  unresolved [voix] Dunbar | Lyrics of lowly life
+  unresolved [voix] Locke | The new Negro
+  skip 61741: not public domain under life+70
+  unresolved [voix] Hopkins | Contending forces
+  unresolved [voix] Diagne | Les trois volontés de Malic
+  unresolved [voix] Maran | Batouala
+  unresolved [voix] Hazoumé | Doguicimi
+  shelf voix: 14/31
   skip 408: not public domain under life+70
-  unresolved [afrique] Cugoano | Thoughts and sentiments on the evil of slavery
-  unresolved [afrique] Leo Africanus | The history and description of Africa
   ws-f2af66e4 L'Âme nègre
     wikisource: 'L'Âme nègre' -> 'L’Âme nègre'
   skip L'Âme nègre: too short (7 words)
-  unresolved [afrique] Cousturier | Des inconnus chez moi
-  unresolved [afrique] Ibn Batoutah | Voyages
-  unresolved [afrique] Dubois | Tombouctou la mystérieuse
+  unresolved [temoins] Cousturier | Des inconnus chez moi
+  unresolved [temoins] Dubois | Tombouctou la mystérieuse
   ws-fd0db64e Au soleil (Maupassant)
     wikisource: 'Au soleil (Maupassant)' -> 'Au soleil (recueil)/Au soleil' (edition page)
   skip Au soleil (Maupassant): too short (807 words)
-  unresolved [afrique] Barker | A year's housekeeping in South Africa
+  unresolved [temoins] Barker | A year's housekeeping in South Africa
   skip 40830: not public domain under life+70
   skip 52928: not public domain under life+70
-  unresolved [afrique] Mofolo | Chaka
-  unresolved [afrique] Hayford | Ethiopia unbound
-  unresolved [afrique] Crowther | Journal of an expedition up the Niger
-  unresolved [afrique] Johnson | The history of the Yorubas
-  unresolved [afrique] Blyden | Christianity, Islam and the Negro race
-  unresolved [afrique] Horton | West African countries and peoples
-  skip 45631: not public domain under life+70
-  unresolved [afrique] Dunbar | Lyrics of lowly life
-  unresolved [afrique] Locke | The new Negro
-  skip 61741: not public domain under life+70
-  unresolved [afrique] Hopkins | Contending forces
-  unresolved [afrique] Speke | Journal of the discovery of the source of the Nile
-  unresolved [afrique] Bosman | A new and accurate description of the coast of Guinea
-  unresolved [afrique] Delafosse | Les Noirs de l'Afrique
-  unresolved [afrique] Binger | Esclavage, islamisme et christianisme
-  unresolved [afrique] Diagne | Les trois volontés de Malic
-  unresolved [afrique] Maran | Batouala
-  unresolved [afrique] Hazoumé | Doguicimi
-  unresolved [afrique] Gide | Voyage au Congo
-  unresolved [afrique] Marchand | Les Dahoméens
-  unresolved [afrique] Trilles | Le totémisme chez les Fân
-  unresolved [afrique] Lebeuf | Zanzibar
-  unresolved [afrique] Vigné d'Octon | Au pays des fétiches
-  unresolved [afrique] Kingsley | Travels in West Africa
-  shelf afrique: 34/69
-  ws-fc09feff Deux ans de vacances
-  skip Deux ans de vacances: too short (0 words)
-  unresolved [jeunesse] Perrault | Contes
-  shelf jeunesse: 25/27
-  skip 56075: not public domain under life+70
-  skip 2388: not public domain under life+70
-  ws-79507c32 Manuel d'Épictète
-  skip Manuel d'Épictète: too short (0 words)
-  shelf dev: 18/20
-  skip 3160: not public domain under life+70
-  shelf classiques-en: 39/40
+  unresolved [temoins] Speke | Journal of the discovery of the source of the Nile
+  unresolved [temoins] Bosman | A new and accurate description of the coast of Guinea
+  unresolved [temoins] Delafosse | Les Noirs de l'Afrique
+  unresolved [temoins] Binger | Esclavage, islamisme et christianisme
+  unresolved [temoins] Gide | Voyage au Congo
+  unresolved [temoins] Marchand | Les Dahoméens
+  unresolved [temoins] Trilles | Le totémisme chez les Fân
+  unresolved [temoins] Lebeuf | Zanzibar
+  unresolved [temoins] Vigné d'Octon | Au pays des fétiches
+  unresolved [temoins] Kingsley | Travels in West Africa
+  shelf temoins: 19/37
   skip 37472: not public domain under life+70
   skip 75833: not public domain under life+70
   unresolved [contes] Tremearne | Hausa folk-lore
@@ -139,7 +129,17 @@ catalogue: 296 books
   unresolved [contes] Hazoumé | Contes du Dahomey
   unresolved [contes] Tauxier | Contes bambara
   shelf contes: 12/35
-  removing ws-0b9e9cfb Les Contes du Gabon (no longer on a shelf)
+  ws-fc09feff Deux ans de vacances
+  skip Deux ans de vacances: too short (0 words)
+  unresolved [jeunesse] Perrault | Contes
+  shelf jeunesse: 25/27
+  skip 56075: not public domain under life+70
+  skip 2388: not public domain under life+70
+  ws-79507c32 Manuel d'Épictète
+  skip Manuel d'Épictète: too short (0 words)
+  shelf dev: 19/21
+  skip 3160: not public domain under life+70
+  shelf classiques-en: 39/40
   skip 1727: not public domain under life+70
   skip 16328: not public domain under life+70
   skip 1497: not public domain under life+70
