@@ -29,11 +29,12 @@ PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
 FMT = 7                         # bump to re-process every book with the current text pipeline
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
-GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)
-    (r"conduct of life|self-help|success|stoic|ethics|maxims|strategy|military art|wisdom|happiness|meditations", "selfhelp"),
+GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key); first match = primary genre
     (r"children|juvenile|fairy", "children"),
     (r"poetry|po[eé]sie|poems", "poetry"),
     (r"drama|plays|th[eé][aâ]tre", "drama"),
+    (r"satire|picaresque|novel|roman|nouvelles|short stories|contes", "fiction"),
+    (r"conduct of life|self-help|success|stoic|ethics|maxims|strategy|military art|wisdom|happiness|meditations", "selfhelp"),
     (r"philosoph", "philosophy"),
     (r"history|histoire|biograph", "history"),
     (r"science fiction|fantasy|adventure|aventure|voyage|travel", "adventure"),
@@ -205,6 +206,7 @@ HEAD_RX = re.compile(
     re.I)
 
 def strip_boilerplate(txt):
+    txt = re.sub(r"\[Illustration:?[^\]]*\]", "", txt)   # Gutenberg image markers
     m = START_RX.search(txt)
     if m:
         txt = txt[m.end():]

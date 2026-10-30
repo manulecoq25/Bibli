@@ -113,7 +113,7 @@ details.x summary{cursor:pointer;font-weight:600;padding:10px 0;list-style:none;
 .tabs a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;color:var(--ink2);min-height:var(--tab)}
 .tabs a.on{color:var(--terra-ink);font-weight:700}.tabs svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 body.reading .tabs,body.reading header.top,body.reading footer{display:none}
-@media(min-width:1000px){.tabs{position:sticky;top:0;bottom:auto;height:auto;border-top:0;border-bottom:1px solid var(--line);justify-content:center;gap:8px;padding:0 16px}.tabs a{flex:0 0 auto;flex-direction:row;gap:8px;padding:0 14px;font-size:14px;min-height:48px}.tabs svg{width:20px;height:20px}body{padding-bottom:0}header.top{position:static}}
+@media(min-width:1000px){.tabs{position:fixed;top:0;bottom:auto;left:50%;right:auto;transform:translateX(-50%);width:auto;height:56px;padding:0;border:0;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;gap:4px;z-index:6}.tabs a{flex:0 0 auto;flex-direction:row;gap:8px;padding:0 14px;font-size:14px;min-height:56px;border-radius:0;border-bottom:2px solid transparent}.tabs a.on{border-color:var(--terra)}.tabs svg{width:20px;height:20px}body{padding-bottom:0}body.reading .tabs{display:none}}
 /* states */
 .skel{background:linear-gradient(90deg,var(--surface2) 25%,var(--surface) 50%,var(--surface2) 75%);background-size:200% 100%;animation:sh 1.2s infinite;border-radius:8px}
 @keyframes sh{to{background-position:-200% 0}}
