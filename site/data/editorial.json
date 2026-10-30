@@ -863,5 +863,218 @@
 "fr": "contes · ruse · Orient",
 "en": "tales · cunning · Orient"
 }
+},
+"6886": {
+"hero": true,
+"hook": {
+"fr": "1854 : déguisé en marchand arabe, Burton entre dans Harar, la ville interdite aux Européens, et en ressort vivant pour le raconter.",
+"en": "1854: disguised as an Arab merchant, Burton enters Harar, the city closed to Europeans, and comes out alive to tell it."
+},
+"mood": {
+"fr": "Harar · exploration · déguisement",
+"en": "Harar · exploration · disguise"
+}
+},
+"54400": {
+"hook": {
+"fr": "Une romancière australienne traverse seule la Gold Coast et le Nigeria en 1911, en hamac, et regarde tout avec un œil sans complaisance.",
+"en": "An Australian novelist crosses the Gold Coast and Nigeria alone in 1911, by hammock, and looks at everything without indulgence."
+},
+"mood": {
+"fr": "voyage · 1911 · regard",
+"en": "travel · 1911 · gaze"
+}
+},
+"5891": {
+"hook": {
+"fr": "Une Anglaise en jupe longue remonte les fleuves du Gabon, escalade le mont Cameroun et négocie avec les Fang. Drôle, précise, sans peur.",
+"en": "An Englishwoman in a long skirt sails up the rivers of Gabon, climbs Mount Cameroon and bargains with the Fang. Funny, precise, fearless."
+},
+"mood": {
+"fr": "Gabon · humour · audace",
+"en": "Gabon · humour · daring"
+}
+},
+"1039": {
+"hook": {
+"fr": "Seize ans de marche du Cap au Zambèze, les chutes qu'il baptise Victoria, et un récit qui fera rêver toute l'Europe.",
+"en": "Sixteen years on foot from the Cape to the Zambezi, the falls he names Victoria, and an account that set all Europe dreaming."
+},
+"mood": {
+"fr": "Zambèze · marche · 1857",
+"en": "Zambezi · walking · 1857"
+}
+},
+"5157": {
+"hook": {
+"fr": "Un journaliste reçoit l'ordre de retrouver un explorateur disparu au cœur du continent. Il le trouve, et prononce la phrase la plus célèbre du siècle.",
+"en": "A journalist is ordered to find an explorer lost in the heart of the continent. He finds him, and says the most famous sentence of the century."
+},
+"mood": {
+"fr": "Tanganyika · presse · obstination",
+"en": "Tanganyika · press · obstinacy"
+}
+},
+"409": {
+"hook": {
+"fr": "Enlevée en Afrique de l'Ouest à sept ans, esclave à Boston, elle publie à vingt ans le premier recueil de poèmes d'une Africaine-Américaine. 1773.",
+"en": "Taken from West Africa at seven, enslaved in Boston, she publishes at twenty the first book of poems by an African-American. 1773."
+},
+"mood": {
+"fr": "poésie · 1773 · première",
+"en": "poetry · 1773 · first"
+}
+},
+"11012": {
+"hook": {
+"fr": "Un musicien assez clair de peau pour passer pour blanc raconte, sans donner son nom, ce que ce choix lui a coûté.",
+"en": "A musician light-skinned enough to pass for white tells, without giving his name, what that choice cost him."
+},
+"mood": {
+"fr": "identité · ragtime · secret",
+"en": "identity · ragtime · secret"
+}
+},
+"64989": {
+"hook": {
+"fr": "Les poèmes de Harlem en 1922 : la colère, la nostalgie de la Jamaïque, et un sonnet que l'on cite encore dans les luttes.",
+"en": "Harlem's poems in 1922: anger, longing for Jamaica, and a sonnet still quoted in struggles today."
+},
+"mood": {
+"fr": "Harlem · sonnets · colère",
+"en": "Harlem · sonnets · anger"
+}
+},
+"70543": {
+"hook": {
+"fr": "Il a vingt-deux ans quand paraît ce recueil, et Harlem tient son poète. Court, musical, à lire à voix haute.",
+"en": "He is twenty-two when this collection appears, and Harlem has its poet. Short, musical, to be read aloud."
+},
+"mood": {
+"fr": "Harlem · jeunesse · musique",
+"en": "Harlem · youth · music"
+}
+},
+"14975": {
+"hook": {
+"fr": "1892 : une journaliste noire de Memphis enquête sur les lynchages et démonte, chiffres à l'appui, le mensonge qui les justifie.",
+"en": "1892: a Black journalist from Memphis investigates lynchings and dismantles, with figures, the lie used to justify them."
+},
+"mood": {
+"fr": "enquête · courage · 1892",
+"en": "investigation · courage · 1892"
+}
+},
+"1674": {
+"hook": {
+"fr": "Née esclave dans l'État de New York, elle marche vers la liberté, change de nom et devient l'une des voix les plus écoutées de son temps.",
+"en": "Born enslaved in New York State, she walks to freedom, takes a new name and becomes one of the most listened-to voices of her time."
+},
+"mood": {
+"fr": "liberté · parole · foi",
+"en": "freedom · speech · faith"
+}
+},
+"11666": {
+"hook": {
+"fr": "Un vieil homme raconte à un couple de Blancs les sortilèges des plantations. Chaque conte cache une vérité qu'ils n'entendent pas.",
+"en": "An old man tells a white couple the spells of the plantations. Each tale hides a truth they do not hear."
+},
+"mood": {
+"fr": "contes · ruse · plantations",
+"en": "tales · cunning · plantations"
+}
+},
+"48828": {
+"hero": true,
+"hook": {
+"fr": "Le lièvre, l'araignée et les autres « viandes » : les contes des Temne et des Mende de Sierra Leone, notés en 1903 tels qu'on les disait le soir.",
+"en": "The rabbit, the spider and the other 'beef': the tales of the Temne and Mende of Sierra Leone, noted in 1903 as they were told at night."
+},
+"mood": {
+"fr": "Sierra Leone · araignée · veillée",
+"en": "Sierra Leone · spider · evening tales"
+}
+},
+"70959": {
+"hook": {
+"fr": "Pourquoi la tortue a la carapace fendue, pourquoi le soleil et la lune vivent au ciel : les histoires d'Ikom, dans le sud-est du Nigeria, recueillies en 1913.",
+"en": "Why the tortoise's shell is cracked, why the sun and moon live in the sky: the stories of Ikom, south-eastern Nigeria, collected in 1913."
+},
+"mood": {
+"fr": "Nigeria · origines · tortue",
+"en": "Nigeria · origins · tortoise"
+}
+},
+"58900": {
+"hook": {
+"fr": "Les contes des Mpongwe, Benga et Fang où les animaux parlent, jugent et se jouent des hommes, notés par un missionnaire resté quarante ans au Gabon.",
+"en": "Tales of the Mpongwe, Benga and Fang where animals speak, judge and outwit men, noted by a missionary who spent forty years in Gabon."
+},
+"mood": {
+"fr": "Gabon · animaux · ruse",
+"en": "Gabon · animals · cunning"
+}
+},
+"71335": {
+"hook": {
+"fr": "Contes, proverbes et énigmes xhosa recueillis en 1882, avec le texte original et la traduction en regard.",
+"en": "Xhosa tales, proverbs and riddles collected in 1882, with the original text and the translation side by side."
+},
+"mood": {
+"fr": "xhosa · proverbes · énigmes",
+"en": "Xhosa · proverbs · riddles"
+}
+},
+"2306": {
+"hook": {
+"fr": "Les contes de Frère Lapin, nés en Afrique et passés par les plantations de Géorgie, tels qu'un journaliste les a notés en 1880.",
+"en": "The Brer Rabbit tales, born in Africa and passed through Georgia's plantations, as a journalist noted them in 1880."
+},
+"mood": {
+"fr": "lapin · Géorgie · oralité",
+"en": "rabbit · Georgia · oral tradition"
+}
+},
+"ws-1d3df535": {
+"hero": true,
+"hook": {
+"fr": "Cent contes de tout le continent, du Maghreb au Cap, réunis en 1903 : le lièvre, l'hyène, le chacal et les génies, en français.",
+"en": "A hundred tales from the whole continent, from the Maghreb to the Cape, gathered in 1903: hare, hyena, jackal and spirits, in French."
+},
+"mood": {
+"fr": "continent · lièvre · 1903",
+"en": "continent · hare · 1903"
+}
+},
+"ws-7b111b15": {
+"hook": {
+"fr": "Les contes du Soudan français et du Sénégal, notés par un administrateur qui prenait les conteurs au sérieux.",
+"en": "Tales from French Sudan and Senegal, noted by an administrator who took the storytellers seriously."
+},
+"mood": {
+"fr": "Mali · Sénégal · conteurs",
+"en": "Mali · Senegal · storytellers"
+}
+},
+"77526": {
+"hook": {
+"fr": "Une mission traverse le Sahara et le Sahel de Saint-Louis à Tripoli en 1892 ; chaque étape, chaque royaume, chaque marché est noté.",
+"en": "A mission crosses the Sahara and the Sahel from Saint-Louis to Tripoli in 1892; every stage, kingdom and market is noted."
+},
+"mood": {
+"fr": "Sahel · Tchad · 1892",
+"en": "Sahel · Chad · 1892"
+}
+},
+"71296": {
+"hook": {
+"fr": "Un jeune officier découvre le Congo et le Tchad et en rapporte un livre de silence, de chaleur et de doute.",
+"en": "A young officer discovers Congo and Chad and brings back a book of silence, heat and doubt."
+},
+"mood": {
+"fr": "Congo · silence · jeunesse",
+"en": "Congo · silence · youth"
+}
 }
 }

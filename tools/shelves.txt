@@ -269,6 +269,4 @@ fr: Dugast | Contes du Sénégal
 fr: Hazoumé | Contes du Dahomey
 fr: Tauxier | Contes bambara
 ws: fr | Contes nègres de l'Ouest africain | François-Victor Équilbecq | children,history
-ws: fr | Contes soudanais | Charles Monteil | children,history
 ws: fr | Contes populaires d'Afrique | René Basset | children,history
-ws: fr | Les Contes du Gabon | Jean Allégret | children,history
