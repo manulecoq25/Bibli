@@ -22,7 +22,7 @@ aleph 000
   skip 52927: not public domain under life+70
   skip 12949: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 264 books
+catalogue: 296 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 1727: not public domain under life+70
@@ -36,7 +36,7 @@ catalogue: 264 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 264 books
+catalogue: 296 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   skip 216: not public domain under life+70
@@ -51,7 +51,7 @@ catalogue: 264 books
   skip 5712: not public domain under life+70
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
-catalogue: 264 books
+catalogue: 296 books
   loading the Gutenberg catalogue (pg_catalog.csv)…
   78423 texts in the catalogue
   ws-5cd0056c Dom Juan ou le Festin de pierre
@@ -77,16 +77,8 @@ catalogue: 264 books
   ws-fd0db64e Au soleil (Maupassant)
     wikisource: 'Au soleil (Maupassant)' -> 'Au soleil (recueil)/Au soleil' (edition page)
   skip Au soleil (Maupassant): too short (807 words)
-  6886 First Footsteps in East Africa
-  73138 Travels and discoveries in North and Central Africa
-  54400 Alone in West Africa
-  3233 In the Heart of Africa
   unresolved [afrique] Barker | A year's housekeeping in South Africa
   skip 40830: not public domain under life+70
-  22323 Impressions of South Africa
-  75580 Affairs of West Africa
-  69757 Dawn in darkest Africa
-  67502 Africa and the American Flag
   skip 52928: not public domain under life+70
   unresolved [afrique] Mofolo | Chaka
   unresolved [afrique] Hayford | Ethiopia unbound
@@ -95,24 +87,12 @@ catalogue: 264 books
   unresolved [afrique] Blyden | Christianity, Islam and the Negro race
   unresolved [afrique] Horton | West African countries and peoples
   skip 45631: not public domain under life+70
-  1674 The Narrative of Sojourner Truth
-  409 Poems on various subjects, religious and moral
   unresolved [afrique] Dunbar | Lyrics of lowly life
-  11666 The Conjure Woman
-  11012 The Autobiography of an Ex-Colored Man
   unresolved [afrique] Locke | The new Negro
-  64989 Harlem shadows
-  70543 Color
-  61953 The Story of My Life and Work
-  14975 Southern Horrors: Lynch Law in All Its Phases
   skip 61741: not public domain under life+70
   unresolved [afrique] Hopkins | Contending forces
-  5157 How I found Livingstone
-  1039 Missionary Travels and Researches in South Africa
   unresolved [afrique] Speke | Journal of the discovery of the source of the Nile
-  5891 Travels in West Africa: Congo Français, Corisco and Cameroons
   unresolved [afrique] Bosman | A new and accurate description of the coast of Guinea
-  77526 De Saint-Louis à Tripoli par le Lac Tchad
   unresolved [afrique] Delafosse | Les Noirs de l'Afrique
   unresolved [afrique] Binger | Esclavage, islamisme et christianisme
   unresolved [afrique] Diagne | Les trois volontés de Malic
@@ -123,7 +103,6 @@ catalogue: 264 books
   unresolved [afrique] Trilles | Le totémisme chez les Fân
   unresolved [afrique] Lebeuf | Zanzibar
   unresolved [afrique] Vigné d'Octon | Au pays des fétiches
-  71296 Terres de soleil et de sommeil
   unresolved [afrique] Kingsley | Travels in West Africa
   shelf afrique: 34/69
   ws-fc09feff Deux ans de vacances
@@ -139,27 +118,18 @@ catalogue: 264 books
   shelf classiques-en: 39/40
   skip 37472: not public domain under life+70
   skip 75833: not public domain under life+70
-  70959 Ikom folk stories from Southern Nigeria
   unresolved [contes] Tremearne | Hausa folk-lore
   unresolved [contes] Tremearne | Hausa superstitions and customs
-  48828 Cunnie Rabbit, Mr. Spider and the Other Beef: West African Folk Tales
   skip 66923: not public domain under life+70
   skip 38339: not public domain under life+70
-  71335 Kaffir folk-lore
   unresolved [contes] Callaway | Nursery tales, traditions, and histories of the Zulus
-  73413 Reynard the fox in South Africa
   unresolved [contes] Rattray | Hausa folk-lore, customs, proverbs
-  32914 Tales of South Africa
-  37259 Wild Honey: Stories of South Africa
-  2306 Uncle Remus, His Songs and His Sayings
   skip 72735: not public domain under life+70
   skip 35410: not public domain under life+70
   unresolved [contes] Chatelain | Folk-tales of Angola
   unresolved [contes] Frobenius | The voice of Africa
   unresolved [contes] Ellis | Yoruba-speaking peoples of the slave coast
   unresolved [contes] Ellis | The Tshi-speaking peoples of the Gold Coast
-  38038 Fetichism in West Africa
-  58900 Where Animals Talk: West African Folk Lore Tales
   unresolved [contes] Burlin | Songs and tales from the dark continent
   unresolved [contes] Monteil | Contes soudanais
   unresolved [contes] Basset | Contes populaires d'Afrique
@@ -168,14 +138,8 @@ catalogue: 264 books
   unresolved [contes] Dugast | Contes du Sénégal
   unresolved [contes] Hazoumé | Contes du Dahomey
   unresolved [contes] Tauxier | Contes bambara
-  ws-7b111b15 Contes nègres de l'Ouest africain
-    wikisource: 'Contes nègres de l'Ouest africain' -> 'Dans l’ouest africain'
-  ws-11140b2c Contes soudanais
-    wikisource: 'Contes soudanais' -> 'La Figure de proue'
-  skip Contes soudanais: too short (0 words)
-  ws-0b9e9cfb Les Contes du Gabon
-    wikisource: 'Les Contes du Gabon' -> 'Contes populaires d’Afrique (Basset)' (edition page)
-  shelf contes: 13/37
+  shelf contes: 12/35
+  removing ws-0b9e9cfb Les Contes du Gabon (no longer on a shelf)
   skip 1727: not public domain under life+70
   skip 16328: not public domain under life+70
   skip 1497: not public domain under life+70
@@ -187,4 +151,4 @@ catalogue: 264 books
   skip 28000: not public domain under life+70
   skip 14138: not public domain under life+70
   skip 13316: not public domain under life+70
-catalogue: 296 books
+catalogue: 295 books
