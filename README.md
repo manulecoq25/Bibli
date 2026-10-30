@@ -1,8 +1,13 @@
-# Bibli — free public-domain books, phone-first (FR + EN)
+# Itanva — free public-domain books, phone-first (FR + EN)
 
 Static site + ingestion script. No server, no database, no account.
 
 ## Layout
+- `site/css/app.css`, `site/js/app.js` — design system and app (no build step)
+- `site/data/index.json` — light catalogue (built by `tools/build_site.py`); `site/data/books/<id>/meta.json` + `sample.txt` per book
+- `site/livre/<id>.html` — indexable landing page per book; `site/sitemap.xml`
+- `tools/shelves.txt` — editorial shelves (author | title lines); `site/data/editorial.json` — hooks and moods
+- `tools/build_site.py` — derived files; `tools/test_site.py` — end-to-end checks; `docs/` — analytics plan, deployment checklist
 - `site/` — the website (deploy this folder as-is)
   - `index.html` — the whole app (catalogue, search, book page, reader, FR/EN UI)
   - `sw.js` — offline cache (shell + catalogue on install, chapters as they are read)

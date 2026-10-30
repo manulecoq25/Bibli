@@ -53,6 +53,7 @@ def html_to_paras(h):
             continue  # container, its children are matched separately
         txt = re.sub(r"<[^>]+>", "", inner)
         txt = html.unescape(txt).replace("\xa0", " ")
+        txt = re.sub(r"(^|\n)\s*\d{1,4}(?=[A-ZÀ-Ü«])", r"\1", txt)  # verse line numbers glued to the first word
         txt = re.sub(r"[ \t]+", " ", txt).strip()
         if len(txt) < 2:
             continue

@@ -43,16 +43,18 @@ jobs:
             python3 tools/ingest.py --from-file tools/seed-dev.txt
             python3 tools/ingest.py --shelves tools/shelves.txt
           } 2>&1 | tee tools/last-run.log
+          python3 tools/build_site.py
       - name: Commit the catalogue
         if: always()
         run: |
           git config user.name "bibli-bot"
           git config user.email "bibli-bot@users.noreply.github.com"
-          git add site/data tools/last-run.log
+          git add site/data site/livre site/sitemap.xml site/robots.txt tools/last-run.log
           git diff --cached --quiet || git commit -m "data: refresh catalogue ($(date -u +%F))"
-          git pull --rebase --autostash origin main
+          git pull --rebase --autostash origin ${GITHUB_REF_NAME}
           git push
       - name: Deploy the site
+        if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run deploy.yml --ref main

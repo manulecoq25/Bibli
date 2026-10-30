@@ -1,0 +1,5 @@
+* Le texte en italiques est représenté en italiques et le texte en petites capitales en MAJUSCULES.
+
+* L’orthographe originale a été conservée, mais les «n» ont été remplacés para des «ñ» aux noms espagnols qui, à l'origine, les utilisent: par exemple, «Onate» a été changé en «Oñate».
+
+* Les notes de scène (ou didascalies) apparaissent à l’original imprimé en une typographie réduite. Sur cette transcription elles apparaissent en italiques.
