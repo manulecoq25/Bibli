@@ -13,7 +13,7 @@ import html, json, os, re, sys, time
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
 DATA = os.path.join(SITE, "data")
-BASE_URL = os.environ.get("ITANVA_URL", "https://manulecoq25.github.io/Itanva/")
+BASE_URL = os.environ.get("ITANVA_URL", "https://itanva.com/")
 
 LIGHT = ("id", "title", "author", "lang", "genres", "words", "orig", "source", "downloads", "added")
 
