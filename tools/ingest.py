@@ -26,7 +26,7 @@ DATA = os.path.join(SITE, "data")
 CACHE = os.path.join(ROOT, "tools", "cache")
 PD_DEATH_BEFORE = 1956          # life + 70 as of 2026
 PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
-FMT = 6                         # bump to re-process every book with the current text pipeline
+FMT = 7                         # bump to re-process every book with the current text pipeline
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
 GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)
@@ -246,6 +246,16 @@ def split_chapters(txt):
         out.append(cur)
     return [{"title": None, "paras": c} for c in out]
 
+TOC_LINE = re.compile(r"^\s*(chapitre|chapter|livre|book|partie|part|acte|act|sc[eè]ne|tome|section|lettre|letter)\b", re.I)
+def looks_like_toc(ch):
+    """A 'chapter' made mostly of heading-like lines is a table of contents, not text."""
+    lines = [l.strip() for p in ch["paras"] for l in p.split("\n") if l.strip()]
+    if not lines:
+        return True
+    hits = sum(1 for l in lines if TOC_LINE.match(l) or re.match(r"^[IVXLC]+\.?\s", l))
+    words = sum(len(l.split()) for l in lines)
+    return hits >= max(3, 0.5 * len(lines)) and words < 1200
+
 def _chapter(lines):
     title = lines[0].strip()
     body = "\n".join(lines[1:])
@@ -268,6 +278,7 @@ def para_html(p):
     return "<p>" + text + "</p>"
 
 def clean_title(t):
+    t = re.sub(r"\s*:\s*\$b\s*", ": ", t)
     return re.sub(r"\s+", " ", t.split("\n")[0]).strip()
 
 def ingest(meta, lang_hint=None):
@@ -281,6 +292,7 @@ def ingest(meta, lang_hint=None):
     words = sum(len(" ".join(c["paras"]).split()) for c in chapters)
     if words < 1500:
         log(f"  skip {gid}: too short"); return None
+    chapters = [c for c in chapters if not looks_like_toc(c)] or chapters
     # group chapters into parts
     parts, cur, size, index = [], [], 0, []
     for ci, ch in enumerate(chapters):
@@ -395,7 +407,10 @@ def main():
             except Exception as e:
                 log(f"  cannot refresh {gid}: {e}")
     # hand-maintained block list: wrong editions picked up by earlier runs (stage adaptations, partial volumes)
-    for gid in ("79159", "7193"):
+    BLOCK = ("79159", "7193", "37683", "12342", "78119", "78009", "78122", "78080", "100", "59828",
+             "78064", "78041", "78063", "78069", "78021", "78101", "78036", "78059", "78098", "78027", "78037", "78074",
+             "78016", "78065", "78102", "78084", "78017")   # reference works, partial volumes, 1920s titles nobody searches for
+    for gid in BLOCK:
         if gid in catalogue:
             log(f"  removing {gid} {catalogue[gid]['title']} (blocked)"); del catalogue[gid]
             import shutil; shutil.rmtree(os.path.join(DATA, "books", gid), ignore_errors=True)
