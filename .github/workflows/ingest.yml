@@ -43,7 +43,7 @@ jobs:
             python3 tools/ingest.py --from-file tools/seed-dev.txt
             python3 tools/ingest.py --shelves tools/shelves.txt
           } 2>&1 | tee tools/last-run.log
-          python3 tools/build_site.py
+          ITANVA_URL=https://itanva.com/ python3 tools/build_site.py
       - name: Commit the catalogue
         if: always()
         run: |
