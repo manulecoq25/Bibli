@@ -1,4 +1,4 @@
-# Bibli — measurement plan (privacy first)
+# Itanva — measurement plan (privacy first)
 
 ## Principles
 - No third-party tracker, no cookies, no fingerprinting, no consent banner needed.

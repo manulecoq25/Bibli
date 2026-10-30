@@ -1,4 +1,4 @@
-/* Bibli design system — ivory paper, midnight ink, terracotta / forest / gold accents.
+/* Itanva design system — ivory paper, midnight ink, terracotta / forest / gold accents.
    Type: Fraunces (headings, cover titles), system sans (UI), reader font chosen by the reader. */
 :root{
   --bg:#F7F3E9;--surface:#FFFDF8;--surface2:#EFE8D8;--ink:#182D3B;--ink2:#56636E;--line:#E3DAC6;
@@ -21,9 +21,11 @@ h1{font-size:30px;line-height:1.1}h2{font-size:22px;line-height:1.15}h3{font-siz
 p{margin:0}
 /* layout */
 header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;min-height:56px;padding:8px 16px;padding-top:max(8px,env(safe-area-inset-top))}
-.logo{font:700 24px/1 var(--df);display:flex;align-items:center;gap:9px;min-height:44px}
-.logo i{width:24px;height:24px;border-radius:5px 10px 10px 5px;background:var(--terra);display:inline-block;position:relative}
-.logo i:after{content:"";position:absolute;left:6px;top:6px;width:11px;height:2px;background:#fff;box-shadow:0 4px 0 #fff,0 8px 0 #fff}
+.logo{font:700 24px/1 var(--df);letter-spacing:.5px;display:flex;align-items:center;gap:9px;min-height:44px}
+.logo i{width:26px;height:26px;border-radius:7px;background:var(--ink);display:inline-block;position:relative;flex:0 0 26px}
+.logo i:before{content:"";position:absolute;right:5px;top:5px;width:7px;height:7px;border-radius:50%;background:var(--terra)}
+.logo i:after{content:"";position:absolute;left:6px;top:12px;width:14px;height:2px;background:var(--bg);box-shadow:0 4px 0 var(--bg),0 8px 0 var(--bg);border-radius:1px}
+[data-theme=dark] .logo i{background:var(--bg)}[data-theme=dark] .logo i:after{background:var(--ink)}
 .spacer{flex:1}
 main{padding:16px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right));max-width:1040px;margin:0 auto}
 section{margin:28px 0}

@@ -1,4 +1,4 @@
-# Bibli — free public-domain books, phone-first (FR + EN)
+# Itanva — free public-domain books, phone-first (FR + EN)
 
 Static site + ingestion script. No server, no database, no account.
 

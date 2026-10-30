@@ -1,5 +1,5 @@
 {
-"_note": "Hooks and moods written by Bibli (not quoted from the books). Keyed by catalogue id. hero=true marks candidates for 'livre du jour'.",
+"_note": "Hooks and moods written by Itanva (not quoted from the books). Keyed by catalogue id. hero=true marks candidates for 'livre du jour'.",
 "4650": {"hero": true, "hook": {"fr": "On lui a appris que tout va pour le mieux dans le meilleur des mondes. Puis le monde s'est mis à le contredire, pays après pays.", "en": "He was taught that all is for the best in the best of worlds. Then the world started proving him wrong, one country at a time."}, "mood": {"fr": "ironie · voyage · optimisme", "en": "irony · travel · optimism"}},
 "6318": {"hero": true, "hook": {"fr": "Un père qui aime son argent plus que ses enfants, et deux enfants qui aimeraient se marier sans lui demander un sou.", "en": "A father who loves his money more than his children, and two children who would like to marry without asking him for a coin."}, "mood": {"fr": "comédie · famille · avarice", "en": "comedy · family · greed"}},
 "ws-fe837a4e": {"hero": true, "hook": {"fr": "Un faux dévot s'installe dans une maison bourgeoise, et seule la servante voit clair.", "en": "A fake holy man moves into a bourgeois home, and only the maid sees through him."}, "mood": {"fr": "comédie · hypocrisie · famille", "en": "comedy · hypocrisy · family"}},

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bibli — derived site files, built after ingestion (run by CI, or locally: python3 tools/build_site.py).
+"""Itanva — derived site files, built after ingestion (run by CI, or locally: python3 tools/build_site.py).
 
 From site/data/catalogue.json (full, ~600 KB) it writes:
   site/data/index.json            light catalogue for browsing (~60 KB): one line per book
@@ -13,7 +13,7 @@ import html, json, os, re, sys, time
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
 DATA = os.path.join(SITE, "data")
-BASE_URL = os.environ.get("BIBLI_URL", "https://manulecoq25.github.io/Bibli/")
+BASE_URL = os.environ.get("ITANVA_URL", "https://manulecoq25.github.io/Itanva/")
 
 LIGHT = ("id", "title", "author", "lang", "genres", "words", "orig", "source", "downloads", "added")
 
@@ -80,16 +80,16 @@ def main():
         mins = round(b["words"] / 230)
         dur = f"{mins} min" if mins < 75 else f"{round(mins/60)} h"
         page = f"""<!doctype html><html lang="{b['lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(b['title'])} — {html.escape(b['author'])} | Bibli</title>
-<meta name="description" content="{html.escape(hook or ('Lire ' + b['title'] + ' de ' + b['author'] + ' gratuitement sur Bibli, en ligne et hors ligne, sur téléphone.'))}">
+<title>{html.escape(b['title'])} — {html.escape(b['author'])} | Itanva</title>
+<meta name="description" content="{html.escape(hook or ('Lire ' + b['title'] + ' de ' + b['author'] + ' gratuitement sur Itanva, en ligne et hors ligne, sur téléphone.'))}">
 <link rel="canonical" href="{url}"><meta property="og:type" content="book"><meta property="og:title" content="{html.escape(b['title'])}"><meta property="og:description" content="{html.escape(hook or b['author'])}"><meta property="og:image" content="{og}"><meta property="og:url" content="{url}"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Book","name":b['title'],"author":{"@type":"Person","name":b['author']},"inLanguage":b['lang'],"isAccessibleForFree":True,"url":url}, ensure_ascii=False)}</script>
 <style>body{{margin:0;background:#F7F3E9;color:#182D3B;font:17px/1.6 Georgia,serif}}main{{max-width:640px;margin:0 auto;padding:24px 20px 60px}}h1{{font-size:30px;line-height:1.15;margin:12px 0 4px}}.a{{color:#5A6672;font:15px system-ui,sans-serif}}.btn{{display:inline-block;background:#A2552A;color:#fff;padding:14px 22px;border-radius:14px;font:700 16px system-ui,sans-serif;text-decoration:none;margin:18px 0}}.hook{{font-style:italic;font-size:19px}}.s{{white-space:pre-line;border-left:3px solid #E6C78B;padding-left:14px;color:#2b3a44}}.l{{font:13px system-ui,sans-serif;color:#5A6672}}a{{color:#287D64}}</style></head>
-<body><main><a class="l" href="../">‹ Bibli</a><h1>{html.escape(b['title'])}</h1><div class="a">{html.escape(b['author'])} · {('Français' if b['lang']=='fr' else 'English')} · {dur}</div>
+<body><main><a class="l" href="../">‹ Itanva</a><h1>{html.escape(b['title'])}</h1><div class="a">{html.escape(b['author'])} · {('Français' if b['lang']=='fr' else 'English')} · {dur}</div>
 {('<p class="hook">' + html.escape(hook) + '</p>') if hook else ''}
-<a class="btn" href="../#/book/{b['id']}">Lire gratuitement sur Bibli</a>
+<a class="btn" href="../#/book/{b['id']}">Lire gratuitement sur Itanva</a>
 <h2 style="font-size:18px">Extrait</h2><p class="s">{html.escape(sample)}</p>
-<p class="l">Domaine public. Source : <a href="{b.get('source_url','#')}">{html.escape(b.get('source','') )}</a>. Bibli prépare les textes du domaine public pour la lecture sur téléphone, gratuitement et légalement.</p></main></body></html>"""
+<p class="l">Domaine public. Source : <a href="{b.get('source_url','#')}">{html.escape(b.get('source','') )}</a>. Itanva prépare les textes du domaine public pour la lecture sur téléphone, gratuitement et légalement.</p></main></body></html>"""
         with open(os.path.join(SITE, "livre", f"{b['id']}.html"), "w", encoding="utf-8") as f:
             f.write(page)
     # remove landing pages, meta and text of books no longer in the catalogue
