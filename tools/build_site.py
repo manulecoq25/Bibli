@@ -92,6 +92,15 @@ def main():
 <p class="l">Domaine public. Source : <a href="{b.get('source_url','#')}">{html.escape(b.get('source','') )}</a>. Bibli prépare les textes du domaine public pour la lecture sur téléphone, gratuitement et légalement.</p></main></body></html>"""
         with open(os.path.join(SITE, "livre", f"{b['id']}.html"), "w", encoding="utf-8") as f:
             f.write(page)
+    # remove landing pages, meta and text of books no longer in the catalogue
+    ids = {b["id"] for b in books}
+    for f in os.listdir(os.path.join(SITE, "livre")):
+        if f.endswith(".html") and f[:-5] not in ids:
+            os.remove(os.path.join(SITE, "livre", f))
+    import shutil
+    for d in os.listdir(os.path.join(DATA, "books")):
+        if d not in ids:
+            shutil.rmtree(os.path.join(DATA, "books", d), ignore_errors=True)
     light.sort(key=lambda x: (-(x.get("downloads") or 0), x["title"]))
     with open(ip, "w", encoding="utf-8") as f:
         json.dump({"generated": today, "books": light}, f, ensure_ascii=False, separators=(",", ":"))
