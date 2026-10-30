@@ -76,6 +76,54 @@ fr: Dubois | Tombouctou la mystérieuse
 ws: fr | Au soleil (Maupassant) | Guy de Maupassant | adventure,history
 ws: fr | Le Roman d'un spahi | Pierre Loti | fiction,history
 ws: fr | L'Art de la guerre (Sun Tzu) | Sun Tzu, trad. J.-M. Amiot (1772) | selfhelp,philosophy
+en: Burton | First footsteps in East Africa
+en: Barth | Travels and discoveries in North and Central Africa
+en: Gaunt | Alone in West Africa
+en: Baker | In the heart of Africa
+en: Barker | A year's housekeeping in South Africa
+en: Anderson | Twenty-five years in a waggon
+en: Bryce | Impressions of South Africa
+en: Morel | Affairs of West Africa
+en: Harris | Dawn in darkest Africa
+en: Foote | Africa and the American flag
+en: Wilmot | The poetry of South Africa
+en: Mofolo | Chaka
+en: Hayford | Ethiopia unbound
+en: Crowther | Journal of an expedition up the Niger
+en: Johnson | The history of the Yorubas
+en: Blyden | Christianity, Islam and the Negro race
+en: Horton | West African countries and peoples
+en: Northup | Twelve years a slave
+en: Truth | Narrative of Sojourner Truth
+en: Wheatley | Poems on various subjects
+en: Dunbar | Lyrics of lowly life
+en: Chesnutt | The conjure woman
+en: Johnson | The autobiography of an ex-colored man
+en: Locke | The new Negro
+en: McKay | Harlem shadows
+en: Cullen | Color
+en: Washington | The story of my life and work
+en: Wells | Southern horrors
+en: Cooper | A voice from the South
+en: Hopkins | Contending forces
+en: Stanley | How I found Livingstone
+en: Livingstone | Missionary travels and researches in South Africa
+en: Speke | Journal of the discovery of the source of the Nile
+en: Kingsley | Travels in West Africa
+en: Bosman | A new and accurate description of the coast of Guinea
+fr: Monteil | De Saint-Louis à Tripoli par le lac Tchad
+fr: Delafosse | Les Noirs de l'Afrique
+fr: Binger | Esclavage, islamisme et christianisme
+fr: Diagne | Les trois volontés de Malic
+fr: Maran | Batouala
+fr: Hazoumé | Doguicimi
+fr: Gide | Voyage au Congo
+fr: Marchand | Les Dahoméens
+fr: Trilles | Le totémisme chez les Fân
+fr: Lebeuf | Zanzibar
+fr: Vigné d'Octon | Au pays des fétiches
+fr: Psichari | Terres de soleil et de sommeil
+fr: Kingsley | Travels in West Africa
 
 [jeunesse]
 name_fr: À lire en famille
@@ -181,3 +229,46 @@ en: Dumas | The count of Monte Cristo
 en: Hugo | Les misérables
 en: Verne | Twenty thousand leagues under the sea
 en: Verne | Around the world in eighty days
+
+[contes]
+name_fr: Contes d'Afrique
+name_en: African folktales
+desc_fr: Contes recueillis en Afrique de l'Ouest, de l'Est et australe au tournant du XXe siècle : Anansi, le lièvre, la tortue, les génies de la brousse. Transcrits par des collecteurs de l'époque, avec leur vocabulaire.
+desc_en: Tales collected in West, East and Southern Africa around 1900: Anansi, the hare, the tortoise, the spirits of the bush. Transcribed by collectors of the time, in their vocabulary.
+en: Bateman | Zanzibar tales
+en: Bourhill | Fairy tales from South Africa
+en: Dayrell | Folk stories from Southern Nigeria
+en: Dayrell | Ikom folk stories from Southern Nigeria
+en: Tremearne | Hausa folk-lore
+en: Tremearne | Hausa superstitions and customs
+en: Cronise | Cunnie Rabbit, Mr. Spider and the other beef
+en: Barker | West African folk-tales
+en: Honey | South-African folk-tales
+en: Theal | Kaffir folk-lore
+en: Callaway | Nursery tales, traditions, and histories of the Zulus
+en: Bleek | Reynard the fox in South Africa
+en: Rattray | Hausa folk-lore, customs, proverbs
+en: Bryden | Tales of South Africa
+en: Stockley | Wild honey
+en: Harris | Uncle Remus, his songs and his sayings
+en: Beckwith | Jamaica Anansi stories
+en: Jekyll | Jamaican song and story
+en: Chatelain | Folk-tales of Angola
+en: Frobenius | The voice of Africa
+en: Ellis | Yoruba-speaking peoples of the slave coast
+en: Ellis | The Tshi-speaking peoples of the Gold Coast
+en: Nassau | Fetichism in West Africa
+en: Nassau | Where animals talk
+en: Burlin | Songs and tales from the dark continent
+fr: Equilbecq | Essai sur la littérature merveilleuse des noirs
+fr: Monteil | Contes soudanais
+fr: Basset | Contes populaires d'Afrique
+fr: Trilles | Contes et légendes fang
+fr: Allégret | Contes du Gabon
+fr: Dugast | Contes du Sénégal
+fr: Hazoumé | Contes du Dahomey
+fr: Tauxier | Contes bambara
+ws: fr | Contes nègres de l'Ouest africain | François-Victor Équilbecq | children,history
+ws: fr | Contes soudanais | Charles Monteil | children,history
+ws: fr | Contes populaires d'Afrique | René Basset | children,history
+ws: fr | Les Contes du Gabon | Jean Allégret | children,history

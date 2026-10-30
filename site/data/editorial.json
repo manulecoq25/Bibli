@@ -1,87 +1,867 @@
 {
 "_note": "Hooks and moods written by Itanva (not quoted from the books). Keyed by catalogue id. hero=true marks candidates for 'livre du jour'.",
-"4650": {"hero": true, "hook": {"fr": "On lui a appris que tout va pour le mieux dans le meilleur des mondes. Puis le monde s'est mis à le contredire, pays après pays.", "en": "He was taught that all is for the best in the best of worlds. Then the world started proving him wrong, one country at a time."}, "mood": {"fr": "ironie · voyage · optimisme", "en": "irony · travel · optimism"}},
-"6318": {"hero": true, "hook": {"fr": "Un père qui aime son argent plus que ses enfants, et deux enfants qui aimeraient se marier sans lui demander un sou.", "en": "A father who loves his money more than his children, and two children who would like to marry without asking him for a coin."}, "mood": {"fr": "comédie · famille · avarice", "en": "comedy · family · greed"}},
-"ws-fe837a4e": {"hero": true, "hook": {"fr": "Un faux dévot s'installe dans une maison bourgeoise, et seule la servante voit clair.", "en": "A fake holy man moves into a bourgeois home, and only the maid sees through him."}, "mood": {"fr": "comédie · hypocrisie · famille", "en": "comedy · hypocrisy · family"}},
-"ws-290134d6": {"hook": {"fr": "Argan se croit malade. Ses médecins le lui confirment, tant qu'il paie.", "en": "Argan believes he is ill. His doctors agree, as long as he pays."}, "mood": {"fr": "comédie · médecins · ruse", "en": "comedy · doctors · tricks"}},
-"ws-34624a83": {"hook": {"fr": "Monsieur Jourdain a de l'argent et veut des manières. Tout le monde va en profiter, sauf lui.", "en": "Monsieur Jourdain has money and wants manners. Everyone will profit, except him."}, "mood": {"fr": "comédie · vanité · musique", "en": "comedy · vanity · music"}},
-"56327": {"hook": {"fr": "Des animaux qui parlent, des leçons qui piquent, en quelques vers qu'on retient toute la vie.", "en": "Talking animals, lessons with a sting, in a few lines you keep for life."}, "mood": {"fr": "fables · malice · sagesse", "en": "fables · wit · wisdom"}},
-"20577": {"hook": {"fr": "Le jour de son mariage, un valet découvre que son maître veut la mariée. Il a vingt-quatre heures pour être plus malin qu'un comte.", "en": "On his wedding day, a valet learns his master wants the bride. He has twenty-four hours to outwit a count."}, "mood": {"fr": "comédie · révolte · mariage", "en": "comedy · revolt · wedding"}},
-"ws-b5e384be": {"hook": {"fr": "L'homme est né libre, et partout il est dans les fers. Le livre qui a donné des idées aux révolutions.", "en": "Man is born free, and everywhere he is in chains. The book that gave revolutions their ideas."}, "mood": {"fr": "idées · liberté · politique", "en": "ideas · freedom · politics"}},
-"17489": {"hero": true, "hook": {"fr": "Dix-neuf ans de bagne pour un pain volé. À sa sortie, un homme décide de devenir quelqu'un d'autre.", "en": "Nineteen years in prison for a stolen loaf. On his release, a man decides to become someone else."}, "mood": {"fr": "rédemption · misère · Paris", "en": "redemption · poverty · Paris"}},
-"19657": {"hero": true, "hook": {"fr": "Une danseuse, un sonneur difforme, un prêtre dévoré par le désir, et une cathédrale qui voit tout.", "en": "A dancer, a deformed bell-ringer, a priest eaten by desire, and a cathedral that sees everything."}, "mood": {"fr": "passion · Moyen Âge · destin", "en": "passion · Middle Ages · fate"}},
-"798": {"hero": true, "hook": {"fr": "Fils de charpentier, Julien veut monter. Il choisira la soutane plutôt que l'uniforme, et les femmes plutôt que la patience.", "en": "A carpenter's son, Julien wants to rise. He picks the cassock over the uniform, and women over patience."}, "mood": {"fr": "ambition · amour · société", "en": "ambition · love · society"}},
-"11049": {"hook": {"fr": "Dans une petite ville, le plus riche des pères enferme sa fille dans l'ennui. Un cousin de Paris arrive, ruiné.", "en": "In a small town, the richest of fathers locks his daughter in boredom. A cousin arrives from Paris, ruined."}, "mood": {"fr": "province · argent · attente", "en": "province · money · waiting"}},
-"14155": {"hero": true, "hook": {"fr": "Emma a lu trop de romans. Mariée à un médecin de campagne, elle veut la vie qu'ils promettent, à n'importe quel prix.", "en": "Emma has read too many novels. Married to a country doctor, she wants the life they promise, at any price."}, "mood": {"fr": "ennui · désir · dettes", "en": "boredom · desire · debts"}},
-"5711": {"hero": true, "hook": {"fr": "Un chômeur descend dans une mine du Nord. Il y trouve la faim, la colère, et une grève qui va tout emporter.", "en": "A jobless man goes down a northern mine. He finds hunger, anger, and a strike that will sweep everything away."}, "mood": {"fr": "mine · révolte · survie", "en": "mine · revolt · survival"}},
-"6497": {"hook": {"fr": "Gervaise, blanchisseuse, voulait juste une boutique à elle. Le quartier, l'alcool et les hommes en ont décidé autrement.", "en": "Gervaise, a laundress, only wanted a shop of her own. The neighbourhood, drink and men decided otherwise."}, "mood": {"fr": "Paris · alcool · chute", "en": "Paris · drink · downfall"}},
-"16852": {"hook": {"fr": "Le premier grand magasin de Paris dévore les petites boutiques. Denise, vendeuse sans le sou, va tenir tête à son propriétaire.", "en": "Paris's first department store devours the small shops. Denise, a penniless salesgirl, will stand up to its owner."}, "mood": {"fr": "commerce · ambition · amour", "en": "commerce · ambition · love"}},
-"10746": {"hero": true, "hook": {"fr": "Dix voyageurs fuient la guerre dans une diligence. Ils ont faim ; seule la prostituée a pensé au panier.", "en": "Ten travellers flee the war in a coach. They are hungry; only the prostitute thought to bring food."}, "mood": {"fr": "guerre · hypocrisie · nouvelle", "en": "war · hypocrisy · short story"}},
-"17457": {"hook": {"fr": "Jeanne sort du couvent avec des rêves. Le mariage, la Normandie et les hommes vont les lui reprendre un par un.", "en": "Jeanne leaves the convent full of dreams. Marriage, Normandy and men will take them back one by one."}, "mood": {"fr": "désillusion · Normandie · temps", "en": "disillusion · Normandy · time"}},
-"ws-478af1eb": {"hero": true, "hook": {"fr": "Il n'a ni talent ni argent, mais une moustache et de l'ambition. Paris et ses femmes feront le reste.", "en": "He has no talent and no money, but a moustache and ambition. Paris and its women will do the rest."}, "mood": {"fr": "ambition · presse · séduction", "en": "ambition · press · seduction"}},
-"10775": {"hook": {"fr": "Quelque chose vit dans sa maison. Il ne le voit pas, mais le verre d'eau se vide la nuit.", "en": "Something lives in his house. He cannot see it, but the glass of water empties at night."}, "mood": {"fr": "peur · folie · invisible", "en": "fear · madness · unseen"}},
-"6099": {"hook": {"fr": "Des poèmes jugés scandaleux en 1857, devenus le livre de chevet de tous les poètes d'après.", "en": "Poems judged scandalous in 1857, which became the bedside book of every poet since."}, "mood": {"fr": "poésie · spleen · beauté", "en": "poetry · spleen · beauty"}},
-"1256": {"hero": true, "hook": {"fr": "Il écrit les plus belles lettres d'amour du monde. Pour un autre. À la femme qu'il aime.", "en": "He writes the most beautiful love letters in the world. For another man. To the woman he loves."}, "mood": {"fr": "panache · amour · épée", "en": "panache · love · sword"}},
-"15462": {"hook": {"fr": "Des poèmes sans ponctuation, Paris, la guerre qui approche, et un pont sous lequel coule la Seine.", "en": "Poems without punctuation, Paris, the coming war, and a bridge under which the Seine flows."}, "mood": {"fr": "poésie · modernité · Paris", "en": "poetry · modernity · Paris"}},
-"56668": {"hook": {"fr": "Il a dix-neuf ans, il a tout brûlé, et il écrit son adieu à la poésie avant de partir pour l'Afrique.", "en": "He is nineteen, he has burned everything, and he writes his farewell to poetry before leaving for Africa."}, "mood": {"fr": "poésie · révolte · jeunesse", "en": "poetry · revolt · youth"}},
-"17983": {"hook": {"fr": "Un jeune homme bien né rencontre Manon. À partir de là, il fera tout ce qu'il ne faut pas.", "en": "A well-born young man meets Manon. From then on, he does everything he should not."}, "mood": {"fr": "passion · ruine · exil", "en": "passion · ruin · exile"}},
-"52006": {"hook": {"fr": "Deux libertins s'écrivent et se lancent des défis. L'enjeu : des cœurs, et leur orgueil.", "en": "Two libertines write to each other and trade challenges. The stakes: hearts, and their pride."}, "mood": {"fr": "lettres · manipulation · désir", "en": "letters · manipulation · desire"}},
-"13846": {"hook": {"fr": "Comment être sûr de quelque chose ? Descartes repart de zéro et trouve une première certitude.", "en": "How can you be sure of anything? Descartes starts from nothing and finds a first certainty."}, "mood": {"fr": "raison · doute · méthode", "en": "reason · doubt · method"}},
-"11770": {"hook": {"fr": "Des histoires de Provence racontées depuis un vieux moulin : la chèvre, le curé, le sous-préfet aux champs.", "en": "Stories from Provence told from an old windmill: the goat, the priest, the sub-prefect in the fields."}, "mood": {"fr": "Provence · tendresse · contes", "en": "Provence · tenderness · tales"}},
-"2650": {"hook": {"fr": "Un gâteau trempé dans du thé, et toute une enfance qui remonte. Le début du plus long roman du monde.", "en": "A cake dipped in tea, and a whole childhood comes back. The opening of the longest novel in the world."}, "mood": {"fr": "mémoire · enfance · temps", "en": "memory · childhood · time"}},
-"15399": {"hero": true, "hook": {"fr": "Enlevé enfant dans l'actuel Nigeria, vendu, puis libre : il raconte sa vie lui-même, en 1789, et fait trembler les marchands d'esclaves.", "en": "Kidnapped as a child in today's Nigeria, sold, then free: he tells his own story in 1789 and shakes the slave traders."}, "mood": {"fr": "témoignage · liberté · Atlantique", "en": "testimony · freedom · Atlantic"}},
-"23": {"hero": true, "hook": {"fr": "Il a appris à lire en cachette, parce que lire était interdit aux esclaves. Puis il a écrit ce livre.", "en": "He learned to read in secret, because reading was forbidden to slaves. Then he wrote this book."}, "mood": {"fr": "récit · courage · liberté", "en": "memoir · courage · freedom"}},
-"1452": {"hook": {"fr": "1913 : une loi chasse les familles noires de leurs terres en Afrique du Sud. Un journaliste parcourt le pays pour le raconter.", "en": "1913: a law drives Black families off their land in South Africa. A journalist travels the country to tell it."}, "mood": {"fr": "Afrique du Sud · injustice · reportage", "en": "South Africa · injustice · reportage"}},
-"74720": {"hook": {"fr": "1887 : un officier traverse à pied ce qui deviendra la Côte d'Ivoire, de Bamako à Grand-Bassam, et décrit les royaumes qu'il rencontre.", "en": "1887: an officer walks across what will become Côte d'Ivoire, from Bamako to Grand-Bassam, describing the kingdoms he meets."}, "mood": {"fr": "Kong · exploration · 1887", "en": "Kong · exploration · 1887"}},
-"ws-21ac5746": {"hero": true, "hook": {"fr": "Le plus vieux manuel de stratégie du monde, dans la traduction d'un jésuite français de 1772. Gagner sans combattre.", "en": "The world's oldest manual of strategy, in a French Jesuit's translation of 1772. Winning without fighting."}, "mood": {"fr": "stratégie · ruse · calme", "en": "strategy · cunning · calm"}},
-"15058": {"hook": {"fr": "Sophie a quatre ans, de bonnes idées et des résultats catastrophiques. Chaque chapitre est une bêtise.", "en": "Sophie is four, full of good ideas with catastrophic results. Every chapter is a new mischief."}, "mood": {"fr": "bêtises · enfance · rires", "en": "mischief · childhood · laughter"}},
-"ws-93eb3ee9": {"hero": true, "hook": {"fr": "Vendu à huit ans à un musicien ambulant, Rémi traverse la France avec un chien, un singe et une question : qui sont ses parents ?", "en": "Sold at eight to a travelling musician, Rémi crosses France with a dog, a monkey and one question: who are his parents?"}, "mood": {"fr": "route · amitié · famille", "en": "road · friendship · family"}},
-"800": {"hero": true, "hook": {"fr": "Un gentleman parie qu'il fera le tour du monde en quatre-vingts jours. Un policier le prend pour un voleur et le suit partout.", "en": "A gentleman bets he can circle the globe in eighty days. A detective takes him for a thief and follows him everywhere."}, "mood": {"fr": "pari · vitesse · monde", "en": "wager · speed · world"}},
-"54873": {"hook": {"fr": "Un monstre marin attaque les navires. C'est un sous-marin, et son capitaine ne veut plus jamais revoir la terre.", "en": "A sea monster attacks ships. It is a submarine, and its captain never wants to see land again."}, "mood": {"fr": "océan · mystère · liberté", "en": "ocean · mystery · freedom"}},
-"4791": {"hook": {"fr": "Un vieux parchemin indique l'entrée : un volcan d'Islande. Au fond, il n'y a pas de fond.", "en": "An old parchment marks the entrance: a volcano in Iceland. At the bottom, there is no bottom."}, "mood": {"fr": "exploration · science · vertige", "en": "exploration · science · vertigo"}},
-"55456": {"hook": {"fr": "Un lapin blanc qui regarde sa montre, un trou, et un pays où rien n'a de sens, sauf pour ceux qui y vivent.", "en": "A white rabbit checking his watch, a hole, and a land where nothing makes sense, except to those who live there."}, "mood": {"fr": "absurde · rêve · jeux de mots", "en": "absurd · dream · wordplay"}},
-"13951": {"hero": true, "hook": {"fr": "Un jeune Gascon arrive à Paris avec un cheval ridicule et trois duels prévus le même jour.", "en": "A young Gascon arrives in Paris with a ridiculous horse and three duels scheduled for the same day."}, "mood": {"fr": "amitié · épées · complots", "en": "friendship · swords · plots"}},
-"14287": {"hook": {"fr": "Cinq prisonniers s'évadent en ballon et tombent sur une île déserte. Quelqu'un, pourtant, les aide en secret.", "en": "Five prisoners escape by balloon and land on a desert island. Someone, though, is secretly helping them."}, "mood": {"fr": "survie · ingéniosité · secret", "en": "survival · ingenuity · secret"}},
-"2680": {"hero": true, "hook": {"fr": "Les notes privées d'un empereur romain, écrites le soir sous la tente, pour rester juste quand tout pousse à ne pas l'être.", "en": "A Roman emperor's private notes, written at night in his tent, on staying just when everything pushes you not to be."}, "mood": {"fr": "stoïcisme · calme · devoir", "en": "stoicism · calm · duty"}},
-"45109": {"hook": {"fr": "Un ancien esclave devenu philosophe résume sa méthode : sépare ce qui dépend de toi de ce qui n'en dépend pas.", "en": "A former slave turned philosopher sums up his method: separate what is up to you from what is not."}, "mood": {"fr": "stoïcisme · liberté · pratique", "en": "stoicism · freedom · practice"}},
-"1232": {"hook": {"fr": "Comment prendre le pouvoir et le garder, expliqué sans morale et sans détour. Les puissants le lisent encore.", "en": "How to take power and keep it, explained without morals and without detours. The powerful still read it."}, "mood": {"fr": "pouvoir · stratégie · réalisme", "en": "power · strategy · realism"}},
-"4507": {"hook": {"fr": "Un petit livre de 1903 avec une seule idée : tu deviens ce que tu penses. Les livres de développement personnel en descendent tous.", "en": "A small book from 1903 with a single idea: you become what you think. Every self-help book descends from it."}, "mood": {"fr": "pensée · caractère · court", "en": "thought · character · short"}},
-"20203": {"hook": {"fr": "Fils d'un fabricant de chandelles, parti de rien : Franklin raconte comment il s'est fabriqué lui-même, vertu par vertu.", "en": "A candle-maker's son who started with nothing: Franklin tells how he built himself, one virtue at a time."}, "mood": {"fr": "discipline · réussite · humour", "en": "discipline · success · humour"}},
-"205": {"hook": {"fr": "Il a construit une cabane au bord d'un lac et vécu deux ans avec presque rien, pour voir ce qui est vraiment nécessaire.", "en": "He built a cabin by a pond and lived two years with almost nothing, to find out what is truly necessary."}, "mood": {"fr": "nature · simplicité · liberté", "en": "nature · simplicity · freedom"}},
-"ws-015ec8c0": {"hook": {"fr": "Les notes privées d'un empereur romain, écrites le soir, pour rester juste quand tout pousse à ne pas l'être. En français.", "en": "A Roman emperor's private notes, written at night, on staying just when everything pushes you not to be. In French."}, "mood": {"fr": "stoïcisme · calme · devoir", "en": "stoicism · calm · duty"}},
-"ws-8fb0c774": {"hook": {"fr": "La vie n'est pas courte : c'est nous qui la gaspillons. Sénèque en vingt pages, à relire chaque année.", "en": "Life is not short: we are the ones who waste it. Seneca in twenty pages, to reread every year."}, "mood": {"fr": "temps · sagesse · court", "en": "time · wisdom · short"}},
-"48529": {"hook": {"fr": "Un homme se retire dans sa tour et écrit sur tout : la peur, l'amitié, la mort, les cannibales, lui-même. Il invente l'essai.", "en": "A man retires to his tower and writes about everything: fear, friendship, death, cannibals, himself. He invents the essay."}, "mood": {"fr": "soi · doute · liberté", "en": "self · doubt · freedom"}},
-"1342": {"hero": true, "hook": {"fr": "Il est riche, fier et désagréable. Elle est vive, moqueuse et sans dot. Ils se détestent, évidemment.", "en": "He is rich, proud and unpleasant. She is sharp, teasing and without a dowry. They hate each other, of course."}, "mood": {"fr": "esprit · mariage · orgueil", "en": "wit · marriage · pride"}},
-"768": {"hook": {"fr": "Un enfant trouvé, élevé dans une ferme des landes, et un amour qui détruira deux familles sur deux générations.", "en": "A foundling raised on a moorland farm, and a love that will destroy two families across two generations."}, "mood": {"fr": "landes · vengeance · passion", "en": "moors · revenge · passion"}},
-"1400": {"hook": {"fr": "Un orphelin aide un forçat évadé dans un cimetière. Des années plus tard, un bienfaiteur anonyme fait de lui un gentleman.", "en": "An orphan helps an escaped convict in a graveyard. Years later, an anonymous benefactor makes him a gentleman."}, "mood": {"fr": "destin · classe · secret", "en": "fate · class · secret"}},
-"98": {"hook": {"fr": "Londres et Paris pendant la Révolution. Deux hommes qui se ressemblent, une femme, et une guillotine.", "en": "London and Paris during the Revolution. Two men who look alike, one woman, and a guillotine."}, "mood": {"fr": "révolution · sacrifice · Paris", "en": "revolution · sacrifice · Paris"}},
-"730": {"hook": {"fr": "Un orphelin demande une deuxième portion de soupe. Pour ce crime, Londres va lui montrer ses bas-fonds.", "en": "An orphan asks for a second helping of gruel. For that crime, London will show him its underworld."}, "mood": {"fr": "Londres · enfance · voleurs", "en": "London · childhood · thieves"}},
-"19337": {"hook": {"fr": "Un avare reçoit la visite de trois fantômes la nuit de Noël. Au matin, il a changé. À lire en une soirée.", "en": "A miser is visited by three ghosts on Christmas night. By morning he has changed. Read it in one evening."}, "mood": {"fr": "Noël · fantômes · générosité", "en": "Christmas · ghosts · generosity"}},
-"84": {"hero": true, "hook": {"fr": "Un étudiant fabrique un être vivant à partir de morts. L'être ouvre les yeux, et le savant s'enfuit.", "en": "A student builds a living being out of the dead. The being opens its eyes, and the scientist runs away."}, "mood": {"fr": "science · solitude · monstre", "en": "science · loneliness · monster"}},
-"345": {"hook": {"fr": "Un clerc de notaire se rend dans un château de Transylvanie. Son hôte ne mange jamais et ne se reflète pas dans les miroirs.", "en": "A solicitor's clerk travels to a castle in Transylvania. His host never eats and casts no reflection."}, "mood": {"fr": "vampire · nuit · lettres", "en": "vampire · night · letters"}},
-"120": {"hook": {"fr": "Une carte au trésor, un cuisinier à une jambe, et un garçon qui en sait trop. Le roman de pirates original.", "en": "A treasure map, a one-legged cook, and a boy who knows too much. The original pirate novel."}, "mood": {"fr": "pirates · trésor · trahison", "en": "pirates · treasure · betrayal"}},
-"42": {"hook": {"fr": "Un médecin respecté, un inconnu brutal qui sort de chez lui la nuit, et une porte que personne n'ouvre.", "en": "A respected doctor, a brutal stranger who leaves his house at night, and a door nobody opens."}, "mood": {"fr": "double · Londres · secret", "en": "double · London · secret"}},
-"174": {"hook": {"fr": "Il restera jeune et beau ; son portrait vieillira à sa place, et portera chacune de ses fautes.", "en": "He will stay young and beautiful; his portrait will age in his place, and carry each of his sins."}, "mood": {"fr": "beauté · péché · portrait", "en": "beauty · sin · portrait"}},
-"1661": {"hero": true, "hook": {"fr": "Douze enquêtes, un détective qui devine votre vie à vos chaussures, et un ami qui prend des notes.", "en": "Twelve cases, a detective who reads your life from your shoes, and a friend who takes notes."}, "mood": {"fr": "enquêtes · logique · Londres", "en": "cases · logic · London"}},
-"2852": {"hook": {"fr": "Une malédiction familiale, un chien monstrueux sur la lande, et Holmes qui n'y croit pas une seconde.", "en": "A family curse, a monstrous hound on the moor, and Holmes who does not believe a word of it."}, "mood": {"fr": "lande · malédiction · enquête", "en": "moor · curse · case"}},
-"76": {"hook": {"fr": "Un garçon fuit son père, un esclave fuit son maître, et le Mississippi les emporte tous les deux sur un radeau.", "en": "A boy runs from his father, a slave runs from his master, and the Mississippi carries them both on a raft."}, "mood": {"fr": "fleuve · liberté · amitié", "en": "river · freedom · friendship"}},
-"11": {"hook": {"fr": "Un lapin blanc qui regarde sa montre, un trou, et un pays où rien n'a de sens, sauf pour ceux qui y vivent.", "en": "A white rabbit checking his watch, a hole, and a land where nothing makes sense, except to those who live there."}, "mood": {"fr": "absurde · rêve · jeux de mots", "en": "absurd · dream · wordplay"}},
-"15": {"hook": {"fr": "Un capitaine a perdu une jambe contre une baleine blanche. Il a un navire, un équipage, et une seule idée.", "en": "A captain lost a leg to a white whale. He has a ship, a crew, and a single idea."}, "mood": {"fr": "obsession · océan · démesure", "en": "obsession · ocean · excess"}},
-"64317": {"hero": true, "hook": {"fr": "Un millionnaire donne des fêtes immenses pour une seule invitée, qui ne vient jamais : la femme qu'il a aimée il y a cinq ans.", "en": "A millionaire throws huge parties for a single guest who never comes: the woman he loved five years ago."}, "mood": {"fr": "fêtes · illusion · 1922", "en": "parties · illusion · 1922"}},
-"219": {"hook": {"fr": "Un capitaine remonte un fleuve africain pour retrouver un agent devenu dieu. Ce qu'il trouve, c'est l'Europe elle-même.", "en": "A captain sails up an African river to find an agent who became a god. What he finds is Europe itself."}, "mood": {"fr": "fleuve · colonie · ténèbres", "en": "river · colony · darkness"}},
-"36": {"hook": {"fr": "Des cylindres tombent du ciel près de Londres. Ce qui en sort n'est pas venu négocier.", "en": "Cylinders fall from the sky near London. What comes out has not come to negotiate."}, "mood": {"fr": "invasion · panique · Mars", "en": "invasion · panic · Mars"}},
-"35": {"hook": {"fr": "Un inventeur voyage en l'an 802 701. L'humanité y est devenue deux espèces, et l'une mange l'autre.", "en": "An inventor travels to the year 802,701. Humanity has split into two species, and one eats the other."}, "mood": {"fr": "futur · science · vertige", "en": "future · science · vertigo"}},
-"16": {"hook": {"fr": "Un garçon qui refuse de grandir entre par la fenêtre et emmène trois enfants vers une île où l'on se bat contre des pirates.", "en": "A boy who refuses to grow up comes in through the window and takes three children to an island where they fight pirates."}, "mood": {"fr": "vol · pirates · enfance", "en": "flight · pirates · childhood"}},
-"514": {"hook": {"fr": "Quatre sœurs, un père à la guerre, pas d'argent, et Jo qui veut devenir écrivain plutôt qu'épouse.", "en": "Four sisters, a father at war, no money, and Jo who wants to be a writer rather than a wife."}, "mood": {"fr": "sœurs · ambition · chaleur", "en": "sisters · ambition · warmth"}},
-"215": {"hook": {"fr": "Un chien de Californie est volé et vendu dans le Grand Nord. Pour survivre, il devra réapprendre à être un loup.", "en": "A California dog is stolen and sold in the far North. To survive, he must learn to be a wolf again."}, "mood": {"fr": "neige · survie · instinct", "en": "snow · survival · instinct"}},
-"1122": {"hook": {"fr": "Le fantôme de son père lui demande vengeance. Hamlet va réfléchir. Longtemps. Tout le monde va mourir.", "en": "His father's ghost demands revenge. Hamlet will think about it. At length. Everyone will die."}, "mood": {"fr": "doute · vengeance · Danemark", "en": "doubt · revenge · Denmark"}},
-"1112": {"hook": {"fr": "Deux familles qui se haïssent, deux adolescents qui s'aiment, cinq jours à Vérone.", "en": "Two families who hate each other, two teenagers who love each other, five days in Verona."}, "mood": {"fr": "amour · haine · Vérone", "en": "love · hate · Verona"}},
-"1533": {"hook": {"fr": "Trois sorcières lui promettent le trône. Sa femme lui dit comment le prendre. Il ne dormira plus jamais.", "en": "Three witches promise him the throne. His wife tells him how to take it. He will never sleep again."}, "mood": {"fr": "ambition · sang · Écosse", "en": "ambition · blood · Scotland"}},
-"1184": {"hero": true, "hook": {"fr": "Un marin innocent est enfermé quatorze ans. Il en sort avec une fortune, un nouveau nom et une liste.", "en": "An innocent sailor is locked away for fourteen years. He comes out with a fortune, a new name and a list."}, "mood": {"fr": "vengeance · fortune · patience", "en": "revenge · fortune · patience"}},
-"164": {"hook": {"fr": "Un monstre marin attaque les navires. C'est un sous-marin, et son capitaine ne veut plus jamais revoir la terre.", "en": "A sea monster attacks ships. It is a submarine, and its captain never wants to see land again."}, "mood": {"fr": "océan · mystère · liberté", "en": "ocean · mystery · freedom"}},
-"103": {"hook": {"fr": "Un gentleman parie qu'il fera le tour du monde en quatre-vingts jours. Un policier le prend pour un voleur et le suit partout.", "en": "A gentleman bets he can circle the globe in eighty days. A detective takes him for a thief and follows him everywhere."}, "mood": {"fr": "pari · vitesse · monde", "en": "wager · speed · world"}},
-"17989": {"hero": true, "hook": {"fr": "Un marin innocent est enfermé quatorze ans. Il en sort avec une fortune, un nouveau nom et une liste.", "en": "An innocent sailor is locked away for fourteen years. He comes out with a fortune, a new name and a list."}, "mood": {"fr": "vengeance · fortune · patience", "en": "revenge · fortune · patience"}},
-"62215": {"hook": {"fr": "Une voix dans les murs de l'Opéra, une chanteuse qui progresse trop vite, et une loge que personne ne doit occuper.", "en": "A voice in the walls of the Opera, a singer improving too fast, and a box nobody may sit in."}, "mood": {"fr": "Opéra · masque · obsession", "en": "Opera · mask · obsession"}},
-"32854": {"hook": {"fr": "Il vole les riches avec élégance, prévient ses victimes par courrier, et s'évade toujours. La police l'adore presque.", "en": "He robs the rich with elegance, warns his victims by post, and always escapes. The police almost adore him."}, "mood": {"fr": "élégance · vol · panache", "en": "elegance · theft · panache"}},
-"26296": {"hook": {"fr": "Pour ne pas mourir à l'aube, une jeune femme raconte chaque nuit une histoire au roi, et s'arrête au meilleur moment.", "en": "To avoid dying at dawn, a young woman tells the king a story every night, and stops at the best moment."}, "mood": {"fr": "contes · ruse · Orient", "en": "tales · cunning · Orient"}}
+"4650": {
+"hero": true,
+"hook": {
+"fr": "On lui a appris que tout va pour le mieux dans le meilleur des mondes. Puis le monde s'est mis à le contredire, pays après pays.",
+"en": "He was taught that all is for the best in the best of worlds. Then the world started proving him wrong, one country at a time."
+},
+"mood": {
+"fr": "ironie · voyage · optimisme",
+"en": "irony · travel · optimism"
+}
+},
+"6318": {
+"hero": true,
+"hook": {
+"fr": "Un père qui aime son argent plus que ses enfants, et deux enfants qui aimeraient se marier sans lui demander un sou.",
+"en": "A father who loves his money more than his children, and two children who would like to marry without asking him for a coin."
+},
+"mood": {
+"fr": "comédie · famille · avarice",
+"en": "comedy · family · greed"
+}
+},
+"ws-fe837a4e": {
+"hero": true,
+"hook": {
+"fr": "Un faux dévot s'installe dans une maison bourgeoise, et seule la servante voit clair.",
+"en": "A fake holy man moves into a bourgeois home, and only the maid sees through him."
+},
+"mood": {
+"fr": "comédie · hypocrisie · famille",
+"en": "comedy · hypocrisy · family"
+}
+},
+"ws-290134d6": {
+"hook": {
+"fr": "Argan se croit malade. Ses médecins le lui confirment, tant qu'il paie.",
+"en": "Argan believes he is ill. His doctors agree, as long as he pays."
+},
+"mood": {
+"fr": "comédie · médecins · ruse",
+"en": "comedy · doctors · tricks"
+}
+},
+"ws-34624a83": {
+"hook": {
+"fr": "Monsieur Jourdain a de l'argent et veut des manières. Tout le monde va en profiter, sauf lui.",
+"en": "Monsieur Jourdain has money and wants manners. Everyone will profit, except him."
+},
+"mood": {
+"fr": "comédie · vanité · musique",
+"en": "comedy · vanity · music"
+}
+},
+"56327": {
+"hook": {
+"fr": "Des animaux qui parlent, des leçons qui piquent, en quelques vers qu'on retient toute la vie.",
+"en": "Talking animals, lessons with a sting, in a few lines you keep for life."
+},
+"mood": {
+"fr": "fables · malice · sagesse",
+"en": "fables · wit · wisdom"
+}
+},
+"20577": {
+"hook": {
+"fr": "Le jour de son mariage, un valet découvre que son maître veut la mariée. Il a vingt-quatre heures pour être plus malin qu'un comte.",
+"en": "On his wedding day, a valet learns his master wants the bride. He has twenty-four hours to outwit a count."
+},
+"mood": {
+"fr": "comédie · révolte · mariage",
+"en": "comedy · revolt · wedding"
+}
+},
+"ws-b5e384be": {
+"hook": {
+"fr": "L'homme est né libre, et partout il est dans les fers. Le livre qui a donné des idées aux révolutions.",
+"en": "Man is born free, and everywhere he is in chains. The book that gave revolutions their ideas."
+},
+"mood": {
+"fr": "idées · liberté · politique",
+"en": "ideas · freedom · politics"
+}
+},
+"17489": {
+"hero": true,
+"hook": {
+"fr": "Dix-neuf ans de bagne pour un pain volé. À sa sortie, un homme décide de devenir quelqu'un d'autre.",
+"en": "Nineteen years in prison for a stolen loaf. On his release, a man decides to become someone else."
+},
+"mood": {
+"fr": "rédemption · misère · Paris",
+"en": "redemption · poverty · Paris"
+}
+},
+"19657": {
+"hero": true,
+"hook": {
+"fr": "Une danseuse, un sonneur difforme, un prêtre dévoré par le désir, et une cathédrale qui voit tout.",
+"en": "A dancer, a deformed bell-ringer, a priest eaten by desire, and a cathedral that sees everything."
+},
+"mood": {
+"fr": "passion · Moyen Âge · destin",
+"en": "passion · Middle Ages · fate"
+}
+},
+"798": {
+"hero": true,
+"hook": {
+"fr": "Fils de charpentier, Julien veut monter. Il choisira la soutane plutôt que l'uniforme, et les femmes plutôt que la patience.",
+"en": "A carpenter's son, Julien wants to rise. He picks the cassock over the uniform, and women over patience."
+},
+"mood": {
+"fr": "ambition · amour · société",
+"en": "ambition · love · society"
+}
+},
+"11049": {
+"hook": {
+"fr": "Dans une petite ville, le plus riche des pères enferme sa fille dans l'ennui. Un cousin de Paris arrive, ruiné.",
+"en": "In a small town, the richest of fathers locks his daughter in boredom. A cousin arrives from Paris, ruined."
+},
+"mood": {
+"fr": "province · argent · attente",
+"en": "province · money · waiting"
+}
+},
+"14155": {
+"hero": true,
+"hook": {
+"fr": "Emma a lu trop de romans. Mariée à un médecin de campagne, elle veut la vie qu'ils promettent, à n'importe quel prix.",
+"en": "Emma has read too many novels. Married to a country doctor, she wants the life they promise, at any price."
+},
+"mood": {
+"fr": "ennui · désir · dettes",
+"en": "boredom · desire · debts"
+}
+},
+"5711": {
+"hero": true,
+"hook": {
+"fr": "Un chômeur descend dans une mine du Nord. Il y trouve la faim, la colère, et une grève qui va tout emporter.",
+"en": "A jobless man goes down a northern mine. He finds hunger, anger, and a strike that will sweep everything away."
+},
+"mood": {
+"fr": "mine · révolte · survie",
+"en": "mine · revolt · survival"
+}
+},
+"6497": {
+"hook": {
+"fr": "Gervaise, blanchisseuse, voulait juste une boutique à elle. Le quartier, l'alcool et les hommes en ont décidé autrement.",
+"en": "Gervaise, a laundress, only wanted a shop of her own. The neighbourhood, drink and men decided otherwise."
+},
+"mood": {
+"fr": "Paris · alcool · chute",
+"en": "Paris · drink · downfall"
+}
+},
+"16852": {
+"hook": {
+"fr": "Le premier grand magasin de Paris dévore les petites boutiques. Denise, vendeuse sans le sou, va tenir tête à son propriétaire.",
+"en": "Paris's first department store devours the small shops. Denise, a penniless salesgirl, will stand up to its owner."
+},
+"mood": {
+"fr": "commerce · ambition · amour",
+"en": "commerce · ambition · love"
+}
+},
+"10746": {
+"hero": true,
+"hook": {
+"fr": "Dix voyageurs fuient la guerre dans une diligence. Ils ont faim ; seule la prostituée a pensé au panier.",
+"en": "Ten travellers flee the war in a coach. They are hungry; only the prostitute thought to bring food."
+},
+"mood": {
+"fr": "guerre · hypocrisie · nouvelle",
+"en": "war · hypocrisy · short story"
+}
+},
+"17457": {
+"hook": {
+"fr": "Jeanne sort du couvent avec des rêves. Le mariage, la Normandie et les hommes vont les lui reprendre un par un.",
+"en": "Jeanne leaves the convent full of dreams. Marriage, Normandy and men will take them back one by one."
+},
+"mood": {
+"fr": "désillusion · Normandie · temps",
+"en": "disillusion · Normandy · time"
+}
+},
+"ws-478af1eb": {
+"hero": true,
+"hook": {
+"fr": "Il n'a ni talent ni argent, mais une moustache et de l'ambition. Paris et ses femmes feront le reste.",
+"en": "He has no talent and no money, but a moustache and ambition. Paris and its women will do the rest."
+},
+"mood": {
+"fr": "ambition · presse · séduction",
+"en": "ambition · press · seduction"
+}
+},
+"10775": {
+"hook": {
+"fr": "Quelque chose vit dans sa maison. Il ne le voit pas, mais le verre d'eau se vide la nuit.",
+"en": "Something lives in his house. He cannot see it, but the glass of water empties at night."
+},
+"mood": {
+"fr": "peur · folie · invisible",
+"en": "fear · madness · unseen"
+}
+},
+"6099": {
+"hook": {
+"fr": "Des poèmes jugés scandaleux en 1857, devenus le livre de chevet de tous les poètes d'après.",
+"en": "Poems judged scandalous in 1857, which became the bedside book of every poet since."
+},
+"mood": {
+"fr": "poésie · spleen · beauté",
+"en": "poetry · spleen · beauty"
+}
+},
+"1256": {
+"hero": true,
+"hook": {
+"fr": "Il écrit les plus belles lettres d'amour du monde. Pour un autre. À la femme qu'il aime.",
+"en": "He writes the most beautiful love letters in the world. For another man. To the woman he loves."
+},
+"mood": {
+"fr": "panache · amour · épée",
+"en": "panache · love · sword"
+}
+},
+"15462": {
+"hook": {
+"fr": "Des poèmes sans ponctuation, Paris, la guerre qui approche, et un pont sous lequel coule la Seine.",
+"en": "Poems without punctuation, Paris, the coming war, and a bridge under which the Seine flows."
+},
+"mood": {
+"fr": "poésie · modernité · Paris",
+"en": "poetry · modernity · Paris"
+}
+},
+"56668": {
+"hook": {
+"fr": "Il a dix-neuf ans, il a tout brûlé, et il écrit son adieu à la poésie avant de partir pour l'Afrique.",
+"en": "He is nineteen, he has burned everything, and he writes his farewell to poetry before leaving for Africa."
+},
+"mood": {
+"fr": "poésie · révolte · jeunesse",
+"en": "poetry · revolt · youth"
+}
+},
+"17983": {
+"hook": {
+"fr": "Un jeune homme bien né rencontre Manon. À partir de là, il fera tout ce qu'il ne faut pas.",
+"en": "A well-born young man meets Manon. From then on, he does everything he should not."
+},
+"mood": {
+"fr": "passion · ruine · exil",
+"en": "passion · ruin · exile"
+}
+},
+"52006": {
+"hook": {
+"fr": "Deux libertins s'écrivent et se lancent des défis. L'enjeu : des cœurs, et leur orgueil.",
+"en": "Two libertines write to each other and trade challenges. The stakes: hearts, and their pride."
+},
+"mood": {
+"fr": "lettres · manipulation · désir",
+"en": "letters · manipulation · desire"
+}
+},
+"13846": {
+"hook": {
+"fr": "Comment être sûr de quelque chose ? Descartes repart de zéro et trouve une première certitude.",
+"en": "How can you be sure of anything? Descartes starts from nothing and finds a first certainty."
+},
+"mood": {
+"fr": "raison · doute · méthode",
+"en": "reason · doubt · method"
+}
+},
+"11770": {
+"hook": {
+"fr": "Des histoires de Provence racontées depuis un vieux moulin : la chèvre, le curé, le sous-préfet aux champs.",
+"en": "Stories from Provence told from an old windmill: the goat, the priest, the sub-prefect in the fields."
+},
+"mood": {
+"fr": "Provence · tendresse · contes",
+"en": "Provence · tenderness · tales"
+}
+},
+"2650": {
+"hook": {
+"fr": "Un gâteau trempé dans du thé, et toute une enfance qui remonte. Le début du plus long roman du monde.",
+"en": "A cake dipped in tea, and a whole childhood comes back. The opening of the longest novel in the world."
+},
+"mood": {
+"fr": "mémoire · enfance · temps",
+"en": "memory · childhood · time"
+}
+},
+"15399": {
+"hero": true,
+"hook": {
+"fr": "Enlevé enfant dans l'actuel Nigeria, vendu, puis libre : il raconte sa vie lui-même, en 1789, et fait trembler les marchands d'esclaves.",
+"en": "Kidnapped as a child in today's Nigeria, sold, then free: he tells his own story in 1789 and shakes the slave traders."
+},
+"mood": {
+"fr": "témoignage · liberté · Atlantique",
+"en": "testimony · freedom · Atlantic"
+}
+},
+"23": {
+"hero": true,
+"hook": {
+"fr": "Il a appris à lire en cachette, parce que lire était interdit aux esclaves. Puis il a écrit ce livre.",
+"en": "He learned to read in secret, because reading was forbidden to slaves. Then he wrote this book."
+},
+"mood": {
+"fr": "récit · courage · liberté",
+"en": "memoir · courage · freedom"
+}
+},
+"1452": {
+"hook": {
+"fr": "1913 : une loi chasse les familles noires de leurs terres en Afrique du Sud. Un journaliste parcourt le pays pour le raconter.",
+"en": "1913: a law drives Black families off their land in South Africa. A journalist travels the country to tell it."
+},
+"mood": {
+"fr": "Afrique du Sud · injustice · reportage",
+"en": "South Africa · injustice · reportage"
+}
+},
+"74720": {
+"hook": {
+"fr": "1887 : un officier traverse à pied ce qui deviendra la Côte d'Ivoire, de Bamako à Grand-Bassam, et décrit les royaumes qu'il rencontre.",
+"en": "1887: an officer walks across what will become Côte d'Ivoire, from Bamako to Grand-Bassam, describing the kingdoms he meets."
+},
+"mood": {
+"fr": "Kong · exploration · 1887",
+"en": "Kong · exploration · 1887"
+}
+},
+"ws-21ac5746": {
+"hero": true,
+"hook": {
+"fr": "Le plus vieux manuel de stratégie du monde, dans la traduction d'un jésuite français de 1772. Gagner sans combattre.",
+"en": "The world's oldest manual of strategy, in a French Jesuit's translation of 1772. Winning without fighting."
+},
+"mood": {
+"fr": "stratégie · ruse · calme",
+"en": "strategy · cunning · calm"
+}
+},
+"15058": {
+"hook": {
+"fr": "Sophie a quatre ans, de bonnes idées et des résultats catastrophiques. Chaque chapitre est une bêtise.",
+"en": "Sophie is four, full of good ideas with catastrophic results. Every chapter is a new mischief."
+},
+"mood": {
+"fr": "bêtises · enfance · rires",
+"en": "mischief · childhood · laughter"
+}
+},
+"ws-93eb3ee9": {
+"hero": true,
+"hook": {
+"fr": "Vendu à huit ans à un musicien ambulant, Rémi traverse la France avec un chien, un singe et une question : qui sont ses parents ?",
+"en": "Sold at eight to a travelling musician, Rémi crosses France with a dog, a monkey and one question: who are his parents?"
+},
+"mood": {
+"fr": "route · amitié · famille",
+"en": "road · friendship · family"
+}
+},
+"800": {
+"hero": true,
+"hook": {
+"fr": "Un gentleman parie qu'il fera le tour du monde en quatre-vingts jours. Un policier le prend pour un voleur et le suit partout.",
+"en": "A gentleman bets he can circle the globe in eighty days. A detective takes him for a thief and follows him everywhere."
+},
+"mood": {
+"fr": "pari · vitesse · monde",
+"en": "wager · speed · world"
+}
+},
+"54873": {
+"hook": {
+"fr": "Un monstre marin attaque les navires. C'est un sous-marin, et son capitaine ne veut plus jamais revoir la terre.",
+"en": "A sea monster attacks ships. It is a submarine, and its captain never wants to see land again."
+},
+"mood": {
+"fr": "océan · mystère · liberté",
+"en": "ocean · mystery · freedom"
+}
+},
+"4791": {
+"hook": {
+"fr": "Un vieux parchemin indique l'entrée : un volcan d'Islande. Au fond, il n'y a pas de fond.",
+"en": "An old parchment marks the entrance: a volcano in Iceland. At the bottom, there is no bottom."
+},
+"mood": {
+"fr": "exploration · science · vertige",
+"en": "exploration · science · vertigo"
+}
+},
+"55456": {
+"hook": {
+"fr": "Un lapin blanc qui regarde sa montre, un trou, et un pays où rien n'a de sens, sauf pour ceux qui y vivent.",
+"en": "A white rabbit checking his watch, a hole, and a land where nothing makes sense, except to those who live there."
+},
+"mood": {
+"fr": "absurde · rêve · jeux de mots",
+"en": "absurd · dream · wordplay"
+}
+},
+"13951": {
+"hero": true,
+"hook": {
+"fr": "Un jeune Gascon arrive à Paris avec un cheval ridicule et trois duels prévus le même jour.",
+"en": "A young Gascon arrives in Paris with a ridiculous horse and three duels scheduled for the same day."
+},
+"mood": {
+"fr": "amitié · épées · complots",
+"en": "friendship · swords · plots"
+}
+},
+"14287": {
+"hook": {
+"fr": "Cinq prisonniers s'évadent en ballon et tombent sur une île déserte. Quelqu'un, pourtant, les aide en secret.",
+"en": "Five prisoners escape by balloon and land on a desert island. Someone, though, is secretly helping them."
+},
+"mood": {
+"fr": "survie · ingéniosité · secret",
+"en": "survival · ingenuity · secret"
+}
+},
+"2680": {
+"hero": true,
+"hook": {
+"fr": "Les notes privées d'un empereur romain, écrites le soir sous la tente, pour rester juste quand tout pousse à ne pas l'être.",
+"en": "A Roman emperor's private notes, written at night in his tent, on staying just when everything pushes you not to be."
+},
+"mood": {
+"fr": "stoïcisme · calme · devoir",
+"en": "stoicism · calm · duty"
+}
+},
+"45109": {
+"hook": {
+"fr": "Un ancien esclave devenu philosophe résume sa méthode : sépare ce qui dépend de toi de ce qui n'en dépend pas.",
+"en": "A former slave turned philosopher sums up his method: separate what is up to you from what is not."
+},
+"mood": {
+"fr": "stoïcisme · liberté · pratique",
+"en": "stoicism · freedom · practice"
+}
+},
+"1232": {
+"hook": {
+"fr": "Comment prendre le pouvoir et le garder, expliqué sans morale et sans détour. Les puissants le lisent encore.",
+"en": "How to take power and keep it, explained without morals and without detours. The powerful still read it."
+},
+"mood": {
+"fr": "pouvoir · stratégie · réalisme",
+"en": "power · strategy · realism"
+}
+},
+"4507": {
+"hook": {
+"fr": "Un petit livre de 1903 avec une seule idée : tu deviens ce que tu penses. Les livres de développement personnel en descendent tous.",
+"en": "A small book from 1903 with a single idea: you become what you think. Every self-help book descends from it."
+},
+"mood": {
+"fr": "pensée · caractère · court",
+"en": "thought · character · short"
+}
+},
+"20203": {
+"hook": {
+"fr": "Fils d'un fabricant de chandelles, parti de rien : Franklin raconte comment il s'est fabriqué lui-même, vertu par vertu.",
+"en": "A candle-maker's son who started with nothing: Franklin tells how he built himself, one virtue at a time."
+},
+"mood": {
+"fr": "discipline · réussite · humour",
+"en": "discipline · success · humour"
+}
+},
+"205": {
+"hook": {
+"fr": "Il a construit une cabane au bord d'un lac et vécu deux ans avec presque rien, pour voir ce qui est vraiment nécessaire.",
+"en": "He built a cabin by a pond and lived two years with almost nothing, to find out what is truly necessary."
+},
+"mood": {
+"fr": "nature · simplicité · liberté",
+"en": "nature · simplicity · freedom"
+}
+},
+"ws-015ec8c0": {
+"hook": {
+"fr": "Les notes privées d'un empereur romain, écrites le soir, pour rester juste quand tout pousse à ne pas l'être. En français.",
+"en": "A Roman emperor's private notes, written at night, on staying just when everything pushes you not to be. In French."
+},
+"mood": {
+"fr": "stoïcisme · calme · devoir",
+"en": "stoicism · calm · duty"
+}
+},
+"ws-8fb0c774": {
+"hook": {
+"fr": "La vie n'est pas courte : c'est nous qui la gaspillons. Sénèque en vingt pages, à relire chaque année.",
+"en": "Life is not short: we are the ones who waste it. Seneca in twenty pages, to reread every year."
+},
+"mood": {
+"fr": "temps · sagesse · court",
+"en": "time · wisdom · short"
+}
+},
+"48529": {
+"hook": {
+"fr": "Un homme se retire dans sa tour et écrit sur tout : la peur, l'amitié, la mort, les cannibales, lui-même. Il invente l'essai.",
+"en": "A man retires to his tower and writes about everything: fear, friendship, death, cannibals, himself. He invents the essay."
+},
+"mood": {
+"fr": "soi · doute · liberté",
+"en": "self · doubt · freedom"
+}
+},
+"1342": {
+"hero": true,
+"hook": {
+"fr": "Il est riche, fier et désagréable. Elle est vive, moqueuse et sans dot. Ils se détestent, évidemment.",
+"en": "He is rich, proud and unpleasant. She is sharp, teasing and without a dowry. They hate each other, of course."
+},
+"mood": {
+"fr": "esprit · mariage · orgueil",
+"en": "wit · marriage · pride"
+}
+},
+"768": {
+"hook": {
+"fr": "Un enfant trouvé, élevé dans une ferme des landes, et un amour qui détruira deux familles sur deux générations.",
+"en": "A foundling raised on a moorland farm, and a love that will destroy two families across two generations."
+},
+"mood": {
+"fr": "landes · vengeance · passion",
+"en": "moors · revenge · passion"
+}
+},
+"1400": {
+"hook": {
+"fr": "Un orphelin aide un forçat évadé dans un cimetière. Des années plus tard, un bienfaiteur anonyme fait de lui un gentleman.",
+"en": "An orphan helps an escaped convict in a graveyard. Years later, an anonymous benefactor makes him a gentleman."
+},
+"mood": {
+"fr": "destin · classe · secret",
+"en": "fate · class · secret"
+}
+},
+"98": {
+"hook": {
+"fr": "Londres et Paris pendant la Révolution. Deux hommes qui se ressemblent, une femme, et une guillotine.",
+"en": "London and Paris during the Revolution. Two men who look alike, one woman, and a guillotine."
+},
+"mood": {
+"fr": "révolution · sacrifice · Paris",
+"en": "revolution · sacrifice · Paris"
+}
+},
+"730": {
+"hook": {
+"fr": "Un orphelin demande une deuxième portion de soupe. Pour ce crime, Londres va lui montrer ses bas-fonds.",
+"en": "An orphan asks for a second helping of gruel. For that crime, London will show him its underworld."
+},
+"mood": {
+"fr": "Londres · enfance · voleurs",
+"en": "London · childhood · thieves"
+}
+},
+"19337": {
+"hook": {
+"fr": "Un avare reçoit la visite de trois fantômes la nuit de Noël. Au matin, il a changé. À lire en une soirée.",
+"en": "A miser is visited by three ghosts on Christmas night. By morning he has changed. Read it in one evening."
+},
+"mood": {
+"fr": "Noël · fantômes · générosité",
+"en": "Christmas · ghosts · generosity"
+}
+},
+"84": {
+"hero": true,
+"hook": {
+"fr": "Un étudiant fabrique un être vivant à partir de morts. L'être ouvre les yeux, et le savant s'enfuit.",
+"en": "A student builds a living being out of the dead. The being opens its eyes, and the scientist runs away."
+},
+"mood": {
+"fr": "science · solitude · monstre",
+"en": "science · loneliness · monster"
+}
+},
+"345": {
+"hook": {
+"fr": "Un clerc de notaire se rend dans un château de Transylvanie. Son hôte ne mange jamais et ne se reflète pas dans les miroirs.",
+"en": "A solicitor's clerk travels to a castle in Transylvania. His host never eats and casts no reflection."
+},
+"mood": {
+"fr": "vampire · nuit · lettres",
+"en": "vampire · night · letters"
+}
+},
+"120": {
+"hook": {
+"fr": "Une carte au trésor, un cuisinier à une jambe, et un garçon qui en sait trop. Le roman de pirates original.",
+"en": "A treasure map, a one-legged cook, and a boy who knows too much. The original pirate novel."
+},
+"mood": {
+"fr": "pirates · trésor · trahison",
+"en": "pirates · treasure · betrayal"
+}
+},
+"42": {
+"hook": {
+"fr": "Un médecin respecté, un inconnu brutal qui sort de chez lui la nuit, et une porte que personne n'ouvre.",
+"en": "A respected doctor, a brutal stranger who leaves his house at night, and a door nobody opens."
+},
+"mood": {
+"fr": "double · Londres · secret",
+"en": "double · London · secret"
+}
+},
+"174": {
+"hook": {
+"fr": "Il restera jeune et beau ; son portrait vieillira à sa place, et portera chacune de ses fautes.",
+"en": "He will stay young and beautiful; his portrait will age in his place, and carry each of his sins."
+},
+"mood": {
+"fr": "beauté · péché · portrait",
+"en": "beauty · sin · portrait"
+}
+},
+"1661": {
+"hero": true,
+"hook": {
+"fr": "Douze enquêtes, un détective qui devine votre vie à vos chaussures, et un ami qui prend des notes.",
+"en": "Twelve cases, a detective who reads your life from your shoes, and a friend who takes notes."
+},
+"mood": {
+"fr": "enquêtes · logique · Londres",
+"en": "cases · logic · London"
+}
+},
+"2852": {
+"hook": {
+"fr": "Une malédiction familiale, un chien monstrueux sur la lande, et Holmes qui n'y croit pas une seconde.",
+"en": "A family curse, a monstrous hound on the moor, and Holmes who does not believe a word of it."
+},
+"mood": {
+"fr": "lande · malédiction · enquête",
+"en": "moor · curse · case"
+}
+},
+"76": {
+"hook": {
+"fr": "Un garçon fuit son père, un esclave fuit son maître, et le Mississippi les emporte tous les deux sur un radeau.",
+"en": "A boy runs from his father, a slave runs from his master, and the Mississippi carries them both on a raft."
+},
+"mood": {
+"fr": "fleuve · liberté · amitié",
+"en": "river · freedom · friendship"
+}
+},
+"11": {
+"hook": {
+"fr": "Un lapin blanc qui regarde sa montre, un trou, et un pays où rien n'a de sens, sauf pour ceux qui y vivent.",
+"en": "A white rabbit checking his watch, a hole, and a land where nothing makes sense, except to those who live there."
+},
+"mood": {
+"fr": "absurde · rêve · jeux de mots",
+"en": "absurd · dream · wordplay"
+}
+},
+"15": {
+"hook": {
+"fr": "Un capitaine a perdu une jambe contre une baleine blanche. Il a un navire, un équipage, et une seule idée.",
+"en": "A captain lost a leg to a white whale. He has a ship, a crew, and a single idea."
+},
+"mood": {
+"fr": "obsession · océan · démesure",
+"en": "obsession · ocean · excess"
+}
+},
+"64317": {
+"hero": true,
+"hook": {
+"fr": "Un millionnaire donne des fêtes immenses pour une seule invitée, qui ne vient jamais : la femme qu'il a aimée il y a cinq ans.",
+"en": "A millionaire throws huge parties for a single guest who never comes: the woman he loved five years ago."
+},
+"mood": {
+"fr": "fêtes · illusion · 1922",
+"en": "parties · illusion · 1922"
+}
+},
+"219": {
+"hook": {
+"fr": "Un capitaine remonte un fleuve africain pour retrouver un agent devenu dieu. Ce qu'il trouve, c'est l'Europe elle-même.",
+"en": "A captain sails up an African river to find an agent who became a god. What he finds is Europe itself."
+},
+"mood": {
+"fr": "fleuve · colonie · ténèbres",
+"en": "river · colony · darkness"
+}
+},
+"36": {
+"hook": {
+"fr": "Des cylindres tombent du ciel près de Londres. Ce qui en sort n'est pas venu négocier.",
+"en": "Cylinders fall from the sky near London. What comes out has not come to negotiate."
+},
+"mood": {
+"fr": "invasion · panique · Mars",
+"en": "invasion · panic · Mars"
+}
+},
+"35": {
+"hook": {
+"fr": "Un inventeur voyage en l'an 802 701. L'humanité y est devenue deux espèces, et l'une mange l'autre.",
+"en": "An inventor travels to the year 802,701. Humanity has split into two species, and one eats the other."
+},
+"mood": {
+"fr": "futur · science · vertige",
+"en": "future · science · vertigo"
+}
+},
+"16": {
+"hook": {
+"fr": "Un garçon qui refuse de grandir entre par la fenêtre et emmène trois enfants vers une île où l'on se bat contre des pirates.",
+"en": "A boy who refuses to grow up comes in through the window and takes three children to an island where they fight pirates."
+},
+"mood": {
+"fr": "vol · pirates · enfance",
+"en": "flight · pirates · childhood"
+}
+},
+"514": {
+"hook": {
+"fr": "Quatre sœurs, un père à la guerre, pas d'argent, et Jo qui veut devenir écrivain plutôt qu'épouse.",
+"en": "Four sisters, a father at war, no money, and Jo who wants to be a writer rather than a wife."
+},
+"mood": {
+"fr": "sœurs · ambition · chaleur",
+"en": "sisters · ambition · warmth"
+}
+},
+"215": {
+"hook": {
+"fr": "Un chien de Californie est volé et vendu dans le Grand Nord. Pour survivre, il devra réapprendre à être un loup.",
+"en": "A California dog is stolen and sold in the far North. To survive, he must learn to be a wolf again."
+},
+"mood": {
+"fr": "neige · survie · instinct",
+"en": "snow · survival · instinct"
+}
+},
+"1122": {
+"hook": {
+"fr": "Le fantôme de son père lui demande vengeance. Hamlet va réfléchir. Longtemps. Tout le monde va mourir.",
+"en": "His father's ghost demands revenge. Hamlet will think about it. At length. Everyone will die."
+},
+"mood": {
+"fr": "doute · vengeance · Danemark",
+"en": "doubt · revenge · Denmark"
+}
+},
+"1112": {
+"hook": {
+"fr": "Deux familles qui se haïssent, deux adolescents qui s'aiment, cinq jours à Vérone.",
+"en": "Two families who hate each other, two teenagers who love each other, five days in Verona."
+},
+"mood": {
+"fr": "amour · haine · Vérone",
+"en": "love · hate · Verona"
+}
+},
+"1533": {
+"hook": {
+"fr": "Trois sorcières lui promettent le trône. Sa femme lui dit comment le prendre. Il ne dormira plus jamais.",
+"en": "Three witches promise him the throne. His wife tells him how to take it. He will never sleep again."
+},
+"mood": {
+"fr": "ambition · sang · Écosse",
+"en": "ambition · blood · Scotland"
+}
+},
+"1184": {
+"hero": true,
+"hook": {
+"fr": "Un marin innocent est enfermé quatorze ans. Il en sort avec une fortune, un nouveau nom et une liste.",
+"en": "An innocent sailor is locked away for fourteen years. He comes out with a fortune, a new name and a list."
+},
+"mood": {
+"fr": "vengeance · fortune · patience",
+"en": "revenge · fortune · patience"
+}
+},
+"164": {
+"hook": {
+"fr": "Un monstre marin attaque les navires. C'est un sous-marin, et son capitaine ne veut plus jamais revoir la terre.",
+"en": "A sea monster attacks ships. It is a submarine, and its captain never wants to see land again."
+},
+"mood": {
+"fr": "océan · mystère · liberté",
+"en": "ocean · mystery · freedom"
+}
+},
+"103": {
+"hook": {
+"fr": "Un gentleman parie qu'il fera le tour du monde en quatre-vingts jours. Un policier le prend pour un voleur et le suit partout.",
+"en": "A gentleman bets he can circle the globe in eighty days. A detective takes him for a thief and follows him everywhere."
+},
+"mood": {
+"fr": "pari · vitesse · monde",
+"en": "wager · speed · world"
+}
+},
+"17989": {
+"hero": true,
+"hook": {
+"fr": "Un marin innocent est enfermé quatorze ans. Il en sort avec une fortune, un nouveau nom et une liste.",
+"en": "An innocent sailor is locked away for fourteen years. He comes out with a fortune, a new name and a list."
+},
+"mood": {
+"fr": "vengeance · fortune · patience",
+"en": "revenge · fortune · patience"
+}
+},
+"62215": {
+"hook": {
+"fr": "Une voix dans les murs de l'Opéra, une chanteuse qui progresse trop vite, et une loge que personne ne doit occuper.",
+"en": "A voice in the walls of the Opera, a singer improving too fast, and a box nobody may sit in."
+},
+"mood": {
+"fr": "Opéra · masque · obsession",
+"en": "Opera · mask · obsession"
+}
+},
+"32854": {
+"hook": {
+"fr": "Il vole les riches avec élégance, prévient ses victimes par courrier, et s'évade toujours. La police l'adore presque.",
+"en": "He robs the rich with elegance, warns his victims by post, and always escapes. The police almost adore him."
+},
+"mood": {
+"fr": "élégance · vol · panache",
+"en": "elegance · theft · panache"
+}
+},
+"26296": {
+"hook": {
+"fr": "Pour ne pas mourir à l'aube, une jeune femme raconte chaque nuit une histoire au roi, et s'arrête au meilleur moment.",
+"en": "To avoid dying at dawn, a young woman tells the king a story every night, and stops at the best moment."
+},
+"mood": {
+"fr": "contes · ruse · Orient",
+"en": "tales · cunning · Orient"
+}
+}
 }
