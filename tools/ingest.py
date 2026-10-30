@@ -26,7 +26,7 @@ DATA = os.path.join(SITE, "data")
 CACHE = os.path.join(ROOT, "tools", "cache")
 PD_DEATH_BEFORE = 1956          # life + 70 as of 2026
 PART_BYTES = 45_000             # target size of one chapter part (uncompressed)
-FMT = 5                         # bump to re-process every book with the current text pipeline
+FMT = 6                         # bump to re-process every book with the current text pipeline
 UA = "Bibli/1.0 (public-domain library; contact: admin@example.org)"
 
 GENRE_MAP = [  # (regex on Gutendex bookshelves/subjects, genre key)
@@ -176,6 +176,25 @@ def fetch_text(gid, preferred=None):
             last = e
     raise RuntimeError(f"no text source reachable for {gid}: {last}")
 
+def fetch_cover(gid):
+    """Gutenberg's own cover image (scan of the original edition or a volunteer cover), kept as a
+    small JPEG for the book page. Returns True when saved. Never hotlinked, per Gutenberg's policy."""
+    out = os.path.join(DATA, "orig", f"{gid}.jpg")
+    if os.path.exists(out):
+        return True
+    for u in (f"https://www.gutenberg.org/cache/epub/{gid}/pg{gid}.cover.medium.jpg",
+              f"https://aleph.gutenberg.org/cache/epub/{gid}/pg{gid}.cover.medium.jpg"):
+        try:
+            raw = fetch(u, binary=True)
+            if raw[:3] == b"\xff\xd8\xff" and len(raw) > 3000:
+                os.makedirs(os.path.dirname(out), exist_ok=True)
+                with open(out, "wb") as f:
+                    f.write(raw)
+                return True
+        except Exception:
+            pass
+    return False
+
 # ---------- text processing ----------
 
 START_RX = re.compile(r"^\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*$", re.M)
@@ -275,6 +294,7 @@ def ingest(meta, lang_hint=None):
         parts.append(cur)
     out_dir = os.path.join(DATA, "books", str(gid))
     os.makedirs(out_dir, exist_ok=True)
+    orig = fetch_cover(gid)
     for k, p in enumerate(parts):
         with open(os.path.join(out_dir, f"p{k}.json"), "w", encoding="utf-8") as f:
             json.dump(p, f, ensure_ascii=False, separators=(",", ":"))
@@ -297,6 +317,7 @@ def ingest(meta, lang_hint=None):
         "source_url": f"https://www.gutenberg.org/ebooks/{gid}",
         "epub_url": f"https://www.gutenberg.org/ebooks/{gid}.epub3.images",
         "license": "Domaine public / Public domain",
+        "orig": orig,
         "fmt": FMT,
     }
 
@@ -319,9 +340,11 @@ def parse_shelves(path):
             author, _, title = v.partition("|")
             cur["items"].append({"src": "pg", "lang": k, "author": author.strip(), "title": title.strip()})
         elif k == "ws":
-            lang, _, rest = v.partition("|")
-            title, _, author = rest.partition("|")
-            cur["items"].append({"src": "ws", "lang": lang.strip(), "title": title.strip(), "author": author.strip()})
+            parts = [x.strip() for x in v.split("|")]
+            lang, title = parts[0], parts[1]
+            author = parts[2] if len(parts) > 2 else ""
+            genres = [x.strip() for x in parts[3].split(",")] if len(parts) > 3 else ["fiction"]
+            cur["items"].append({"src": "ws", "lang": lang, "title": title, "author": author, "genres": genres})
     return shelves
 
 def main():
@@ -381,7 +404,7 @@ def main():
                     if it["src"] == "ws":
                         gid = "ws-" + hashlib.sha1(it["title"].encode()).hexdigest()[:8]
                         if not fresh(gid):
-                            b = ingest_wikisource.ingest_ws(it["title"], author=it.get("author", ""), lang=it["lang"])
+                            b = ingest_wikisource.ingest_ws(it["title"], author=it.get("author", ""), lang=it["lang"], genres=it.get("genres", ["fiction"]))
                             if b:
                                 catalogue[b["id"]] = b
                         if gid in catalogue:

@@ -4,31 +4,31 @@
 # Order in a shelf = display order. Unresolved lines are listed in tools/last-run.log.
 
 [bac]
-name_fr: À lire pour le BAC et le BEPC
-name_en: French school classics (BAC/BEPC)
-desc_fr: Les œuvres qui reviennent dans les programmes de français en Côte d'Ivoire et dans la francophonie : théâtre, roman, poésie, idées.
-desc_en: The works that keep coming back in French-language school programmes: drama, novels, poetry, ideas.
+name_fr: Pour briller en classe
+name_en: To shine in class
+desc_fr: BAC, BEPC : les œuvres qui reviennent dans les programmes de français, en Côte d'Ivoire et dans toute la francophonie. Théâtre, roman, poésie, idées.
+desc_en: BAC, BEPC: the works that keep coming back in French-language school programmes. Drama, novels, poetry, ideas.
 fr: Voltaire | Candide
 fr: Molière | L'avare
-ws: fr | Le Tartuffe ou l'Imposteur | Molière
-ws: fr | Le Malade imaginaire | Molière
-ws: fr | Le Bourgeois gentilhomme | Molière
-ws: fr | Dom Juan ou le Festin de pierre | Molière
+ws: fr | Le Tartuffe ou l'Imposteur | Molière | drama
+ws: fr | Le Malade imaginaire | Molière | drama
+ws: fr | Le Bourgeois gentilhomme | Molière | drama
+ws: fr | Dom Juan ou le Festin de pierre | Molière | drama
 # TODO incomplete on Wikisource import (3k words): ws: fr | Le Cid (Corneille) | Pierre Corneille
-ws: fr | Phèdre (Racine) | Jean Racine
-ws: fr | Andromaque (Racine) | Jean Racine
+ws: fr | Phèdre (Racine) | Jean Racine | drama
+ws: fr | Andromaque (Racine) | Jean Racine | drama
 # TODO incomplete: ws: fr | Britannicus (Racine) | Jean Racine
 fr: La Fontaine | Fables
 fr: Beaumarchais | Le mariage de Figaro
 fr: Montesquieu | Lettres persanes
-ws: fr | Du contrat social | Jean-Jacques Rousseau
+ws: fr | Du contrat social | Jean-Jacques Rousseau | philosophy
 fr: Hugo | Les misérables Tome I
 fr: Hugo | Notre-Dame de Paris
 fr: Hugo | Les contemplations
 fr: Hugo | Hernani
 fr: Hugo | Ruy Blas
 fr: Stendhal | Le rouge et le noir
-ws: fr | Le Père Goriot | Honoré de Balzac
+ws: fr | Le Père Goriot | Honoré de Balzac | fiction
 fr: Balzac | Eugénie Grandet
 fr: Flaubert | Madame Bovary
 fr: Zola | Germinal
@@ -36,7 +36,7 @@ fr: Zola | L'assommoir
 fr: Zola | Au bonheur des dames
 fr: Maupassant | Boule de suif
 fr: Maupassant | Une vie
-ws: fr | Bel-Ami | Guy de Maupassant
+ws: fr | Bel-Ami | Guy de Maupassant | fiction
 fr: Maupassant | Le Horla
 fr: Baudelaire | Les fleurs du mal
 fr: Rostand | Cyrano de Bergerac
@@ -51,8 +51,8 @@ fr: Daudet | Lettres de mon moulin
 fr: Proust | Du côté de chez Swann
 
 [afrique]
-name_fr: Afrique : récits, contes et voix libres
-name_en: Africa: free narratives, tales and voices
+name_fr: L'Afrique en voix libres
+name_en: Africa in free voices
 desc_fr: Peu de littérature africaine est déjà libre de droits : ses grands auteurs sont trop récents. Voici ce qui l'est : récits d'Africains et de descendants d'Africains, contes recueillis, relations de voyage. Les textes d'époque coloniale portent le regard de leur temps.
 desc_en: Little African literature is in the public domain yet: its great authors are too recent. Here is what is free: narratives by Africans and people of African descent, collected tales, travel accounts. Colonial-era texts carry the views of their time.
 en: Equiano | The interesting narrative of the life of Olaudah Equiano
@@ -67,28 +67,28 @@ en: Park | Travels in the interior of Africa
 en: Leo Africanus | The history and description of Africa
 fr: Binger | Du Niger au golfe de Guinée
 fr: Delafosse | Haut-Sénégal-Niger
-ws: fr | L'Âme nègre | Maurice Delafosse
+ws: fr | L'Âme nègre | Maurice Delafosse | history
 fr: Cousturier | Des inconnus chez moi
 fr: Ibn Batoutah | Voyages
-fr: Basset | Contes populaires d'Afrique
+ws: fr | Contes populaires d'Afrique | René Basset | children,history
 fr: Equilbecq | Contes indigènes
 fr: Dubois | Tombouctou la mystérieuse
-ws: fr | Au soleil (Maupassant) | Guy de Maupassant
-ws: fr | Le Roman d'un spahi | Pierre Loti
-ws: fr | L'Art de la guerre (Sun Tzu) | Sun Tzu, trad. J.-M. Amiot (1772)
+ws: fr | Au soleil (Maupassant) | Guy de Maupassant | adventure,history
+ws: fr | Le Roman d'un spahi | Pierre Loti | fiction,history
+ws: fr | L'Art de la guerre (Sun Tzu) | Sun Tzu, trad. J.-M. Amiot (1772) | selfhelp,philosophy
 
 [jeunesse]
-name_fr: Livres pour enfants, en français
-name_en: Children's books, in French
-desc_fr: Contes, fables et grands romans d'aventure à lire à voix haute ou seul, dès 8 ans.
-desc_en: Tales, fables and adventure novels to read aloud or alone, from age 8.
+name_fr: À lire en famille
+name_en: To read as a family
+desc_fr: Contes, fables et grands romans d'aventure en français, à lire à voix haute ou seul, dès 8 ans.
+desc_en: Tales, fables and adventure novels in French, to read aloud or alone, from age 8.
 fr: La Fontaine | Fables
 fr: Ségur | Les malheurs de Sophie
 fr: Ségur | Les petites filles modèles
 fr: Ségur | Un bon petit diable
 fr: Ségur | Les vacances
 fr: Ségur | Le général Dourakine
-ws: fr | Sans famille | Hector Malot
+ws: fr | Sans famille | Hector Malot | children,adventure
 fr: Malot | En famille
 fr: Daudet | Lettres de mon moulin
 fr: Daudet | Tartarin de Tarascon
@@ -111,8 +111,8 @@ fr: Verne | L'île mystérieuse
 fr: Dumas | Les trois mousquetaires
 
 [dev]
-name_fr: Développement personnel et sagesse
-name_en: Personal development and wisdom
+name_fr: Pour grandir
+name_en: To grow
 desc_fr: Les textes que les livres de développement personnel citent encore : stoïciens, moralistes, pensée de l'action.
 desc_en: The texts that today's self-help books still quote: Stoics, moralists, the philosophy of action.
 en: Marcus Aurelius | Meditations
@@ -130,20 +130,20 @@ fr: Montaigne | Essais
 fr: Pascal | Pensées
 fr: La Rochefoucauld | Réflexions ou sentences et maximes morales
 fr: Descartes | Discours de la méthode
-ws: fr | Du contrat social | Jean-Jacques Rousseau
-ws: fr | Manuel d'Épictète | Épictète
-ws: fr | Pensées pour moi-même | Marc Aurèle
-ws: fr | De la brièveté de la vie | Sénèque
+ws: fr | Du contrat social | Jean-Jacques Rousseau | philosophy
+ws: fr | Manuel d'Épictète | Épictète | selfhelp,philosophy
+ws: fr | Pensées pour moi-même | Marc Aurèle | selfhelp,philosophy
+ws: fr | De la brièveté de la vie | Sénèque | selfhelp,philosophy
 fr: La Bruyère | Les caractères
 
 [classiques-en]
-name_fr: Classiques anglais
+name_fr: Les classiques anglais, pour ton anglais
 name_en: English classics
-desc_fr: Les romans anglais et américains que tout le monde devrait lire une fois.
+desc_fr: Les romans anglais et américains que tout le monde devrait lire une fois. En version originale : le meilleur moyen de progresser.
 desc_en: The English and American novels everyone should read once.
 en: Austen | Pride and prejudice
 en: Austen | Emma
-en: Brontë | Jane Eyre
+en: Brontë | Jane Eyre: An Autobiography
 en: Brontë | Wuthering heights
 en: Dickens | Great expectations
 en: Dickens | A tale of two cities
@@ -157,7 +157,7 @@ en: Wilde | The picture of Dorian Gray
 en: Doyle | The adventures of Sherlock Holmes
 en: Doyle | The hound of the Baskervilles
 en: Twain | Adventures of Huckleberry Finn
-en: Twain | The adventures of Tom Sawyer
+en: Twain | The adventures of Tom Sawyer, complete
 en: Carroll | Alice's adventures in Wonderland
 en: Melville | Moby Dick
 en: Hawthorne | The scarlet letter

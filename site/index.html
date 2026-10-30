@@ -5,71 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bibli — livres libres, en français et en anglais</title>
 <meta name="description" content="Bibli : une bibliothèque de livres du domaine public, gratuits, à lire sur ton téléphone, même avec peu de données. Public-domain books, free, in French and English.">
-<meta name="theme-color" content="#f7f3ea">
+<meta name="theme-color" content="#f4ead6">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap">
 <style>
-/* Layout: app pages scroll under a sticky top bar and above a bottom tab bar; the reader takes the whole screen. */
+/* Bibli v3 — warm West-African palette: sand paper, kola ink, terracotta + indigo accents, one electric gold.
+   Display: Fraunces. Reading: system serif / sans / Atkinson Hyperlegible, chosen by the reader. */
 :root{
-  --paper:#f7f3ea;--paper2:#efe8d9;--ink:#241d15;--ink2:#6a5f50;--line:#ddd3c0;--accent:#1d5c8a;--accent2:#2a7a62;--card:#fffcf5;--focus:#f5a524;
-  --rs:18px;--rlh:1.6;--rf:Georgia,"Times New Roman",serif;--tab:60px;
+  --paper:#f4ead6;--paper2:#eadcc0;--ink:#231a12;--ink2:#6b5a45;--line:#d9c7a6;--card:#fcf6ea;
+  --accent:#c8501f;--accent2:#2b3a8c;--gold:#f5b700;--focus:#2b3a8c;--on-accent:#fff7ea;
+  --rs:18px;--rlh:1.6;--rf:Georgia,"Times New Roman",serif;--df:"Fraunces",Georgia,serif;--tab:60px;
 }
-[data-theme=dark]{--paper:#141210;--paper2:#1e1a15;--ink:#ebe2d2;--ink2:#a6967e;--line:#332a1e;--accent:#79b8e8;--accent2:#5fb3a0;--card:#1c1813}
-[data-theme=sepia]{--paper:#ead9bd;--paper2:#e0cdab;--ink:#3a2d1c;--ink2:#6e5a40;--line:#cdb892;--card:#f1e3c8}
-[data-theme=contrast]{--paper:#000;--paper2:#111;--ink:#fff;--ink2:#e6e6e6;--line:#555;--accent:#ffd400;--accent2:#7cf5c8;--card:#0a0a0a;--focus:#ffd400}
+[data-theme=dark]{--paper:#141833;--paper2:#1d2244;--ink:#f1e8d6;--ink2:#aaa4bb;--line:#2d3360;--card:#1a1f3f;--accent:#f0774a;--accent2:#8aa2ff;--gold:#ffc83d;--focus:#ffc83d}
+[data-theme=sepia]{--paper:#e9d9bb;--paper2:#dfcba6;--ink:#3a2d1c;--ink2:#6e5a40;--line:#cdb68c;--card:#f1e3c8}
+[data-theme=contrast]{--paper:#000;--paper2:#111;--ink:#fff;--ink2:#e6e6e6;--line:#555;--card:#0a0a0a;--accent:#ffd400;--accent2:#7cf5c8;--gold:#ffd400;--focus:#ffd400;--on-accent:#000}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;height:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100%;padding-bottom:calc(var(--tab) + env(safe-area-inset-bottom))}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;touch-action:manipulation}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-header.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;min-height:56px;padding:8px 16px;padding-top:max(8px,env(safe-area-inset-top))}
-.logo{font:700 24px/1 var(--rf);letter-spacing:-.5px;display:flex;align-items:center;gap:8px;min-height:44px}
-.logo i{width:24px;height:24px;border-radius:4px 10px 10px 4px;background:var(--accent);display:inline-block;position:relative}
-.logo i:after{content:"";position:absolute;left:6px;top:6px;width:12px;height:2px;background:var(--paper);box-shadow:0 4px 0 var(--paper),0 8px 0 var(--paper)}
+header.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;min-height:56px;padding:8px 16px;padding-top:max(8px,env(safe-area-inset-top))}
+.logo{font:700 26px/1 var(--df);letter-spacing:-.5px;display:flex;align-items:center;gap:9px;min-height:44px}
+.logo i{width:26px;height:26px;border-radius:5px 11px 11px 5px;background:var(--accent);display:inline-block;position:relative}
+.logo i:after{content:"";position:absolute;left:7px;top:7px;width:12px;height:2px;background:var(--on-accent);box-shadow:0 4px 0 var(--on-accent),0 8px 0 var(--on-accent)}
 .spacer{flex:1}
 .pill{border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:14px;background:var(--card);min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .pill.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pill.gold{background:var(--gold);color:#231a12;border-color:transparent;font-weight:700}
 main{padding:16px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right));max-width:900px;margin:0 auto}
-h1{font:700 30px/1.15 var(--rf);margin:8px 0 6px;letter-spacing:-.5px;text-wrap:balance}h2{font:700 21px/1.2 var(--rf);margin:28px 0 4px;text-wrap:balance}
-h2 a{display:flex;justify-content:space-between;align-items:baseline;gap:10px}h2 a small{font:500 13px system-ui,sans-serif;color:var(--accent);white-space:nowrap}
+h1{font:700 32px/1.08 var(--df);margin:8px 0 8px;letter-spacing:-.3px;text-wrap:balance}h2{font:700 23px/1.15 var(--df);margin:0;text-wrap:balance}
 .sub{color:var(--ink2);margin:0 0 12px;font-size:15px}
 .search{display:flex;gap:8px;margin:14px 0}
 .search input{flex:1;font:inherit;padding:13px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);outline:none;min-height:48px;min-width:0}
-.search input:focus{border-color:var(--accent)}
+.search input:focus{border-color:var(--accent2)}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chips .pill{white-space:nowrap;flex:0 0 auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
-.row{display:flex;gap:12px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none;scroll-snap-type:x proximity}.row::-webkit-scrollbar{display:none}.row .card{flex:0 0 150px;scroll-snap-align:start}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:6px;min-height:176px;position:relative;overflow:hidden}
-.cover{height:88px;border-radius:9px;display:flex;align-items:flex-end;padding:8px;font:700 14px/1.15 var(--rf);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45);background:linear-gradient(160deg,var(--c1),var(--c2))}
-.card .t{font:600 14px/1.25 var(--rf)}.card .a{font-size:12px;color:var(--ink2)}
-.card .m{font-size:11px;color:var(--ink2);margin-top:auto;display:flex;gap:6px;align-items:center}
+/* covers */
+.cov{position:relative;aspect-ratio:2/3;width:100%;border-radius:6px 10px 10px 6px;overflow:visible}
+.cov svg{display:block;width:100%;height:100%;border-radius:6px 10px 10px 6px;box-shadow:0 6px 14px -6px rgba(35,26,18,.55);position:relative;z-index:1}
+.cov::before,.cov::after{content:"";position:absolute;inset:0;border-radius:6px 10px 10px 6px;background:var(--paper2);transform:translate(5px,4px);z-index:0;border:1px solid var(--line)}
+.cov::after{transform:translate(10px,8px);opacity:.6}
+.cov.flat::before,.cov.flat::after{display:none}
+/* cards and rows */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:18px 14px}
+.row{display:flex;gap:16px;overflow-x:auto;padding:6px 14px 14px 0;scrollbar-width:none;scroll-snap-type:x proximity}.row::-webkit-scrollbar{display:none}.row .card{flex:0 0 136px;scroll-snap-align:start}
+.card{display:flex;flex-direction:column;gap:7px;position:relative}
+.card .t{font:700 14px/1.2 var(--df);margin-top:4px}.card .a{font-size:12px;color:var(--ink2)}
+.card .m{font-size:11px;color:var(--ink2);display:flex;gap:6px;align-items:center}
 .lang{font-size:10px;font-weight:700;border:1px solid var(--line);border-radius:4px;padding:0 4px;letter-spacing:.5px}
-.prog{height:4px;background:var(--line);position:absolute;left:0;right:0;bottom:0}.prog b{display:block;height:100%;background:var(--accent2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:14px;background:var(--accent);color:#fff;font-weight:600;min-height:48px}
-[data-theme=contrast] .btn{color:#000}
-.btn.sec{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.card .prog{height:4px;background:var(--line);border-radius:2px;overflow:hidden}.prog b{display:block;height:100%;background:var(--gold);transition:width .4s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:14px;background:var(--accent);color:var(--on-accent);font-weight:700;min-height:48px}
+.btn.sec{background:var(--card);color:var(--ink);border:1px solid var(--line)}.btn.indigo{background:var(--accent2)}
 .empty{color:var(--ink2);text-align:center;padding:40px 10px}
-.book-hero{display:flex;gap:16px;align-items:flex-start}.book-hero .cover{width:110px;height:150px;flex:0 0 110px;font-size:16px}.book-hero>div{min-width:0}
+/* hero */
+.hero{background:var(--accent2);color:#fff7ea;border-radius:20px;padding:18px;display:flex;gap:16px;margin:14px 0 6px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:var(--gold);opacity:.18}
+.hero .cov{width:112px;flex:0 0 112px;align-self:flex-start}.hero .cov::before,.hero .cov::after{background:rgba(255,247,234,.18);border-color:transparent}
+.hero>div{min-width:0;position:relative}
+.eyebrow{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;opacity:.85}
+.hero h2{font-size:24px;margin:4px 0 2px;color:#fff7ea}.hero .a{font-size:13px;opacity:.85}
+.hero .hook{font:italic 400 15px/1.4 var(--df);margin:10px 0}.hero .mood{font-size:12px;opacity:.85;letter-spacing:.3px}
+.hero .btn{margin-top:12px;background:var(--gold);color:#231a12}
+[data-theme=contrast] .hero{background:#111;border:1px solid #555}
+/* continue + streak */
+.cont{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;margin:12px 0}
+.cont .cov{width:64px;flex:0 0 64px}.cont>div{min-width:0;flex:1}.cont .t{font:700 16px/1.2 var(--df)}.cont .w{font-size:13px;color:var(--ink2);margin:3px 0 8px}
+.streak{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink)}
+/* shelves */
+.shelf{margin:26px 0 8px}
+.shelf-head{display:flex;flex-direction:column;gap:3px;margin:0 0 10px}
+.shelf-head h2 a{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.shelf-head small{font:700 13px system-ui,sans-serif;color:var(--accent);white-space:nowrap}
+.shelf-head p{margin:0;color:var(--ink2);font-size:14px}
+html.anim .rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}html.anim .rv.in{opacity:1;transform:none}
+/* book page */
+.book-hero{display:flex;gap:18px;align-items:flex-start}.book-hero .cov{width:124px;flex:0 0 124px}.book-hero>div{min-width:0}
 .meta{font-size:14px;color:var(--ink2);display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 14px}
+.hook{font:italic 400 17px/1.45 var(--df);margin:12px 0 4px}.mood{font-size:13px;color:var(--ink2);letter-spacing:.3px}
 .toc{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden}
 .toc li a{display:flex;gap:10px;padding:13px 14px;border-top:1px solid var(--line);min-height:48px;align-items:center}.toc li:first-child a{border-top:0}.toc li a.cur{background:var(--paper2);font-weight:600}
-.toc .n{color:var(--ink2);min-width:26px}
+.toc .n{color:var(--ink2);min-width:26px}.toc .ok{margin-left:auto;color:var(--accent2);font-weight:700}
+.orig{margin:16px 0}.orig img{max-width:220px;width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin-top:10px}
 .note{font-size:13px;color:var(--ink2);border-top:1px solid var(--line);margin-top:24px;padding-top:12px}
 footer{padding:30px 16px;color:var(--ink2);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:30px}
 /* bottom tabs */
 .tabs{position:fixed;left:0;right:0;bottom:0;height:calc(var(--tab) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:var(--paper);border-top:1px solid var(--line);display:flex;z-index:5}
 .tabs a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;color:var(--ink2);min-height:var(--tab)}
-.tabs a.on{color:var(--accent);font-weight:600}.tabs svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tabs a.on{color:var(--accent);font-weight:700}.tabs svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 body.reading .tabs,body.reading header.top,body.reading footer{display:none}
-/* shelves */
-.shelf-head{display:flex;flex-direction:column;gap:2px;margin:26px 0 8px}
-.shelf-head p{margin:0;color:var(--ink2);font-size:14px}
 /* blog */
-.post{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
-.post h3{font:700 19px/1.25 var(--rf);margin:0 0 6px}.post time{font-size:12px;color:var(--ink2)}.post p{margin:6px 0 0;color:var(--ink2)}
-.article{font:var(--rs)/var(--rlh) var(--rf);max-width:640px}.article h3{font:700 1.25em/1.2 var(--rf);margin:1.4em 0 .5em}.article p{margin:0 0 1em}
+.post{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.post h3{font:700 20px/1.2 var(--df);margin:0 0 6px}.post time{font-size:12px;color:var(--ink2)}.post p{margin:6px 0 0;color:var(--ink2)}
+.article{font:var(--rs)/var(--rlh) var(--rf);max-width:640px}.article h3{font:700 1.25em/1.2 var(--df);margin:1.4em 0 .5em}.article p{margin:0 0 1em}
 /* reader */
 body.reading{padding-bottom:0;overflow:hidden}
 .rtop{position:fixed;left:0;right:0;top:0;z-index:6;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:6px 10px;padding-top:max(6px,env(safe-area-inset-top));transition:transform .25s}
@@ -80,23 +108,25 @@ body.hide .rtop{transform:translateY(-110%)}body.hide .rbar{transform:translateY
 .pgwrap{position:fixed;inset:0;overflow:hidden;padding:calc(52px + env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) calc(66px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}
 .pgcols{height:100%;column-width:var(--pgw);column-gap:36px;column-fill:auto;transform:translateX(0);transition:transform .22s ease-out;font:var(--rs)/var(--rlh) var(--rf);hyphens:auto;-webkit-hyphens:auto;will-change:transform}
 .pgcols.nt{transition:none}
-.rd{font:var(--rs)/var(--rlh) var(--rf);max-width:640px;margin:0 auto;padding:calc(60px + env(safe-area-inset-top)) 18px calc(90px + env(safe-area-inset-bottom));hyphens:auto;-webkit-hyphens:auto}
-.rtext h3{font:700 1.3em/1.2 var(--rf);margin:0 0 .9em;text-align:center;break-after:avoid}
-.rtext p{margin:0 0 .9em;text-align:left;orphans:2;widows:2}.rtext p.v{margin-left:1em;text-align:left}.rtext em{font-style:italic}
-.rtext .endch{margin-top:1.5em;display:flex;gap:10px;justify-content:space-between;break-inside:avoid}
+html.anim .rtext.fade{animation:fadein .3s ease}@keyframes fadein{from{opacity:0}to{opacity:1}}
+.rtext h3{font:700 1.3em/1.2 var(--df);margin:0 0 .9em;text-align:center;break-after:avoid}
+.rtext p{margin:0 0 .9em;text-align:left;orphans:2;widows:2}.rtext p.v{margin-left:1em}.rtext em{font-style:italic}
+.rtext .endch{margin-top:1.5em;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;break-inside:avoid}
 .scrollmode .pgwrap{position:static;padding:0;overflow:visible}.scrollmode .pgcols{column-width:auto;height:auto;transform:none;max-width:640px;margin:0 auto;padding:calc(60px + env(safe-area-inset-top)) 18px calc(90px + env(safe-area-inset-bottom))}
 .scrollmode body.reading{overflow:auto}
 .tapzone{position:fixed;top:60px;bottom:70px;width:22%;z-index:4}.tapzone.l{left:0}.tapzone.r{right:0}.tapzone.c{left:22%;right:22%;width:auto}
-.topline{position:fixed;left:0;top:0;height:3px;background:var(--accent);z-index:7;width:0}
+.topline{position:fixed;left:0;top:0;height:3px;background:var(--gold);z-index:7;width:0;transition:width .35s}
 /* sheet */
-.sheet{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9;display:flex;align-items:flex-end}
-.sheet>div{background:var(--paper);width:100%;max-height:85vh;overflow:auto;border-radius:18px 18px 0 0;padding:14px 16px 28px;padding-bottom:max(28px,env(safe-area-inset-bottom))}
+.sheet{position:fixed;inset:0;background:rgba(20,15,10,.45);z-index:9;display:flex;align-items:flex-end}
+.sheet>div{background:var(--paper);width:100%;max-height:85vh;overflow:auto;border-radius:20px 20px 0 0;padding:14px 16px 28px;padding-bottom:max(28px,env(safe-area-inset-bottom))}
 .sheet h2{margin:4px 0 10px}.sheet .lab{font-size:13px;color:var(--ink2);margin:14px 0 6px}
 .opts{display:flex;gap:8px;flex-wrap:wrap}.opts .pill{min-width:56px}
 .szrow{display:flex;align-items:center;gap:10px}.szrow input{flex:1;accent-color:var(--accent)}.szrow b{font:var(--rs)/1 var(--rf);min-width:2.2em;text-align:center}
-.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:999px;font-size:13px;z-index:10;opacity:0;transition:opacity .2s;pointer-events:none}.toast.on{opacity:1}
-.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.kpi div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center}.kpi b{display:block;font:700 22px/1.1 var(--rf)}.kpi span{font-size:12px;color:var(--ink2)}
-@media (min-width:700px){.card{min-height:196px}.cover{height:104px}.row .card{flex-basis:170px}}
+.share{display:flex;flex-direction:column;gap:12px;align-items:center}.share canvas{width:min(100%,260px);height:auto;border-radius:10px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:999px;font-size:13px;z-index:10;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90vw;text-align:center}.toast.on{opacity:1}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.kpi div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center}.kpi b{display:block;font:700 24px/1.1 var(--df)}.kpi span{font-size:12px;color:var(--ink2)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (min-width:700px){.row .card{flex-basis:160px}.hero .cov{width:150px;flex-basis:150px}.hero h2{font-size:30px}}
 </style>
 </head>
 <body>
@@ -104,6 +134,7 @@ body.hide .rtop{transform:translateY(-110%)}body.hide .rbar{transform:translateY
 <header class="top">
   <a class="logo" href="#/" aria-label="Bibli, accueil"><i aria-hidden="true"></i>Bibli</a>
   <span class="spacer"></span>
+  <span id="streak"></span>
   <button class="pill" id="langbtn" aria-label="Changer de langue / change language"></button>
 </header>
 <main id="app"></main>
@@ -114,29 +145,33 @@ body.hide .rtop{transform:translateY(-110%)}body.hide .rbar{transform:translateY
 // ------------------------------------------------------------ i18n
 const I={
  fr:{nav_home:"Accueil",nav_cat:"Catalogue",nav_blog:"Blog",nav_mine:"Mes livres",home_h:"Des livres libres, pour ton téléphone.",home_sub:"Des classiques du domaine public, en français et en anglais. Gratuits, sans compte, légers en données, lisibles hors ligne une fois ouverts.",
-  search:"Titre, auteur…",continue:"Continuer la lecture",seeall:"Voir tout",all:"Tous",bygenre:"Par genre",
-  cat_h:"Catalogue",results:n=>`${n} livre${n>1?"s":""}`,none:"Aucun livre ne correspond. Essaie un autre mot.",
-  read:"Lire",resume:"Reprendre",chapters:n=>`${n} chapitre${n>1?"s":""}`,words:w=>`${Math.round(w/230)} min`,
-  source:"Source",license:"Domaine public",download:"EPUB",toc:"Table des matières",
+  search:"Titre, auteur…",continue:"Continuer",seeall:"Voir tout",all:"Tous",bygenre:"Par genre",today:"Livre du jour",short_h:"En un trajet de gbaka",short_d:"Moins de quarante minutes de lecture : une nouvelle, un conte, un traité court.",
+  cat_h:"Catalogue",results:n=>`${n} livre${n>1?"s":""}`,none:"Aucun livre ne correspond. Essaie un autre mot.",shortf:"Courts",
+  read:"Lire",resume:"Reprendre",chapters:n=>`${n} chapitre${n>1?"s":""}`,words:w=>{const m=Math.round(w/230);return m<75?`${m} min`:`${Math.round(m/60)} h`},
+  source:"Source",license:"Domaine public",download:"EPUB",toc:"Table des matières",orig:"Voir l'édition originale",orig_note:"Image de l'édition numérisée par Project Gutenberg.",
   prev:"Chapitre précédent",next:"Chapitre suivant",end:"Fin du livre",settings:"Réglages de lecture",size:"Taille du texte",lh:"Espacement des lignes",font:"Police",theme:"Thème",mode:"Lecture",
   light:"Clair",sepia:"Sépia",dark:"Sombre",contrast:"Contraste",serif:"Serif",sans:"Sans",legible:"Lisible",paged:"Par pages",scroll:"Défilement",
   tips:"Glisse ou touche les bords pour tourner la page. Touche le milieu pour cacher les boutons.",
   bookmark:"Marquer cette page",bookmarked:"Page marquée",mine_h:"Mes livres",mine_sub:"Tes lectures en cours et tes marques, gardées sur ce téléphone.",mine_none:"Tu n'as pas encore ouvert de livre.",
-  marks:"Marques",chapter:"Chapitre",page:"p.",about:"À propos",legal:"Droits & domaine public",offline:"Hors ligne : ce chapitre n'est pas encore sur ton téléphone.",blog_h:"Le blog de Bibli",blog_sub:"Lire mieux, lire plus, et comprendre d'où viennent ces livres.",readmore:"Lire",
-  about_t:"Bibli est une bibliothèque gratuite de livres entrés dans le domaine public : des œuvres dont les auteurs sont morts depuis plus de 70 ans, que chacun peut lire, copier et partager librement. Les textes viennent du Project Gutenberg et de Wikisource, et sont préparés pour la lecture sur téléphone : chapitres légers, pages à tourner, mode sombre, lecture hors ligne. Bibli ne met en ligne aucun livre encore protégé par le droit d'auteur. Si tu penses qu'un texte ne devrait pas être ici, écris-nous.",
+  marks:"Marques",chapter:"Chapitre",page:"p.",about:"À propos",legal:"Droits & domaine public",offline:"Hors ligne : ce chapitre n'est pas encore sur ton téléphone.",blog_h:"Le blog de Bibli",blog_sub:"Lire mieux, lire plus, et comprendre d'où viennent ces livres.",
+  streak:n=>`${n} jour${n>1?"s":""} de lecture`,done:n=>`${n} lu${n>1?"s":""}`,share:"Partager",share_t:"Partager ma lecture",share_msg:(t,a)=>`Je lis « ${t} » de ${a} sur Bibli, gratuit et légal.`,share_dl:"Enregistrer l'image",share_copy:"Copier le texte",copied:"Texte copié",reading_now:"Je lis",chapter_done:"Chapitre terminé ✓",
+  badges:{bac:"Classe",afrique:"Afrique",jeunesse:"Famille",dev:"Grandir","classiques-en":"English",short:"Express"},
+  about_t:"Bibli est une bibliothèque gratuite de livres entrés dans le domaine public : des œuvres dont les auteurs sont morts depuis plus de 70 ans, que chacun peut lire, copier et partager librement. Les textes viennent du Project Gutenberg et de Wikisource, et sont préparés pour la lecture sur téléphone : chapitres légers, pages à tourner, mode sombre, lecture hors ligne. Les couvertures sont dessinées par Bibli. Bibli ne met en ligne aucun livre encore protégé par le droit d'auteur. Si tu penses qu'un texte ne devrait pas être ici, écris-nous.",
   genres:{selfhelp:"Développement personnel",fiction:"Romans & nouvelles",adventure:"Aventure & voyages",children:"Jeunesse",poetry:"Poésie",drama:"Théâtre",philosophy:"Philosophie",history:"Histoire & vies",mystery:"Policier & mystère",romance:"Amour",science:"Sciences",religion:"Spiritualité"},
   langs:{fr:"Français",en:"Anglais"},install:"Ajoute Bibli à l'écran d'accueil pour lire hors ligne."},
  en:{nav_home:"Home",nav_cat:"Catalogue",nav_blog:"Blog",nav_mine:"My books",home_h:"Free books, made for your phone.",home_sub:"Public-domain classics in French and English. Free, no account, light on data, readable offline once opened.",
-  search:"Title, author…",continue:"Continue reading",seeall:"See all",all:"All",bygenre:"By genre",
-  cat_h:"Catalogue",results:n=>`${n} book${n>1?"s":""}`,none:"No book matches. Try another word.",
-  read:"Read",resume:"Resume",chapters:n=>`${n} chapter${n>1?"s":""}`,words:w=>`${Math.round(w/230)} min`,
-  source:"Source",license:"Public domain",download:"EPUB",toc:"Contents",
+  search:"Title, author…",continue:"Continue",seeall:"See all",all:"All",bygenre:"By genre",today:"Book of the day",short_h:"One bus ride",short_d:"Under forty minutes of reading: a short story, a tale, a brief treatise.",
+  cat_h:"Catalogue",results:n=>`${n} book${n>1?"s":""}`,none:"No book matches. Try another word.",shortf:"Short",
+  read:"Read",resume:"Resume",chapters:n=>`${n} chapter${n>1?"s":""}`,words:w=>{const m=Math.round(w/230);return m<75?`${m} min`:`${Math.round(m/60)} h`},
+  source:"Source",license:"Public domain",download:"EPUB",toc:"Contents",orig:"See the original edition",orig_note:"Image of the edition digitised by Project Gutenberg.",
   prev:"Previous chapter",next:"Next chapter",end:"End of book",settings:"Reading settings",size:"Text size",lh:"Line spacing",font:"Font",theme:"Theme",mode:"Reading",
   light:"Light",sepia:"Sepia",dark:"Dark",contrast:"Contrast",serif:"Serif",sans:"Sans",legible:"Legible",paged:"Pages",scroll:"Scroll",
   tips:"Swipe or tap the edges to turn the page. Tap the middle to hide the buttons.",
   bookmark:"Bookmark this page",bookmarked:"Bookmarked",mine_h:"My books",mine_sub:"Your current reads and bookmarks, kept on this phone.",mine_none:"You haven't opened a book yet.",
-  marks:"Bookmarks",chapter:"Chapter",page:"p.",about:"About",legal:"Rights & public domain",offline:"Offline: this chapter isn't on your phone yet.",blog_h:"The Bibli blog",blog_sub:"Read better, read more, and know where these books come from.",readmore:"Read",
-  about_t:"Bibli is a free library of public-domain books: works whose authors died more than 70 years ago, which anyone may read, copy and share. Texts come from Project Gutenberg and Wikisource, prepared for phone reading: light chapters, pages to turn, dark mode, offline reading. Bibli hosts no book still under copyright. If you believe a text should not be here, write to us.",
+  marks:"Bookmarks",chapter:"Chapter",page:"p.",about:"About",legal:"Rights & public domain",offline:"Offline: this chapter isn't on your phone yet.",blog_h:"The Bibli blog",blog_sub:"Read better, read more, and know where these books come from.",
+  streak:n=>`${n}-day reading streak`,done:n=>`${n} read`,share:"Share",share_t:"Share my reading",share_msg:(t,a)=>`I'm reading "${t}" by ${a} on Bibli, free and legal.`,share_dl:"Save the image",share_copy:"Copy the text",copied:"Text copied",reading_now:"I'm reading",chapter_done:"Chapter done ✓",
+  badges:{bac:"Class",afrique:"Africa",jeunesse:"Family",dev:"Grow","classiques-en":"English",short:"Express"},
+  about_t:"Bibli is a free library of public-domain books: works whose authors died more than 70 years ago, which anyone may read, copy and share. Texts come from Project Gutenberg and Wikisource, prepared for phone reading: light chapters, pages to turn, dark mode, offline reading. Covers are drawn by Bibli. Bibli hosts no book still under copyright. If you believe a text should not be here, write to us.",
   genres:{selfhelp:"Personal development",fiction:"Fiction & stories",adventure:"Adventure & travel",children:"Children",poetry:"Poetry",drama:"Drama",philosophy:"Philosophy",history:"History & lives",mystery:"Mystery & crime",romance:"Romance",science:"Science",religion:"Spirituality"},
   langs:{fr:"French",en:"English"},install:"Add Bibli to your home screen to read offline."}
 };
@@ -144,65 +179,132 @@ const LS=k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return null
 let L=LS("bibli.lang")||((navigator.language||"fr").slice(0,2)==="en"?"en":"fr");
 const t=k=>I[L][k];
 const prefs=Object.assign({size:18,lh:1.6,font:"serif",theme:"light",mode:"paged"},LS("bibli.prefs")||{});
-let progress=LS("bibli.progress")||{};   // id -> {ch, pg, frac, y, pct, at}
+let progress=LS("bibli.progress")||{};   // id -> {ch, frac, y, pct, at, done:[]}
 let marks=LS("bibli.marks")||{};
+let days=LS("bibli.days")||[];           // ["2026-10-30", ...] days with reading
 const app=document.getElementById("app"),toastEl=document.getElementById("toast");
-let CAT=null,BOOKS={},SHELVES=null,BLOG=null,partCache={};
+let CAT=null,BOOKS={},SHELVES=[],BLOG=[],ED={},partCache={},SHELF_OF={};
+const SITE=location.origin+location.pathname.replace(/[^/]*$/,"");
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const hue=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))%360;return h};
-const cover=b=>`<div class="cover" aria-hidden="true" style="--c1:hsl(${hue(b.title)},42%,40%);--c2:hsl(${(hue(b.title)+40)%360},48%,26%)">${esc(b.title.length>42?b.title.slice(0,40)+"…":b.title)}</div>`;
+const hash=s=>{let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))>>>0;return h};
 const FONTS={serif:'Georgia,"Times New Roman",serif',sans:'system-ui,-apple-system,"Segoe UI",Roboto,sans-serif',legible:'"Atkinson Hyperlegible",system-ui,sans-serif'};
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduced&&"IntersectionObserver"in window)document.documentElement.classList.add("anim");
 function applyTheme(){const r=document.documentElement;r.dataset.theme=prefs.theme;r.style.setProperty("--rs",prefs.size+"px");r.style.setProperty("--rlh",prefs.lh);r.style.setProperty("--rf",FONTS[prefs.font]||FONTS.serif);r.classList.toggle("scrollmode",prefs.mode==="scroll");
  if(prefs.font==="legible"&&!document.getElementById("gf")){const l=document.createElement("link");l.id="gf";l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap";document.head.appendChild(l)}
  document.querySelector('meta[name=theme-color]').content=getComputedStyle(document.body).getPropertyValue("--paper").trim()}
-function toast(m){toastEl.textContent=m;toastEl.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>toastEl.classList.remove("on"),1800)}
-const ICONS={home:'<svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',cat:'<svg viewBox="0 0 24 24"><path d="M4 4h5v16H4zM10 4h5v16h-5zM16 5l4-1 3 15-4 1z"/></svg>',blog:'<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg>',mine:'<svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>'};
-function setLang(l){L=l;SS("bibli.lang",l);document.documentElement.lang=l;document.getElementById("langbtn").textContent=l==="fr"?"EN":"FR";
- document.getElementById("tabs").innerHTML=[["#/","home","nav_home"],["#/catalogue","cat","nav_cat"],["#/blog","blog","nav_blog"],["#/mine","mine","nav_mine"]].map(([h,i,k])=>`<a href="${h}" data-tab="${h}">${ICONS[i]}<span>${t(k)}</span></a>`).join("");
- document.getElementById("foot").innerHTML=`<a href="#/about">${t("about")}</a> · <a href="#/about">${t("legal")}</a> · <a href="https://www.gutenberg.org" rel="noopener">Project Gutenberg</a> · <a href="https://fr.wikisource.org" rel="noopener">Wikisource</a><br>© 2026 Bibli · ${t("license")}`;route()}
-document.getElementById("langbtn").onclick=()=>setLang(L==="fr"?"en":"fr");
-async function loadCat(){if(CAT)return CAT;const [c,s,b]=await Promise.all([fetch("data/catalogue.json").then(r=>r.json()),fetch("data/shelves.json").then(r=>r.ok?r.json():[]).catch(()=>[]),fetch("data/blog.json").then(r=>r.ok?r.json():[]).catch(()=>[])]);CAT=c;SHELVES=s;BLOG=b;CAT.books.forEach(b=>BOOKS[b.id]=b);return CAT}
+function toast(m){toastEl.textContent=m;toastEl.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>toastEl.classList.remove("on"),2200)}
+
+// ------------------------------------------------------------ covers (drawn from metadata, one look for the whole library)
+const PAL={fiction:["#2b3a8c","#6b7fe0","#fff7ea"],adventure:["#0f6e6a","#4ec3b2","#fff7ea"],children:["#e8902a","#ffd66b","#2a1a05"],poetry:["#5b2a6e","#c48ae0","#fff7ea"],drama:["#9b1d2a","#f06a76","#fff7ea"],
+ selfhelp:["#b8741a","#ffd25a","#2a1a05"],philosophy:["#b8741a","#ffd25a","#2a1a05"],history:["#5a3a1e","#c48a58","#fff7ea"],mystery:["#1b2b24","#4fa37a","#fff7ea"],romance:["#c4443f","#ffb0a8","#fff7ea"],science:["#2f4858","#8fc0de","#fff7ea"],religion:["#1f5f3a","#7fd39a","#fff7ea"],afrique:["#c8501f","#2b3a8c","#fff7ea"]};
+const MOTIF={
+ fiction:(c)=>`<path d="M-4 20L20 -4M-4 40L40 -4M16 40L40 16" stroke="${c}" stroke-width="3"/>`,
+ adventure:(c)=>`<path d="M0 12q6-8 12 0t12 0t12 0M0 30q6-8 12 0t12 0t12 0" fill="none" stroke="${c}" stroke-width="2.5"/>`,
+ children:(c)=>`<circle cx="10" cy="10" r="5" fill="${c}"/><circle cx="30" cy="30" r="5" fill="${c}"/><circle cx="30" cy="10" r="2" fill="${c}"/><circle cx="10" cy="30" r="2" fill="${c}"/>`,
+ poetry:(c)=>`<path d="M0 8h40M0 20h26M0 32h34" stroke="${c}" stroke-width="1.6"/>`,
+ drama:(c)=>`<path d="M0 14l10-10 10 10 10-10 10 10M0 34l10-10 10 10 10-10 10 10" fill="none" stroke="${c}" stroke-width="3"/>`,
+ selfhelp:(c)=>`<circle cx="20" cy="20" r="16" fill="none" stroke="${c}" stroke-width="2"/><circle cx="20" cy="20" r="9" fill="none" stroke="${c}" stroke-width="2"/><circle cx="20" cy="20" r="3" fill="${c}"/>`,
+ philosophy:(c)=>`<circle cx="20" cy="20" r="16" fill="none" stroke="${c}" stroke-width="2"/><circle cx="20" cy="20" r="9" fill="none" stroke="${c}" stroke-width="2"/><circle cx="20" cy="20" r="3" fill="${c}"/>`,
+ history:(c)=>`<path d="M0 10h40M0 30h40M20 10v20M0 30v10M40 30v10M20 -10v20" stroke="${c}" stroke-width="2"/>`,
+ mystery:(c)=>`<path d="M0 0l40 40M40 0L0 40" stroke="${c}" stroke-width="1.4"/>`,
+ romance:(c)=>`<ellipse cx="20" cy="20" rx="14" ry="8" fill="none" stroke="${c}" stroke-width="2.2"/>`,
+ science:(c)=>`<path d="M20 0v40M0 20h40" stroke="${c}" stroke-width="1.2"/><circle cx="20" cy="20" r="3" fill="${c}"/>`,
+ religion:(c)=>`<path d="M20 2l18 18-18 18L2 20z" fill="none" stroke="${c}" stroke-width="2.2"/>`,
+ afrique:(c)=>`<path d="M0 20l10-16 10 16 10-16 10 16z" fill="${c}"/><path d="M0 30l10 8 10-8 10 8 10-8" fill="none" stroke="${c}" stroke-width="2.5"/>`};
+function coverKey(b){if(SHELF_OF[b.id]==="afrique")return"afrique";for(const g of b.genres||[])if(PAL[g])return g;return"fiction"}
+function wrap(txt,max,lines){const w=txt.split(/\s+/),out=[];let cur="";for(const x of w){if((cur+" "+x).trim().length>max&&cur){out.push(cur);cur=x}else cur=(cur+" "+x).trim()}if(cur)out.push(cur);if(out.length>lines){out.length=lines;out[lines-1]=out[lines-1].replace(/\s*\S*$/,"")+"…"}return out}
+const shortTitle=x=>{let y=x.replace(/\s*[:;].*$/,"").replace(/,\s*(or|ou)\b.*$/i,"").replace(/\s*\((I|II|[0-9]+)\/[^)]*\)$/,"").trim();return y.length>=3?y:x};
+function coverSVG(b){const k=coverKey(b),[c1,c2,tc]=PAL[k],h=hash(b.id),mid=`m${h%100000}`,sc=0.8+(h%5)*0.15,rot=[0,45,90][h%3];
+ const title=shortTitle(b.title);const fs=title.length<=16?24:title.length<=28?19:title.length<=44?15.5:13;const lines=wrap(title,Math.floor(176/(fs*0.5)),4);
+ const author=(b.author||"").split(",")[0].replace(/\s*\(.*\)/,"").trim();const al=wrap(author.toUpperCase(),22,2);
+ const badge=SHELF_OF[b.id]?t("badges")[SHELF_OF[b.id]]:(b.words<9000?t("badges").short:"");const bw=badge?badge.length*6.2+14:0;
+ let y=168;const authorSvg=al.map(l=>`<text x="16" y="${y+=15}" font-family="system-ui,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="${tc}" opacity=".85">${esc(l)}</text>`).join("");y+=8;
+ const titleSvg=lines.map(l=>`<text x="16" y="${y+=fs*1.08}" font-family="'Fraunces',Georgia,serif" font-size="${fs}" font-weight="700" fill="${tc}">${esc(l)}</text>`).join("");
+ return `<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(b.title)}"><defs><pattern id="${mid}" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="scale(${sc.toFixed(2)}) rotate(${rot})">${MOTIF[k](c2)}</pattern></defs>
+ <rect width="200" height="300" fill="${c1}"/><rect width="200" height="150" fill="url(#${mid})" opacity=".9"/><rect x="0" y="146" width="200" height="4" fill="#f5b700"/>
+ ${authorSvg}${titleSvg}
+ <text x="16" y="286" font-family="system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="2.2" fill="${tc}" opacity=".7">BIBLI</text>
+ ${badge?`<rect x="${184-bw}" y="272" width="${bw}" height="18" rx="9" fill="${tc}" opacity=".92"/><text x="${184-bw/2}" y="284.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="${c1}">${esc(badge)}</text>`:""}</svg>`}
+const cover=(b,cls="")=>`<div class="cov ${cls}">${coverSVG(b)}</div>`;
+
+// ------------------------------------------------------------ data
+async function loadCat(){if(CAT)return CAT;const j=u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null);const [c,s,b,e]=await Promise.all([j("data/catalogue.json"),j("data/shelves.json"),j("data/blog.json"),j("data/editorial.json")]);
+ CAT=c;SHELVES=s||[];BLOG=b||[];ED=e||{};CAT.books.forEach(x=>BOOKS[x.id]=x);for(const sh of SHELVES)for(const id of sh.ids)if(!SHELF_OF[id])SHELF_OF[id]=sh.key;return CAT}
 async function loadPart(id,k){const key=id+"/"+k;if(partCache[key])return partCache[key];const r=await fetch(`data/books/${id}/p${k}.json`);if(!r.ok)throw new Error("part");const j=await r.json();partCache[key]=j;return j}
+const today=()=>new Date().toISOString().slice(0,10);
+function streak(){const s=new Set(days);let n=0,d=new Date();if(!s.has(today())){d.setDate(d.getDate()-1);if(!s.has(d.toISOString().slice(0,10)))return 0}while(s.has(d.toISOString().slice(0,10))){n++;d.setDate(d.getDate()-1)}return n}
+function noteDay(){const d=today();if(days[days.length-1]!==d){days.push(d);days=days.slice(-400);SS("bibli.days",days);renderStreak()}}
+function renderStreak(){const n=streak();document.getElementById("streak").innerHTML=n?`<span class="streak" title="${t("streak")(n)}">🔥 ${n}</span>`:""}
+function reveal(){if(!document.documentElement.classList.contains("anim"))return;const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -5% 0px"});document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el))}
 
 // ------------------------------------------------------------ views
-const card=b=>{const p=progress[b.id];return `<a class="card" href="#/book/${b.id}" aria-label="${esc(b.title)}, ${esc(b.author)}">${cover(b)}<div class="t">${esc(b.title)}</div><div class="a">${esc(b.author)}</div><div class="m"><span class="lang">${b.lang.toUpperCase()}</span>${t("words")(b.words)}</div>${p?`<div class="prog"><b style="width:${p.pct}%"></b></div>`:""}</a>`};
+const card=b=>{const p=progress[b.id];return `<a class="card" href="#/book/${b.id}" aria-label="${esc(b.title)}, ${esc(b.author)}">${cover(b)}<div class="t">${esc(shortTitle(b.title))}</div><div class="a">${esc(b.author)}</div><div class="m"><span class="lang">${b.lang.toUpperCase()}</span>${t("words")(b.words)}</div>${p?`<div class="prog"><b style="width:${p.pct}%"></b></div>`:""}</a>`};
 const row=bs=>`<div class="row">${bs.map(card).join("")}</div>`;
 const shelfBooks=s=>s.ids.map(id=>BOOKS[id]).filter(Boolean);
-function shelfBlock(s,limit=12){const bs=shelfBooks(s);if(!bs.length)return"";return `<div class="shelf-head"><h2 style="margin:0"><a href="#/shelf/${s.key}">${esc(s.name[L]||s.name.fr)} <small>${t("seeall")} (${bs.length}) ›</small></a></h2><p>${esc(s.desc[L]||s.desc.fr||"")}</p></div>${row(bs.slice(0,limit))}`}
+function shelfBlock(s,limit=12){const bs=shelfBooks(s);if(!bs.length)return"";return `<section class="shelf rv"><div class="shelf-head"><h2><a href="#/shelf/${s.key}">${esc(s.name[L]||s.name.fr)} <small>${t("seeall")} (${bs.length}) ›</small></a></h2><p>${esc(s.desc[L]||s.desc.fr||"")}</p></div>${row(bs.slice(0,limit))}</section>`}
+const shortBooks=()=>CAT.books.filter(b=>b.words<9000&&b.words>=1500).sort((a,b)=>(ED[b.id]?1:0)-(ED[a.id]?1:0)||b.downloads-a.downloads);
+function heroBook(){const ids=Object.keys(ED).filter(id=>ED[id].hero&&BOOKS[id]&&BOOKS[id].lang===L);const pool=ids.length?ids:Object.keys(ED).filter(id=>BOOKS[id]);if(!pool.length)return null;const doy=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5);return BOOKS[pool[doy%pool.length]]}
 
-async function home(){const c=await loadCat();const cont=Object.entries(progress).sort((a,b)=>b[1].at-a[1].at).map(([id])=>BOOKS[id]).filter(Boolean).slice(0,8);
+async function home(){const c=await loadCat();const cont=Object.entries(progress).sort((a,b)=>b[1].at-a[1].at).map(([id,p])=>[BOOKS[id],p]).filter(x=>x[0]).slice(0,1);
+ const hb=heroBook(),e=hb&&ED[hb.id];
  app.innerHTML=`<h1>${t("home_h")}</h1><p class="sub">${t("home_sub")}</p>
  <form class="search" role="search" onsubmit="location.hash='#/catalogue?q='+encodeURIComponent(this.q.value);return false"><label class="vh" for="hq">${t("search")}</label><input id="hq" name="q" placeholder="${t("search")}" autocomplete="off"></form>
- ${cont.length?`<h2>${t("continue")}</h2>${row(cont)}`:""}
- ${(SHELVES||[]).map(s=>shelfBlock(s)).join("")}
- <h2>${t("bygenre")}</h2><div class="chips">${Object.keys(t("genres")).map(g=>`<a class="pill" href="#/catalogue?g=${g}">${t("genres")[g]}</a>`).join("")}</div>
- ${(SHELVES||[]).length?"":row(c.books.slice(0,12))}
- <div class="note">${t("install")}</div>`}
+ ${cont.map(([b,p])=>`<a class="cont rv" href="#/read/${b.id}/${p.ch}">${cover(b,"flat")}<div><div class="eyebrow" style="color:var(--ink2)">${t("continue")}${streak()?` · 🔥 ${t("streak")(streak())}`:""}</div><div class="t">${esc(b.title)}</div><div class="w">${t("chapter")} ${p.ch+1}/${b.chapters.length}${p.pg!=null&&p.pages?` · ${t("page")} ${p.pg+1}/${p.pages}`:""} · ${p.pct} %</div><div class="prog"><b style="width:${p.pct}%"></b></div></div></a>`).join("")}
+ ${hb?`<section class="hero rv" aria-label="${t("today")}">${cover(hb)}<div><div class="eyebrow">${t("today")}</div><h2>${esc(hb.title)}</h2><div class="a">${esc(hb.author)} · ${t("words")(hb.words)}</div>${e?`<p class="hook">${esc(e.hook[L]||e.hook.fr)}</p><div class="mood">${esc(e.mood[L]||e.mood.fr)}</div>`:""}<a class="btn" href="#/book/${hb.id}">${t("read")} ›</a></div></section>`:""}
+ ${SHELVES.map(s=>shelfBlock(s)).join("")}
+ <section class="shelf rv"><div class="shelf-head"><h2><a href="#/catalogue?short=1">${t("short_h")} <small>${t("seeall")} ›</small></a></h2><p>${t("short_d")}</p></div>${row(shortBooks().slice(0,12))}</section>
+ <section class="shelf rv"><div class="shelf-head"><h2>${t("bygenre")}</h2></div><div class="chips">${Object.keys(t("genres")).map(g=>`<a class="pill" href="#/catalogue?g=${g}">${t("genres")[g]}</a>`).join("")}</div></section>
+ <div class="note">${t("install")}</div>`;reveal()}
 
-async function shelf(key){await loadCat();const s=(SHELVES||[]).find(x=>x.key===key);if(!s)return app.innerHTML=`<div class="empty">404</div>`;const bs=shelfBooks(s);
+async function shelf(key){await loadCat();const s=SHELVES.find(x=>x.key===key);if(!s)return app.innerHTML=`<div class="empty">404</div>`;const bs=shelfBooks(s);
  app.innerHTML=`<h1>${esc(s.name[L]||s.name.fr)}</h1><p class="sub">${esc(s.desc[L]||s.desc.fr||"")}</p><p class="sub">${t("results")(bs.length)}</p><div class="grid">${bs.map(card).join("")}</div>`}
 
-async function catalogue(q){const c=await loadCat();const Q=(q.get("q")||"").trim(),G=q.get("g")||"",LG=q.get("l")||"";
+async function catalogue(q){const c=await loadCat();const Q=(q.get("q")||"").trim(),G=q.get("g")||"",LG=q.get("l")||"",SH=q.get("short")==="1";
  const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");const nq=norm(Q);
- let bs=c.books.filter(b=>(!LG||b.lang===LG)&&(!G||b.genres.includes(G))&&(!nq||norm(b.title+" "+b.author).includes(nq)));
+ let bs=c.books.filter(b=>(!LG||b.lang===LG)&&(!G||b.genres.includes(G))&&(!SH||b.words<9000)&&(!nq||norm(b.title+" "+b.author).includes(nq)));
  bs=bs.slice().sort((a,b)=>a.author.split(" ").pop().localeCompare(b.author.split(" ").pop())||a.title.localeCompare(b.title));
  const link=(k,v)=>{const p=new URLSearchParams(q);v?p.set(k,v):p.delete(k);return "#/catalogue?"+p};
  app.innerHTML=`<h1>${t("cat_h")}</h1>
  <form class="search" role="search" onsubmit="location.hash='${link("q","")}'.replace(/\\?$/,'')+'&q='+encodeURIComponent(this.q.value);return false"><label class="vh" for="cq">${t("search")}</label><input id="cq" name="q" value="${esc(Q)}" placeholder="${t("search")}" autocomplete="off"></form>
- <div class="chips"><a class="pill ${!LG?"on":""}" href="${link("l","")}">${t("all")}</a><a class="pill ${LG==="fr"?"on":""}" href="${link("l","fr")}">${t("langs").fr}</a><a class="pill ${LG==="en"?"on":""}" href="${link("l","en")}">${t("langs").en}</a></div>
+ <div class="chips"><a class="pill ${!LG?"on":""}" href="${link("l","")}">${t("all")}</a><a class="pill ${LG==="fr"?"on":""}" href="${link("l","fr")}">${t("langs").fr}</a><a class="pill ${LG==="en"?"on":""}" href="${link("l","en")}">${t("langs").en}</a><a class="pill ${SH?"on":""}" href="${link("short",SH?"":"1")}">${t("shortf")}</a></div>
  <div class="chips"><a class="pill ${!G?"on":""}" href="${link("g","")}">${t("all")}</a>${Object.keys(t("genres")).map(g=>`<a class="pill ${G===g?"on":""}" href="${link("g",g)}">${t("genres")[g]}</a>`).join("")}</div>
  <p class="sub">${t("results")(bs.length)}</p>${bs.length?`<div class="grid">${bs.map(card).join("")}</div>`:`<div class="empty">${t("none")}</div>`}`}
 
-async function book(id){await loadCat();const b=BOOKS[id];if(!b)return app.innerHTML=`<div class="empty">404</div>`;const p=progress[id];const ad=b.author_dates&&b.author_dates[0];
+async function book(id){await loadCat();const b=BOOKS[id];if(!b)return app.innerHTML=`<div class="empty">404</div>`;const p=progress[id];const ad=b.author_dates&&b.author_dates[0];const e=ED[id];const done=new Set(p&&p.done||[]);
  app.innerHTML=`<div class="book-hero">${cover(b)}<div><h1>${esc(b.title)}</h1><p class="sub">${esc(b.author)}${ad&&ad[0]?` (${ad[0]}–${ad[1]||""})`:""}</p>
- <div class="meta"><span>${t("langs")[b.lang]||b.lang}</span><span>${t("chapters")(b.chapters.length)}</span><span>${t("words")(b.words)}</span></div>
- <a class="btn" href="#/read/${id}/${p?p.ch:0}">${p?t("resume"):t("read")}</a></div></div>
+ <div class="meta"><span>${t("langs")[b.lang]||b.lang}</span><span>${t("chapters")(b.chapters.length)}</span><span>${t("words")(b.words)}</span>${done.size?`<span>✓ ${t("done")(done.size)}</span>`:""}</div>
+ <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="#/read/${id}/${p?p.ch:0}">${p?t("resume"):t("read")}</a><button class="btn sec" id="shareb">${t("share")}</button></div></div></div>
+ ${e?`<p class="hook">${esc(e.hook[L]||e.hook.fr)}</p><div class="mood">${esc(e.mood[L]||e.mood.fr)}</div>`:""}
  <div class="meta" style="margin-top:14px">${b.genres.map(g=>`<a class="pill" href="#/catalogue?g=${g}">${t("genres")[g]||g}</a>`).join("")}</div>
- <h2>${t("toc")}</h2><ol class="toc">${b.chapters.map((c,i)=>`<li><a href="#/read/${id}/${i}" class="${p&&p.ch===i?"cur":""}"><span class="n">${i+1}</span><span>${esc(c||t("chapter")+" "+(i+1))}</span></a></li>`).join("")}</ol>
- <div class="note">${t("source")} : <a href="${b.source_url}" rel="noopener">${b.source}</a> · ${t("license")} · <a href="${b.epub_url}" rel="noopener">${t("download")}</a></div>`}
+ ${b.orig?`<div class="orig"><button class="pill" id="origb">${t("orig")}</button><div id="origbox" hidden><img alt="" loading="lazy"><div class="sub">${t("orig_note")}</div></div></div>`:""}
+ <h2 style="margin:18px 0 10px">${t("toc")}</h2><ol class="toc">${b.chapters.map((c,i)=>`<li><a href="#/read/${id}/${i}" class="${p&&p.ch===i?"cur":""}"><span class="n">${i+1}</span><span>${esc(c||t("chapter")+" "+(i+1))}</span>${done.has(i)?`<span class="ok" aria-label="${t("chapter_done")}">✓</span>`:""}</a></li>`).join("")}</ol>
+ <div class="note">${t("source")} : <a href="${b.source_url}" rel="noopener">${b.source}</a> · ${t("license")} · <a href="${b.epub_url}" rel="noopener">${t("download")}</a></div>`;
+ document.getElementById("shareb").onclick=()=>shareCard(b);
+ const ob=document.getElementById("origb");if(ob)ob.onclick=()=>{const box=document.getElementById("origbox");box.querySelector("img").src=`data/orig/${id}.jpg`;box.hidden=false;ob.hidden=true}}
+
+// ------------------------------------------------------------ share card (canvas → Web Share / save / copy)
+async function shareCard(b){const d=document.createElement("div");d.className="sheet";d.setAttribute("role","dialog");d.innerHTML=`<div class="share"><h2>${t("share_t")}</h2><canvas width="1080" height="1350" id="shc"></canvas><div class="opts"><button class="btn" id="shs">${t("share")}</button><button class="btn sec" id="shd">${t("share_dl")}</button><button class="btn sec" id="shc2">${t("share_copy")}</button></div></div>`;
+ d.onclick=e=>{if(e.target===d)d.remove()};document.body.appendChild(d);
+ const cv=d.querySelector("#shc"),x=cv.getContext("2d");const k=coverKey(b),[c1,c2,tc]=PAL[k];
+ try{await document.fonts.load("700 60px Fraunces")}catch(e){}
+ x.fillStyle="#f4ead6";x.fillRect(0,0,1080,1350);x.fillStyle=c1;x.fillRect(0,0,1080,760);
+ const img=new Image();const svg=new Blob([coverSVG(b)],{type:"image/svg+xml"});const url=URL.createObjectURL(svg);
+ await new Promise(r=>{img.onload=r;img.onerror=r;img.src=url});
+ x.save();x.shadowColor="rgba(0,0,0,.45)";x.shadowBlur=40;x.shadowOffsetY=20;x.drawImage(img,340,100,400,600);x.restore();URL.revokeObjectURL(url);
+ x.fillStyle="#231a12";x.font="700 34px system-ui,sans-serif";x.fillText(t("reading_now").toUpperCase(),72,850);
+ x.font="700 64px Fraunces,Georgia,serif";const lines=wrap(b.title,26,2);lines.forEach((l,i)=>x.fillText(l,72,930+i*72));
+ x.font="400 40px system-ui,sans-serif";x.fillStyle="#6b5a45";x.fillText(b.author,72,930+lines.length*72+10);
+ const p=progress[b.id];if(p){x.fillStyle="#d9c7a6";x.fillRect(72,1160,936,14);x.fillStyle="#f5b700";x.fillRect(72,1160,936*p.pct/100,14);x.fillStyle="#6b5a45";x.font="400 32px system-ui,sans-serif";x.fillText(`${p.pct} %`,72,1215)}
+ x.fillStyle="#c8501f";x.font="700 40px Fraunces,Georgia,serif";x.fillText("Bibli",72,1300);x.fillStyle="#6b5a45";x.font="400 30px system-ui,sans-serif";x.fillText(SITE.replace(/^https?:\/\//,""),200,1300);
+ const text=t("share_msg")(b.title,b.author)+" "+SITE+"#/book/"+b.id;
+ const blob=await new Promise(r=>cv.toBlob(r,"image/png"));const file=new File([blob],"bibli.png",{type:"image/png"});
+ d.querySelector("#shs").onclick=async()=>{try{if(navigator.canShare&&navigator.canShare({files:[file]}))await navigator.share({files:[file],text});else if(navigator.share)await navigator.share({text});else throw 0}catch(e){await navigator.clipboard?.writeText(text).catch(()=>{});toast(t("copied"))}};
+ d.querySelector("#shd").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="bibli-"+b.id+".png";a.click()};
+ d.querySelector("#shc2").onclick=async()=>{try{await navigator.clipboard.writeText(text);toast(t("copied"))}catch(e){prompt("",text)}}}
 
 // ------------------------------------------------------------ reader
-let R=null; // {id,ch,n,pages,pg,cols,wrap}
+let R=null;
 async function read(id,ch,where){await loadCat();const b=BOOKS[id];if(!b)return app.innerHTML="404";ch=Math.max(0,Math.min(b.chapters.length-1,ch|0));
  const [pk,ci]=b.index[ch];document.body.classList.add("reading");document.body.classList.remove("hide");
  const last=ch>=b.chapters.length-1;
@@ -211,17 +313,17 @@ async function read(id,ch,where){await loadCat();const b=BOOKS[id];if(!b)return 
  <div class="tapzone l" id="tzl" aria-hidden="true"></div><div class="tapzone c" id="tzc" aria-hidden="true"></div><div class="tapzone r" id="tzr" aria-hidden="true"></div>
  <div class="rbar"><button class="pill" id="pprev" aria-label="${t("prev")}">‹</button><button class="pill" id="mk" aria-label="${t("bookmark")}">🔖</button><span class="pct" id="pct" aria-live="polite"></span><button class="pill" id="pnext" aria-label="${t("next")}">›</button></div>`;
  let part;try{part=await loadPart(id,pk)}catch(e){document.getElementById("pgcols").innerHTML=`<div class="empty">${t("offline")}</div>`;return}
- const c=part[ci];
- const cols=document.getElementById("pgcols");
- cols.innerHTML=`<h3>${esc(c.t||t("chapter")+" "+(ch+1))}</h3>${c.h}<div class="endch">${ch>0?`<a class="btn sec" href="#/read/${id}/${ch-1}">${t("prev")}</a>`:"<span></span>"}${last?`<a class="btn sec" href="#/book/${id}">${t("end")}</a>`:`<a class="btn" href="#/read/${id}/${ch+1}">${t("next")}</a>`}</div>`;
+ const c=part[ci];const cols=document.getElementById("pgcols");
+ cols.innerHTML=`<h3>${esc(c.t||t("chapter")+" "+(ch+1))}</h3>${c.h}<div class="endch">${ch>0?`<a class="btn sec" href="#/read/${id}/${ch-1}">${t("prev")}</a>`:"<span></span>"}<button class="btn sec" id="shr">${t("share")}</button>${last?`<a class="btn indigo" href="#/book/${id}">${t("end")}</a>`:`<a class="btn" href="#/read/${id}/${ch+1}">${t("next")}</a>`}</div>`;
+ cols.classList.add("fade");
  if(!last){const [npk]=b.index[ch+1];if(npk!==pk)loadPart(id,npk).catch(()=>{})}
  R={id,ch,n:b.chapters.length,pg:0,pages:1,cols,wrap:document.getElementById("pgwrap"),last};
  const saved=progress[id];
  if(prefs.mode==="paged"){layout();let pg=0;if(where==="end")pg=R.pages-1;else if(saved&&saved.ch===ch)pg=Math.min(R.pages-1,Math.round((saved.frac||0)*(R.pages-1)));goPage(pg,true);requestAnimationFrame(()=>cols.classList.remove("nt"))}
  else{cols.classList.remove("nt");const y=where==="end"?document.documentElement.scrollHeight:(saved&&saved.ch===ch?saved.y||0:0);requestAnimationFrame(()=>window.scrollTo(0,y))}
- updatePct();
+ updatePct();noteDay();
  document.getElementById("mk").onclick=()=>{(marks[id]=marks[id]||[]).unshift({ch,frac:R.pages>1?R.pg/(R.pages-1):0,y:window.scrollY,ts:Date.now()});marks[id]=marks[id].slice(0,30);SS("bibli.marks",marks);toast(t("bookmarked"))};
- document.getElementById("aa").onclick=settings;
+ document.getElementById("aa").onclick=settings;document.getElementById("shr").onclick=()=>shareCard(b);
  document.getElementById("pprev").onclick=()=>turn(-1);document.getElementById("pnext").onclick=()=>turn(1);
  const tz=document.getElementById("tzl"),tc=document.getElementById("tzc"),tr=document.getElementById("tzr");
  let sx=0,sy=0,st=0,lastTouch=0;const down=e=>{if(e.touches)lastTouch=Date.now();else if(Date.now()-lastTouch<800)return;const p=e.touches?e.touches[0]:e;sx=p.clientX;sy=p.clientY;st=Date.now()};
@@ -231,11 +333,12 @@ async function read(id,ch,where){await loadCat();const b=BOOKS[id];if(!b)return 
  if(!LS("bibli.tip")){toast(t("tips"));SS("bibli.tip",1)}}
 function layout(){if(!R||prefs.mode!=="paged")return;const w=R.wrap.clientWidth-36;R.cols.style.setProperty("--pgw",w+"px");R.step=w+36;R.pages=Math.max(1,Math.round(R.cols.scrollWidth/R.step))}
 function goPage(pg,silent){if(!R)return;R.pg=Math.max(0,Math.min(R.pages-1,pg));R.cols.style.transform=`translateX(${-R.pg*R.step}px)`;if(!silent)updatePct()}
-function turn(d){if(!R)return;if(prefs.mode==="scroll"){const h=window.innerHeight-130;const y=window.scrollY+d*h;const max=document.documentElement.scrollHeight-window.innerHeight;if(y<0&&R.ch>0)return location.hash=`#/read/${R.id}/${R.ch-1}/end`;if(y>max+10&&!R.last)return location.hash=`#/read/${R.id}/${R.ch+1}`;window.scrollTo({top:Math.max(0,Math.min(max,y)),behavior:"smooth"});return}
- const np=R.pg+d;if(np<0){if(R.ch>0)location.hash=`#/read/${R.id}/${R.ch-1}/end`;return}if(np>=R.pages){if(!R.last)location.hash=`#/read/${R.id}/${R.ch+1}`;return}goPage(np)}
+function markDone(){if(!R)return;const p=progress[R.id]||{};const d=new Set(p.done||[]);if(!d.has(R.ch)){d.add(R.ch);p.done=[...d];progress[R.id]=Object.assign(progress[R.id]||{},p);SS("bibli.progress",progress);toast(t("chapter_done"))}}
+function turn(d){if(!R)return;if(prefs.mode==="scroll"){const h=window.innerHeight-130;const y=window.scrollY+d*h;const max=document.documentElement.scrollHeight-window.innerHeight;if(y<0&&R.ch>0)return location.hash=`#/read/${R.id}/${R.ch-1}/end`;if(y>max+10){markDone();if(!R.last)return location.hash=`#/read/${R.id}/${R.ch+1}`}window.scrollTo({top:Math.max(0,Math.min(max,y)),behavior:"smooth"});return}
+ const np=R.pg+d;if(np<0){if(R.ch>0)location.hash=`#/read/${R.id}/${R.ch-1}/end`;return}if(np>=R.pages){markDone();if(!R.last)location.hash=`#/read/${R.id}/${R.ch+1}`;return}goPage(np)}
 function updatePct(){if(!R)return;let frac;if(prefs.mode==="paged")frac=R.pages>1?R.pg/(R.pages-1):1;else{const h=document.documentElement;frac=h.scrollHeight>h.clientHeight?window.scrollY/(h.scrollHeight-h.clientHeight):1}
  const pct=Math.round(((R.ch+Math.min(1,frac))/R.n)*100);document.getElementById("pct").innerHTML=prefs.mode==="paged"?`${t("page")} ${R.pg+1}/${R.pages}<br>${pct} %`:`${pct} %`;document.getElementById("topline").style.width=pct+"%";
- progress[R.id]={ch:R.ch,frac,y:window.scrollY,pct,at:Date.now()};clearTimeout(window._ps);window._ps=setTimeout(()=>SS("bibli.progress",progress),300)}
+ const prev=progress[R.id]||{};progress[R.id]={ch:R.ch,frac,y:window.scrollY,pct,at:Date.now(),pg:R.pg,pages:R.pages,done:prev.done||[]};if(prefs.mode==="paged"&&R.pg>=R.pages-1&&R.pages>1)markDone();clearTimeout(window._ps);window._ps=setTimeout(()=>SS("bibli.progress",progress),300)}
 let lastY=0;window.addEventListener("scroll",()=>{if(!R||prefs.mode!=="scroll")return;updatePct();const y=window.scrollY;document.body.classList.toggle("hide",y>lastY+10&&y>80);if(y<lastY-10)document.body.classList.remove("hide");lastY=y},{passive:true});
 window.addEventListener("resize",()=>{if(!R||prefs.mode!=="paged")return;const f=R.pages>1?R.pg/(R.pages-1):0;R.cols.classList.add("nt");layout();goPage(Math.round(f*(R.pages-1)));requestAnimationFrame(()=>R.cols.classList.remove("nt"))});
 window.addEventListener("keydown",e=>{if(!R)return;if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();turn(1)}else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();turn(-1)}});
@@ -255,20 +358,25 @@ function settings(){const d=document.createElement("div");d.className="sheet";d.
  d.querySelector("#szr").oninput=e=>{prefs.size=+e.target.value;apply()};document.body.appendChild(d)}
 
 async function mine(){await loadCat();const ids=Object.entries(progress).sort((a,b)=>b[1].at-a[1].at).map(([id])=>id).filter(id=>BOOKS[id]);
- const mk=Object.entries(marks).filter(([id,m])=>BOOKS[id]&&m.length);
- app.innerHTML=`<h1>${t("mine_h")}</h1><p class="sub">${t("mine_sub")}</p>${ids.length?`<div class="grid">${ids.map(id=>card(BOOKS[id])).join("")}</div>`:`<div class="empty">${t("mine_none")}</div>`}
- ${mk.length?`<h2>${t("marks")}</h2><ol class="toc">${mk.flatMap(([id,m])=>m.slice(0,5).map(x=>`<li><a href="#/read/${id}/${x.ch}"><span class="n">${x.ch+1}</span><span>${esc(BOOKS[id].title)} — ${esc(BOOKS[id].chapters[x.ch]||t("chapter")+" "+(x.ch+1))}</span></a></li>`)).join("")}</ol>`:""}`}
+ const mk=Object.entries(marks).filter(([id,m])=>BOOKS[id]&&m.length);const n=streak();const doneN=ids.reduce((s,id)=>s+((progress[id].done||[]).length),0);
+ app.innerHTML=`<h1>${t("mine_h")}</h1><p class="sub">${t("mine_sub")}</p><div class="kpi"><div><b>${ids.length}</b><span>${t("results")(ids.length).replace(/^\d+\s/,"")}</span></div><div><b>${doneN}</b><span>${t("chapters")(doneN).replace(/^\d+\s/,"")} ✓</span></div><div><b>🔥 ${n}</b><span>${t("streak")(n).replace(/^\d+[- ]/,"")}</span></div></div>${ids.length?`<div class="grid">${ids.map(id=>card(BOOKS[id])).join("")}</div>`:`<div class="empty">${t("mine_none")}</div>`}
+ ${mk.length?`<h2 style="margin:22px 0 10px">${t("marks")}</h2><ol class="toc">${mk.flatMap(([id,m])=>m.slice(0,5).map(x=>`<li><a href="#/read/${id}/${x.ch}"><span class="n">${x.ch+1}</span><span>${esc(BOOKS[id].title)} — ${esc(BOOKS[id].chapters[x.ch]||t("chapter")+" "+(x.ch+1))}</span></a></li>`)).join("")}</ol>`:""}`}
 
-async function blog(slug){await loadCat();const posts=(BLOG||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
+async function blog(slug){await loadCat();const posts=BLOG.slice().sort((a,b)=>b.date.localeCompare(a.date));
  if(slug){const p=posts.find(x=>x.slug===slug);if(!p)return app.innerHTML=`<div class="empty">404</div>`;app.innerHTML=`<p class="sub"><a href="#/blog">‹ ${t("blog_h")}</a></p><h1>${esc(p.title)}</h1><p class="sub"><time>${p.date}</time></p><div class="article">${p.html}</div>`;return}
- app.innerHTML=`<h1>${t("blog_h")}</h1><p class="sub">${t("blog_sub")}</p>${posts.map(p=>`<a class="post" href="#/post/${p.slug}"><h3>${esc(p.title)}</h3><time>${p.date}</time><p>${esc(p.summary)}</p></a>`).join("")}`}
+ app.innerHTML=`<h1>${t("blog_h")}</h1><p class="sub">${t("blog_sub")}</p>${posts.map(p=>`<a class="post rv" href="#/post/${p.slug}"><h3>${esc(p.title)}</h3><time>${p.date}</time><p>${esc(p.summary)}</p></a>`).join("")}`;reveal()}
 
 async function about(){const c=await loadCat();const fr=c.books.filter(b=>b.lang==="fr").length;
  app.innerHTML=`<h1>${t("about")}</h1><div class="kpi"><div><b>${c.books.length}</b><span>${t("results")(c.books.length).replace(/^\d+\s/,"")}</span></div><div><b>${fr}</b><span>${t("langs").fr}</span></div><div><b>${c.books.length-fr}</b><span>${t("langs").en}</span></div></div><div class="article"><p>${t("about_t")}</p></div><p class="note">${t("legal")} — vie + 70 / life + 70 (Côte d'Ivoire, France, UE). ${t("source")} : <a href="https://www.gutenberg.org/policy/license.html" rel="noopener">Project Gutenberg</a>, <a href="https://fr.wikisource.org" rel="noopener">Wikisource</a>.</p>`}
 
 // ------------------------------------------------------------ router
+const ICONS={home:'<svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',cat:'<svg viewBox="0 0 24 24"><path d="M4 4h5v16H4zM10 4h5v16h-5zM16 5l4-1 3 15-4 1z"/></svg>',blog:'<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg>',mine:'<svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>'};
+function setLang(l){L=l;SS("bibli.lang",l);document.documentElement.lang=l;document.getElementById("langbtn").textContent=l==="fr"?"EN":"FR";
+ document.getElementById("tabs").innerHTML=[["#/","home","nav_home"],["#/catalogue","cat","nav_cat"],["#/blog","blog","nav_blog"],["#/mine","mine","nav_mine"]].map(([h,i,k])=>`<a href="${h}" data-tab="${h}">${ICONS[i]}<span>${t(k)}</span></a>`).join("");
+ document.getElementById("foot").innerHTML=`<a href="#/about">${t("about")}</a> · <a href="#/about">${t("legal")}</a> · <a href="https://www.gutenberg.org" rel="noopener">Project Gutenberg</a> · <a href="https://fr.wikisource.org" rel="noopener">Wikisource</a><br>© 2026 Bibli · ${t("license")}`;renderStreak();route()}
+document.getElementById("langbtn").onclick=()=>setLang(L==="fr"?"en":"fr");
 async function route(){const h=location.hash||"#/";const [path,qs]=h.slice(1).split("?");const q=new URLSearchParams(qs||"");const seg=path.split("/").filter(Boolean);
- R=null;document.body.classList.remove("reading","hide");document.getElementById("topline").style.width=0;
+ R=null;document.body.classList.remove("reading","hide");document.getElementById("topline").style.width=0;document.querySelectorAll(".sheet").forEach(s=>s.remove());
  document.querySelectorAll("#tabs a").forEach(a=>a.classList.toggle("on",a.dataset.tab==="#/"+(seg[0]||"")||(a.dataset.tab==="#/blog"&&seg[0]==="post")));
  try{
  if(seg[0]==="catalogue")await catalogue(q);else if(seg[0]==="shelf")await shelf(seg[1]);else if(seg[0]==="book")await book(seg[1]);else if(seg[0]==="read")await read(seg[1],seg[2],seg[3]);else if(seg[0]==="mine")await mine();else if(seg[0]==="blog")await blog();else if(seg[0]==="post")await blog(seg[1]);else if(seg[0]==="about")await about();else await home();
