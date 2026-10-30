@@ -358,7 +358,17 @@ async function route(){const h=location.hash||"#/";const [path,qs]=h.slice(1).sp
  track("view",{p:seg[0]||"home"});
  try{if(seg[0]==="catalogue")await catalogue(q);else if(seg[0]==="shelf")await shelfView(seg[1]);else if(seg[0]==="book")await book(seg[1]);else if(seg[0]==="read")await read(seg[1],seg[2],seg[3]);else if(seg[0]==="mine")await mine(seg[1]);else if(seg[0]==="blog")await blog();else if(seg[0]==="post")await blog(seg[1]);else if(seg[0]==="about")await about();else await home()}
  catch(e){console.error(e);app.innerHTML=errorBox()}
- if(seg[0]!=="read")window.scrollTo(0,0)}
+ if(seg[0]!=="read"){const y=scrollMem[h];requestAnimationFrame(()=>window.scrollTo(0,(seg[0]==="catalogue"||seg[0]==="shelf"||!seg[0])&&y?y:0))}
+ if(!seg[0])setTimeout(maybeInstall,1500)}
 window.addEventListener("hashchange",route);
+// install prompt (Android/Chrome): shown from the second visit, once dismissed stays quiet for 30 days
+let installEvt=null;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installEvt=e;maybeInstall()});
+function maybeInstall(){const el=$("#install");if(!el||!installEvt||profile.seen<2)return;const d=LS("itanva.install_dismissed");if(d&&Date.now()-d<30*864e5)return;if(matchMedia("(display-mode: standalone)").matches)return;
+ $("#inst-t").textContent=L==="fr"?"Installer Itanva":"Install Itanva";$("#inst-s").textContent=L==="fr"?"Une icône sur l'écran d'accueil, lecture hors ligne, sans magasin d'applications.":"A home-screen icon, offline reading, no app store.";$("#inst-ok").textContent=L==="fr"?"Installer":"Install";el.hidden=false;
+ $("#inst-ok").onclick=async()=>{el.hidden=true;try{installEvt.prompt();const r=await installEvt.userChoice;track("install",{r:r.outcome})}catch(e){}installEvt=null};
+ $("#inst-x").onclick=()=>{el.hidden=true;SS("itanva.install_dismissed",Date.now())}}
+window.addEventListener("appinstalled",()=>{track("installed");toast(L==="fr"?"Itanva est installé.":"Itanva is installed.")});
+// scroll position memory for list pages (back from a book lands where you were)
+const scrollMem={};window.addEventListener("scroll",()=>{if(!R)scrollMem[location.hash]=window.scrollY},{passive:true});
 applyTheme();setLang(L);
 if("serviceWorker"in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
