@@ -18,10 +18,10 @@ fr:{nav_home:"Accueil",nav_cat:"Itanvaothèque",nav_blog:"Blog",nav_mine:"Mes li
  desc_auto:(b,g,l)=>`${b.author} · ${g}. Texte intégral en ${l}, préparé pour la lecture sur téléphone : ${b.n} chapitres, environ ${I.fr.words(b.words)} de lecture.`,
  prev:"Chapitre précédent",next:"Chapitre suivant",end:"Fin du livre",settings:"Réglages de lecture",size:"Taille du texte",lh:"Interligne",font:"Police",theme:"Thème",mode:"Lecture",wpm:"Vitesse de lecture",wpm_s:"mots par minute, pour estimer le temps restant",
  light:"Clair",sepia:"Sépia",dark:"Sombre",contrast:"Contraste",serif:"Serif",sans:"Sans",legible:"Lisible",paged:"Par pages",scroll:"Défilement",focus:"Mode concentration",focus_on:"Concentration : touchez le milieu pour revenir.",
- tips:"Glissez pour tourner la page · touchez le milieu pour les boutons · sélectionnez un mot ou un passage pour le surligner ou le faire expliquer.",
- bookmark:"Marquer cette page",bookmarked:"Page marquée",hl:"Surligner",note:"Note",define:"Définir",hl_saved:"Passage surligné",note_ph:"Votre note…",note_saved:"Note enregistrée",del:"Supprimer",
+ tips:"Glissez ou touchez les bords pour tourner la page · appuyez longuement sur une phrase pour la sélectionner, puis glissez pour en prendre plus.",
+ bookmark:"Marquer cette page",sel_before:"avant",sel_after:"après",sel_less:"une",sel_prev:"Ajouter la phrase précédente",sel_next:"Ajouter la phrase suivante",sel_n:n=>`${n} phrase${n>1?"s":""}`,hl_one:"Passage surligné",c_gold:"or",c_green:"vert",c_terra:"terre cuite",copy:"Copier",copied_txt:"Passage copié",close:"Fermer",hl_del:"Surlignage supprimé",save_note:"Enregistrer",bookmarked:"Page marquée",hl:"Surligner",note:"Note",define:"Définir",hl_saved:"Passage surligné",note_ph:"Votre note…",note_saved:"Note enregistrée",del:"Supprimer",
  dict_h:"Définition",dict_none:"Pas de définition trouvée.",dict_off:"Le dictionnaire a besoin d'une connexion.",dict_src:"Source : Wiktionnaire (CC BY-SA)",dict_gloss:"Lexique Itanva",explain:"Expliquer",explain_h:"Itanva explique",explain_in:"Expliquer ce mot dans sa phrase",explain_wait:"Lecture du passage…",explain_ai:"Explication générée par IA à partir du passage : elle peut se tromper. Dites-nous si elle aide.",explain_quota:"Limite du jour atteinte. Créez un accès gratuit dans Mes livres pour en avoir plus.",explain_off:"Les explications ont besoin d'une connexion.",explain_na:"Les explications ne sont pas encore activées.",helpful:"Utile",nothelpful:"Pas utile",thanks:"Merci !",
- tts:"Écouter",tts_stop:"Arrêter",tts_none:"Aucune voix disponible sur cet appareil pour cette langue.",tts_beta:"Lecture à voix haute par la voix du téléphone (qualité variable).",
+ 
  mine_h:"Mes livres",mine_sub:"Gardés sur ce téléphone, sans compte.",t_cur:"En cours",t_todo:"À lire",t_done:"Terminés",t_fav:"Favoris",t_notes:"Notes",mine_none:"Rien ici pour l'instant.",mine_none_s:"Ouvrez un livre, ou ajoutez-le à votre liste depuis la bibliothèque.",
  recap_h:"Votre semaine",recap:(m,d,c,b)=>`${m} min de lecture sur ${d} jour${d>1?"s":""}, ${c} chapitre${c>1?"s":""} terminé${c>1?"s":""}${b?`, ${b} livre${b>1?"s":""} fini${b>1?"s":""}`:""}.`,recap_none:"Pas encore de lecture cette semaine. Dix minutes suffisent pour commencer.",
  chal_h:"Défis",chal:{d5:["Lire 10 min pendant 5 jours","sur 7 jours"],first:["Terminer un premier livre","tout chapitre coché"],g3:["Explorer trois genres","trois genres différents commencés"],shortb:["Finir un livre court","moins de 40 minutes"]},
@@ -49,10 +49,10 @@ en:{nav_home:"Home",nav_cat:"Library",nav_blog:"Blog",nav_mine:"My books",
  desc_auto:(b,g,l)=>`${b.author} · ${g}. Full text in ${l}, prepared for phone reading: ${b.n} chapters, about ${I.en.words(b.words)} of reading.`,
  prev:"Previous chapter",next:"Next chapter",end:"End of book",settings:"Reading settings",size:"Text size",lh:"Line spacing",font:"Font",theme:"Theme",mode:"Reading",wpm:"Reading speed",wpm_s:"words per minute, used for time left",
  light:"Light",sepia:"Sepia",dark:"Dark",contrast:"Contrast",serif:"Serif",sans:"Sans",legible:"Legible",paged:"Pages",scroll:"Scroll",focus:"Focus mode",focus_on:"Focus mode: tap the middle to come back.",
- tips:"Swipe to turn the page · tap the middle for the buttons · select a word or passage to highlight or explain it.",
- bookmark:"Bookmark this page",bookmarked:"Bookmarked",hl:"Highlight",note:"Note",define:"Define",hl_saved:"Passage highlighted",note_ph:"Your note…",note_saved:"Note saved",del:"Delete",
+ tips:"Swipe or tap the edges to turn the page · press and hold a sentence to select it, then slide to take more.",
+ bookmark:"Bookmark this page",sel_before:"before",sel_after:"after",sel_less:"one",sel_prev:"Add the previous sentence",sel_next:"Add the next sentence",sel_n:n=>`${n} sentence${n>1?"s":""}`,hl_one:"Highlighted passage",c_gold:"gold",c_green:"green",c_terra:"terracotta",copy:"Copy",copied_txt:"Passage copied",close:"Close",hl_del:"Highlight removed",save_note:"Save",bookmarked:"Bookmarked",hl:"Highlight",note:"Note",define:"Define",hl_saved:"Passage highlighted",note_ph:"Your note…",note_saved:"Note saved",del:"Delete",
  dict_h:"Definition",dict_none:"No definition found.",dict_off:"The dictionary needs a connection.",dict_src:"Source: Wiktionary (CC BY-SA)",dict_gloss:"Itanva glossary",explain:"Explain",explain_h:"Itanva explains",explain_in:"Explain this word in its sentence",explain_wait:"Reading the passage…",explain_ai:"AI-generated explanation from the passage: it can be wrong. Tell us if it helps.",explain_quota:"Daily limit reached. Create a free access in My books for more.",explain_off:"Explanations need a connection.",explain_na:"Explanations are not enabled yet.",helpful:"Helpful",nothelpful:"Not helpful",thanks:"Thanks!",
- tts:"Listen",tts_stop:"Stop",tts_none:"No voice available on this device for this language.",tts_beta:"Read aloud by the phone's own voice (quality varies).",
+ 
  mine_h:"My books",mine_sub:"Kept on this phone, no account.",t_cur:"Reading",t_todo:"To read",t_done:"Finished",t_fav:"Favourites",t_notes:"Notes",mine_none:"Nothing here yet.",mine_none_s:"Open a book, or add one to your list from the library.",
  recap_h:"Your week",recap:(m,d,c,b)=>`${m} min of reading over ${d} day${d>1?"s":""}, ${c} chapter${c>1?"s":""} finished${b?`, ${b} book${b>1?"s":""} completed`:""}.`,recap_none:"No reading yet this week. Ten minutes is enough to start.",
  chal_h:"Challenges",chal:{d5:["Read 10 min on 5 days","within 7 days"],first:["Finish a first book","every chapter ticked"],g3:["Explore three genres","three different genres started"],shortb:["Finish a short book","under 40 minutes"]},
@@ -285,32 +285,28 @@ function onboarding(goalOnly){let step=goalOnly?2:1;const sel=new Set(profile.in
   const nx=d.querySelector("#nx");if(nx)nx.onclick=()=>{step=2;render()};const ok=d.querySelector("#ok");if(ok)ok.onclick=fin;d.querySelector("#sk").onclick=()=>{profile.onboarded=true;SSs("itanva.profile",profile);d.remove()}};
  render()}
 // ---------------------------------------------------------------- reader
-let R=null,tts=null;
+let R=null;
 async function read(id,ch,where){await loadIdx();const b=BOOKS[id];if(!b)return app.innerHTML=errorBox();let m;try{m=await meta(id)}catch(e){return app.innerHTML=errorBox()}ch=Math.max(0,Math.min(m.chapters.length-1,ch|0));
  const [pk,ci]=m.index[ch];document.body.classList.add("reading");document.body.classList.remove("hide");document.body.classList.toggle("focus",!!prefs.focus);
  const last=ch>=m.chapters.length-1;
- app.innerHTML=`<div class="rtop"><a class="pill icon" href="#/book/${id}" aria-label="${t("toc")}">☰</a><div class="ttl">${esc(shortTitle(b.title))} · ${ch+1}/${m.chapters.length}</div><button class="pill icon" id="ttsb" aria-label="${t("tts")}">🔊</button><button class="pill icon" id="aa" aria-label="${t("settings")}">Aa</button></div>
+ app.innerHTML=`<div class="rtop"><a class="pill icon" href="#/book/${id}" aria-label="${t("toc")}">☰</a><div class="ttl">${esc(shortTitle(b.title))} · ${ch+1}/${m.chapters.length}</div><button class="pill icon" id="aa" aria-label="${t("settings")}">Aa</button></div>
  <div class="pgwrap" id="pgwrap"><div class="pgcols rtext nt" id="pgcols"><p class="muted">…</p></div></div>
- <div class="tapzone l" id="tzl" aria-hidden="true"></div><div class="tapzone c" id="tzc" aria-hidden="true"></div><div class="tapzone r" id="tzr" aria-hidden="true"></div>
+ <div class="seldock" id="dock" hidden></div>
  <div class="rbar"><button class="pill" id="pprev" aria-label="${t("prev")}">‹</button><button class="pill" id="mk" aria-label="${t("bookmark")}">🔖</button><span class="pct" id="pct" aria-live="polite"></span><button class="pill" id="pnext" aria-label="${t("next")}">›</button></div>`;
  let part;try{part=await loadPart(id,pk)}catch(e){$("#pgcols").innerHTML=`<div class="empty"><b>${t("offline")}</b><a class="btn sec" href="#/book/${id}">${t("toc")}</a></div>`;return}
  const c=part[ci],cols=$("#pgcols");
  cols.innerHTML=`<h3>${esc(c.t||t("chapter")+" "+(ch+1))}</h3>${c.h}<div class="endch">${ch>0?`<a class="btn sec" href="#/read/${id}/${ch-1}">${t("prev")}</a>`:""}<button class="btn sec" id="shr">${t("share")}</button>${last?`<a class="btn forest" href="#/book/${id}">${t("end")}</a>`:`<a class="btn" href="#/read/${id}/${ch+1}">${t("next")}</a>`}</div>`;
- applyHighlights(id,ch,cols);cols.classList.add("fade");
+ segment(cols);cols.classList.add("fade");
  if(!last){const [npk]=m.index[ch+1];if(npk!==pk)loadPart(id,npk).catch(()=>{})}
- R={id,ch,n:m.chapters.length,pg:0,pages:1,cols,wrap:$("#pgwrap"),last,b};
+ R={id,ch,n:m.chapters.length,pg:0,pages:1,cols,wrap:$("#pgwrap"),last,b,sents:SEG.keys,spans:SEG.map};renderHighlights();
  const saved=progress[id];
  if(prefs.mode==="paged"){layout();let pg=0;if(where==="end")pg=R.pages-1;else if(saved&&saved.ch===ch)pg=Math.min(R.pages-1,Math.round((saved.frac||0)*(R.pages-1)));goPage(pg,true);requestAnimationFrame(()=>cols.classList.remove("nt"))}
  else{cols.classList.remove("nt");const y=where==="end"?document.documentElement.scrollHeight:(saved&&saved.ch===ch?saved.y||0:0);requestAnimationFrame(()=>window.scrollTo(0,y))}
  updatePct();startSession(id);track("read",{id,ch});
  $("#mk").onclick=()=>{(marks[id]=marks[id]||[]).unshift({ch,frac:R.pages>1?R.pg/(R.pages-1):0,y:window.scrollY,ts:Date.now()});marks[id]=marks[id].slice(0,30);SSs("itanva.marks",marks);toast(t("bookmarked"))};
- $("#aa").onclick=settings;$("#shr").onclick=()=>shareCard(b);$("#ttsb").onclick=()=>ttsToggle(cols,b.lang);
+ $("#aa").onclick=settings;$("#shr").onclick=()=>shareCard(b);
  $("#pprev").onclick=()=>turn(-1);$("#pnext").onclick=()=>turn(1);
- const tz=$("#tzl"),tc=$("#tzc"),tr=$("#tzr");let sx=0,sy=0,st=0,lastTouch=0;
- const down=e=>{if(e.touches)lastTouch=Date.now();else if(Date.now()-lastTouch<800)return;const p=e.touches?e.touches[0]:e;sx=p.clientX;sy=p.clientY;st=Date.now()};
- const up=e=>{if(e.changedTouches)lastTouch=Date.now();else if(Date.now()-lastTouch<800)return;if(document.body.classList.contains("selecting"))return;const p=e.changedTouches?e.changedTouches[0]:e;const dx=p.clientX-sx,dy=p.clientY-sy;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.3){turn(dx<0?1:-1);return}
-  if(Math.abs(dx)<10&&Math.abs(dy)<10&&Date.now()-st<400){if(e.currentTarget===tz)turn(-1);else if(e.currentTarget===tr)turn(1);else if(prefs.focus){prefs.focus=false;SSs("itanva.prefs",prefs);document.body.classList.remove("focus");relayout()}else document.body.classList.toggle("hide")}};
- for(const z of[tz,tc,tr]){z.addEventListener("touchstart",down,{passive:true});z.addEventListener("touchend",up);z.addEventListener("mousedown",down);z.addEventListener("mouseup",up)}
+ bindGestures(R.wrap);
  if(!LS("itanva.tip")){toast(t("tips"),4000);SSs("itanva.tip",1)}if(prefs.focus)toast(t("focus_on"))}
 function layout(){if(!R||prefs.mode!=="paged")return;const w=R.wrap.clientWidth-40;R.cols.style.setProperty("--pgw",w+"px");R.step=w+40;R.pages=Math.max(1,Math.round(R.cols.scrollWidth/R.step))}
 function relayout(){if(!R||prefs.mode!=="paged")return;const f=R.pages>1?R.pg/(R.pages-1):0;R.cols.classList.add("nt");layout();goPage(Math.round(f*(R.pages-1)));requestAnimationFrame(()=>R.cols.classList.remove("nt"))}
@@ -323,40 +319,96 @@ function updatePct(){if(!R)return;let frac;if(prefs.mode==="paged")frac=R.pages>
  const prev=progress[R.id]||{};progress[R.id]={ch:R.ch,frac,y:window.scrollY,pct,at:Date.now(),pg:R.pg,pages:R.pages,done:prev.done||[]};if(prefs.mode==="paged"&&R.pg>=R.pages-1&&R.pages>1)markDone();clearTimeout(window._ps);window._ps=setTimeout(()=>SSs("itanva.progress",progress),300)}
 let lastY=0;window.addEventListener("scroll",()=>{if(!R||prefs.mode!=="scroll")return;updatePct();const y=window.scrollY;document.body.classList.toggle("hide",y>lastY+10&&y>80);if(y<lastY-10)document.body.classList.remove("hide");lastY=y},{passive:true});
 window.addEventListener("resize",relayout);
-window.addEventListener("keydown",e=>{if(!R||e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();turn(1)}else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();turn(-1)}else if(e.key==="Escape")location.hash=`#/book/${R.id}`});
+window.addEventListener("keydown",e=>{if(!R||e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();turn(1)}else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();turn(-1)}else if(e.key==="Escape"){if(SEL)clearSel();else location.hash=`#/book/${R.id}`}});
 window.addEventListener("pagehide",()=>{SSs("itanva.progress",progress);endSession()});
-// highlights & notes & dictionary (selection toolbar)
-function applyHighlights(id,ch,cols){const hs=(notes[id]||[]).filter(h=>h.ch===ch);if(!hs.length)return;const ps=cols.querySelectorAll("p");for(const h of hs){const p=ps[h.pi];if(!p)continue;const html=p.innerHTML;const i=html.indexOf(esc(h.text));if(i<0)continue;p.innerHTML=html.slice(0,i)+`<mark class="${h.c||""}" data-h="${h.ts}">`+esc(h.text)+"</mark>"+html.slice(i+esc(h.text).length)}}
-let selbar=null;
-function selInfo(){const s=document.getSelection();if(!s||s.isCollapsed||!R)return null;const text=s.toString().trim();if(text.length<2||text.length>600)return null;const node=s.anchorNode&&(s.anchorNode.nodeType===3?s.anchorNode.parentElement:s.anchorNode);const p=node&&node.closest&&node.closest("#pgcols p");if(!p)return null;const pi=[...R.cols.querySelectorAll("p")].indexOf(p);const r=s.getRangeAt(0).getBoundingClientRect();return{text,pi,rect:r,word:text.split(/\s+/).length===1}}
-document.addEventListener("selectionchange",()=>{clearTimeout(selbar&&selbar.t);if(selbar){selbar.remove();selbar=null}const info=selInfo();document.body.classList.toggle("selecting",!!info);if(!info)return;
- selbar=document.createElement("div");selbar.className="selbar";selbar.innerHTML=`<button data-c="">${t("hl")}</button><button class="c" style="background:#E6C78B" data-c="" aria-label="gold"></button><button class="c" style="background:#7FC8AE" data-c="g" aria-label="green"></button><button class="c" style="background:#F0A080" data-c="t" aria-label="terracotta"></button><button data-n="1">${t("note")}</button>${info.word?`<button data-d="1">${t("define")}</button>`:""}<button data-x="1">${t("explain")}</button>`;
- const top=info.rect.top-54;selbar.style.top=Math.max(8,top<60?info.rect.bottom+10:top)+"px";document.body.appendChild(selbar);
- selbar.onmousedown=e=>e.preventDefault();selbar.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.d){dictionary(info.text,info)}else if(b.dataset.x){explain(info.text,null,info)}else if(b.dataset.n){addNote(info,null)}else{addNote(info,b.dataset.c,true)}document.getSelection().removeAllRanges()})});
-function addNote(info,color,quick){const save=(note)=>{(notes[R.id]=notes[R.id]||[]).push({ch:R.ch,pi:info.pi,text:info.text,note:note||"",c:color||"",ts:Date.now()});SSs("itanva.notes",notes);applyHighlightsNow();toast(note?t("note_saved"):t("hl_saved"));track("highlight",{id:R.id})};
- if(quick)return save("");const d=sheet(`<h2>${t("note")}</h2><q class="muted" style="display:block;font:italic 15px/1.4 var(--df);margin:6px 0 12px">${esc(info.text)}</q><textarea id="nt" rows="4" style="width:100%;font:15px var(--sf);padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)" placeholder="${t("note_ph")}"></textarea><div class="opts" style="margin-top:12px"><button class="btn" id="nsv">OK</button></div>`);d.querySelector("#nsv").onclick=()=>{save(d.querySelector("#nt").value.trim());d.remove()}}
-function applyHighlightsNow(){if(!R)return;const f=R.pages>1?R.pg/(R.pages-1):0;R.cols.querySelectorAll("mark[data-h]").forEach(m=>m.replaceWith(...m.childNodes));R.cols.normalize();applyHighlights(R.id,R.ch,R.cols);if(prefs.mode==="paged"){R.cols.classList.add("nt");layout();goPage(Math.round(f*(R.pages-1)),true);requestAnimationFrame(()=>R.cols.classList.remove("nt"))}}
-function sentenceOf(info){try{const p=R.cols.querySelectorAll("p")[info.pi];const txt=p?p.textContent:"";const i=txt.indexOf(info.text);if(i<0)return txt.slice(0,400);const a=Math.max(0,txt.lastIndexOf(".",i)+1),b=txt.indexOf(".",i+info.text.length);return txt.slice(a,b<0?txt.length:b+1).trim().slice(0,500)}catch(e){return info.text}}
+// ---------------------------------------------------------------- sentences, selection, highlights
+// Text is cut into sentence spans (<span class="s" data-s="para:sentence">). A long-press selects the
+// sentence under the finger; sliding extends it; a bottom dock adjusts it and acts on it.
+let SEG={keys:[],map:new Map()},SEL=null;
+const ABBR=/(?:^|[\s(«“"'’])(?:[A-ZÀ-Ý]|M|MM|Mme|Mmes|Mlle|Mlles|Mr|Mrs|Ms|Dr|St|Ste|Sr|Jr|etc|cf|vol|ch|chap|p|No|no|av|J\.-C)$/;
+function segment(cols){const keys=[],map=new Map();
+ cols.querySelectorAll("p").forEach((p,pi)=>{const nodes=[];const bounds=new Set();let full="";
+  const walk=n=>{for(const c of [...n.childNodes]){if(c.nodeType===3){nodes.push({node:c,start:full.length});full+=c.data}else if(c.nodeName==="BR"){bounds.add(full.length)}else walk(c)}};walk(p);
+  const re=/[.!?…]+[»"”’)\]]*(?=\s)/g;let m;while((m=re.exec(full))){if(m[0][0]==="."&&ABBR.test(full.slice(Math.max(0,m.index-6),m.index)))continue;let e=m.index+m[0].length;while(e<full.length&&/\s/.test(full[e]))e++;bounds.add(e)}
+  const cuts=[...bounds].filter(x=>x>0&&x<full.length).sort((a,b)=>a-b);const idx=o=>{let n=0;for(const c of cuts)if(c<=o)n++;return n};
+  for(const {node,start} of nodes){const end=start+node.data.length;const pos=[start,...cuts.filter(c=>c>start&&c<end),end];const frag=document.createDocumentFragment();
+   for(let i=0;i<pos.length-1;i++){const txt=node.data.slice(pos[i]-start,pos[i+1]-start);if(!txt)continue;if(!txt.trim()){frag.appendChild(document.createTextNode(txt));continue}
+    const k=pi+":"+idx(pos[i]);const sp=document.createElement("span");sp.className="s";sp.dataset.s=k;sp.textContent=txt;frag.appendChild(sp);if(!map.has(k)){map.set(k,[]);keys.push(k)}map.get(k).push(sp)}
+   node.replaceWith(frag)}});
+ SEG={keys,map}}
+const selText=(i0,i1)=>{const out=[];for(let i=i0;i<=i1;i++)out.push(R.spans.get(R.sents[i]).map(x=>x.textContent).join(""));return out.join(" ").replace(/\s+/g," ").trim()};
+function paintSel(){R.cols.querySelectorAll(".s.sel").forEach(x=>x.classList.remove("sel"));if(!SEL)return;for(let i=SEL.a;i<=SEL.b;i++)R.spans.get(R.sents[i]).forEach(x=>x.classList.add("sel"))}
+function wordAt(x,y){try{let node,off;if(document.caretRangeFromPoint){const r=document.caretRangeFromPoint(x,y);if(!r)return"";node=r.startContainer;off=r.startOffset}else if(document.caretPositionFromPoint){const r=document.caretPositionFromPoint(x,y);if(!r)return"";node=r.offsetNode;off=r.offset}
+ if(!node||node.nodeType!==3)return"";const t0=node.data;let a=off,b=off;const W=/[\p{L}\p{N}'’-]/u;while(a>0&&W.test(t0[a-1]))a--;while(b<t0.length&&W.test(t0[b]))b++;return t0.slice(a,b).replace(/^['’-]+|['’-]+$/g,"")}catch(e){return""}}
+function startSel(span,x,y){const i=R.sents.indexOf(span.dataset.s);if(i<0)return;SEL={a:i,b:i,anchor:i,word:wordAt(x,y),hl:null};paintSel();showDock();try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}}
+function extendTo(span){if(!SEL||!span)return;const i=R.sents.indexOf(span.dataset.s);if(i<0)return;SEL.a=Math.min(SEL.anchor,i);SEL.b=Math.max(SEL.anchor,i);SEL.hl=null;paintSel();showDock()}
+function clearSel(){SEL=null;if(R){paintSel();const d=$("#dock");if(d)d.hidden=true;document.body.classList.remove("selmode")}}
+const keyOf=i=>R.sents[i];
+function hlRange(h){if(h.a&&h.b){const i0=R.sents.indexOf(h.a),i1=R.sents.indexOf(h.b);return i0>=0&&i1>=0?[Math.min(i0,i1),Math.max(i0,i1)]:null}
+ // older highlights stored only text + paragraph: map them onto the sentences they overlap
+ const ks=R.sents.map((k,i)=>[k,i]).filter(([k])=>k.split(":")[0]==String(h.pi));if(!ks.length)return null;let acc="",hit=[];for(const [k,i] of ks){const t1=R.spans.get(k).map(x=>x.textContent).join("");const st=acc.length;acc+=t1;hit.push([i,st,acc.length])}
+ const at=acc.indexOf(h.text);if(at<0)return null;const en=at+h.text.length;const sel=hit.filter(([,st,e])=>e>at&&st<en).map(([i])=>i);return sel.length?[sel[0],sel[sel.length-1]]:null}
+function renderHighlights(){if(!R)return;R.cols.querySelectorAll(".s.hl").forEach(x=>{x.classList.remove("hl","g","t","nt");delete x.dataset.h});
+ for(const h of (notes[R.id]||[]).filter(h=>h.ch===R.ch)){const r=hlRange(h);if(!r)continue;for(let i=r[0];i<=r[1];i++)R.spans.get(R.sents[i]).forEach(x=>{x.classList.add("hl");if(h.c)x.classList.add(h.c);if(h.note&&i===r[1])x.classList.add("nt");x.dataset.h=h.ts})}}
+function showDock(){const d=$("#dock");if(!d||!SEL)return;document.body.classList.add("selmode");toastEl.classList.remove("on");const n=SEL.b-SEL.a+1;const editing=SEL.hl!=null;
+ const w=SEL.word&&n===1&&SEL.word.length>2?SEL.word:"";
+ d.innerHTML=`<div class="dk-row">${editing?`<span class="dk-n">${t("hl_one")}</span>`:`<button class="pill" data-k="prev" aria-label="${t("sel_prev")}">+ ${t("sel_before")}</button><span class="dk-n">${t("sel_n")(n)}</span><button class="pill" data-k="next" aria-label="${t("sel_next")}">+ ${t("sel_after")}</button>${n>1?`<button class="pill" data-k="less">− ${t("sel_less")}</button>`:""}`}<button class="pill icon dk-x" data-k="close" aria-label="${t("close")}">✕</button></div>
+ <div class="dk-row dk-acts"><button class="dot" style="background:#E6C78B" data-c="" aria-label="${t("hl")} ${t("c_gold")}"></button><button class="dot" style="background:#7FC8AE" data-c="g" aria-label="${t("hl")} ${t("c_green")}"></button><button class="dot" style="background:#F0A080" data-c="t" aria-label="${t("hl")} ${t("c_terra")}"></button>
+ <button class="pill" data-k="note">✎ ${t("note")}</button><button class="pill" data-k="explain">${t("explain")}</button>${w?`<button class="pill" data-k="define">${t("define")} « ${esc(w)} »</button>`:""}<button class="pill" data-k="copy">${t("copy")}</button>${editing?`<button class="pill" data-k="del">${t("del")}</button>`:""}</div>`;
+ d.hidden=false;placeDock(d);
+ d.onclick=e=>{const b=e.target.closest("button");if(!b||!SEL)return;const k=b.dataset.k,text=selText(SEL.a,SEL.b);
+  if(b.dataset.c!==undefined&&k===undefined){saveHl(b.dataset.c,null);return}
+  if(k==="prev"&&SEL.a>0){SEL.a--;SEL.anchor=SEL.b;paintSel();showDock()}else if(k==="next"&&SEL.b<R.sents.length-1){SEL.b++;SEL.anchor=SEL.a;paintSel();showDock()}else if(k==="less"&&SEL.b>SEL.a){SEL.b--;paintSel();showDock()}
+  else if(k==="close")clearSel();else if(k==="note")noteSheet(text);else if(k==="explain"){const wd=null;clearSel();explain(text,wd)}
+  else if(k==="define"){const ctx=text;clearSel();dictionary(w,ctx)}else if(k==="copy"){const out=`« ${text} » — ${shortTitle(R.b.title)}, ${R.b.author.split(",")[0]}`;(navigator.clipboard?navigator.clipboard.writeText(out):Promise.reject()).then(()=>toast(t("copied_txt"))).catch(()=>prompt("",out));clearSel()}
+  else if(k==="del"){notes[R.id]=(notes[R.id]||[]).filter(h=>h.ts!==SEL.hl);SSs("itanva.notes",notes);renderHighlights();clearSel();toast(t("hl_del"))}}}
+function placeDock(d){// keep the selection visible: the dock goes to the top when the selected lines on screen sit low
+ const W=innerWidth,H=innerHeight,dh=d.offsetHeight;let top=1e9,bot=-1;
+ for(let i=SEL.a;i<=SEL.b;i++)for(const sp of R.spans.get(R.sents[i]))for(const r of sp.getClientRects())if(r.right>0&&r.left<W&&r.bottom>0&&r.top<H){top=Math.min(top,r.top);bot=Math.max(bot,r.bottom)}
+ if(bot<0){d.classList.remove("top");return}d.classList.toggle("top",bot>H-dh-8&&top>dh+8)}
+function saveHl(color,note){const text=selText(SEL.a,SEL.b);const arr=notes[R.id]=notes[R.id]||[];
+ if(SEL.hl!=null){const h=arr.find(x=>x.ts===SEL.hl);if(h){h.c=color??h.c;if(note!=null)h.note=note}}
+ else{// merge with highlights it overlaps, so one passage = one entry
+  const keep=[];let a=SEL.a,b=SEL.b,prevNote="";for(const h of arr){if(h.ch!==R.ch){keep.push(h);continue}const r=hlRange(h);if(r&&r[0]<=b&&r[1]>=a){a=Math.min(a,r[0]);b=Math.max(b,r[1]);if(h.note)prevNote=prevNote?prevNote+"\n"+h.note:h.note}else keep.push(h)}
+  keep.push({ch:R.ch,pi:+keyOf(a).split(":")[0],a:keyOf(a),b:keyOf(b),text:selText(a,b),note:note!=null?note:prevNote,c:color||"",ts:Date.now()});notes[R.id]=keep}
+ SSs("itanva.notes",notes);renderHighlights();clearSel();toast(note?t("note_saved"):t("hl_saved"));track("highlight",{id:R.id})}
+function noteSheet(text){const cur=SEL&&SEL.hl!=null?((notes[R.id]||[]).find(h=>h.ts===SEL.hl)||{}).note||"":"";const keepSel=SEL&&{...SEL};
+ const d=sheet(`<h2>${t("note")}</h2><q class="muted" style="display:block;font:italic 15px/1.4 var(--df);margin:6px 0 12px">${esc(text.length>220?text.slice(0,220)+"…":text)}</q><textarea id="nt" rows="4" class="inp" style="min-height:110px" placeholder="${t("note_ph")}">${esc(cur)}</textarea><div class="opts" style="margin-top:12px"><button class="btn" id="nsv">${t("save_note")}</button></div>`);
+ d.querySelector("#nt").focus();d.querySelector("#nsv").onclick=()=>{SEL=keepSel;saveHl(SEL.hl!=null?null:"",d.querySelector("#nt").value.trim());d.remove()}}
+function openHl(ts){const h=(notes[R.id]||[]).find(x=>String(x.ts)===String(ts));if(!h)return;const r=hlRange(h);if(!r)return;SEL={a:r[0],b:r[1],anchor:r[0],word:"",hl:h.ts};paintSel();showDock()}
+// gestures on the page: tap edges = turn, tap middle = bars, swipe = turn, long-press = select, slide = extend
+function bindGestures(el){let sx=0,sy=0,st=0,timer=null,pressed=false,dragging=false,moved=false,lastTouch=0,mouseDown=false,downSpan=null;
+ const spanAt=(x,y)=>{const e=document.elementFromPoint(x,y);return e&&e.closest?e.closest("#pgcols .s"):null};
+ const tap=(x,target)=>{if(target.closest&&target.closest("a,button,input,textarea,select"))return;if(SEL){clearSel();return}const hs=target.closest&&target.closest(".s.hl");if(hs){openHl(hs.dataset.h);return}
+  const w=window.innerWidth;if(x<w*.25)turn(-1);else if(x>w*.75)turn(1);else if(prefs.focus){prefs.focus=false;SSs("itanva.prefs",prefs);document.body.classList.remove("focus");relayout()}else document.body.classList.toggle("hide")};
+ el.addEventListener("touchstart",e=>{lastTouch=Date.now();if(e.touches.length>1){clearTimeout(timer);return}const p=e.touches[0];sx=p.clientX;sy=p.clientY;st=Date.now();pressed=false;dragging=false;moved=false;
+  clearTimeout(timer);const sp=spanAt(sx,sy);if(sp)timer=setTimeout(()=>{pressed=true;dragging=true;startSel(sp,sx,sy)},420)},{passive:true});
+ el.addEventListener("touchmove",e=>{const p=e.touches[0];const dx=p.clientX-sx,dy=p.clientY-sy;if(dragging){e.preventDefault();extendTo(spanAt(p.clientX,p.clientY));return}if(Math.abs(dx)>8||Math.abs(dy)>8){moved=true;clearTimeout(timer)}
+  if(prefs.mode==="paged"&&Math.abs(dx)>Math.abs(dy))e.preventDefault()},{passive:false});
+ el.addEventListener("touchend",e=>{clearTimeout(timer);lastTouch=Date.now();if(pressed){pressed=false;dragging=false;e.preventDefault();return}
+  const p=e.changedTouches[0];const dx=p.clientX-sx,dy=p.clientY-sy;
+  if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.3){if(SEL)clearSel();turn(dx<0?1:-1);return}
+  if(!moved&&Date.now()-st<350){const tgt=e.target;if(!(tgt.closest&&tgt.closest("a,button")))e.preventDefault();tap(p.clientX,tgt)}});
+ // mouse: press on a sentence and drag to select; a simple click behaves like a tap
+ el.addEventListener("mousedown",e=>{if(Date.now()-lastTouch<800||e.button!==0)return;sx=e.clientX;sy=e.clientY;mouseDown=true;dragging=false;downSpan=spanAt(sx,sy)});
+ el.addEventListener("mousemove",e=>{if(!mouseDown)return;if(!dragging&&downSpan&&(Math.abs(e.clientX-sx)>6||Math.abs(e.clientY-sy)>6)){dragging=true;startSel(downSpan,sx,sy)}if(dragging)extendTo(spanAt(e.clientX,e.clientY))});
+ el.addEventListener("mouseup",e=>{if(Date.now()-lastTouch<800||!mouseDown)return;mouseDown=false;if(dragging){dragging=false;return}tap(e.clientX,e.target)});
+ el.addEventListener("contextmenu",e=>{if(e.target.closest&&e.target.closest("#pgcols .s"))e.preventDefault()});
+ el.addEventListener("dblclick",e=>{const sp=e.target.closest&&e.target.closest("#pgcols .s");if(sp){e.preventDefault();startSel(sp,e.clientX,e.clientY)}})}
 let glossCache={};async function glossary(id){if(glossCache[id]!==undefined)return glossCache[id];glossCache[id]=(await jget(`data/books/${id}/glossary.json`))||{};return glossCache[id]}
-async function explain(text,word,info){const d=sheet(`<h2>${t("explain_h")}</h2><q class="muted" style="display:block;font:italic 15px/1.4 var(--df);margin:6px 0 12px">${esc(word?word:text.length>160?text.slice(0,160)+"…":text)}</q><div id="xp" class="article" style="font-size:16px"><div class="skel" style="height:70px"></div></div><p class="small muted" style="margin-top:12px">${t("explain_ai")}</p><div class="opts" id="xv" hidden><button class="pill" data-v="1">👍 ${t("helpful")}</button><button class="pill" data-v="0">👎 ${t("nothelpful")}</button></div>`);
+async function explain(text,word){const d=sheet(`<h2>${t("explain_h")}</h2><q class="muted" style="display:block;font:italic 15px/1.4 var(--df);margin:6px 0 12px">${esc(word?word:text.length>160?text.slice(0,160)+"…":text)}</q><div id="xp" class="article" style="font-size:16px"><div class="skel" style="height:70px"></div></div><p class="small muted" style="margin-top:12px">${t("explain_ai")}</p><div class="opts" id="xv" hidden><button class="pill" data-v="1">👍 ${t("helpful")}</button><button class="pill" data-v="0">👎 ${t("nothelpful")}</button></div>`);
  const out=d.querySelector("#xp");if(!navigator.onLine){out.textContent=t("explain_off");return}
  try{const b=R&&R.b;const j=await api("/api/explain",{text,word:word||undefined,book:b?shortTitle(b.title):"",author:b?b.author.split(",")[0]:"",lang:b?b.lang:L,ui:L,bookId:b?b.id:""});out.innerHTML=esc(j.answer).replace(/\n+/g,"<br>");track("explain",{id:b&&b.id,w:!!word,c:j.cached});
   const v=d.querySelector("#xv");v.hidden=false;v.querySelectorAll("button").forEach(x=>x.onclick=()=>{api("/api/explain/vote",{key:j.key,up:x.dataset.v==="1"}).catch(()=>{});v.innerHTML=`<span class="small muted">${t("thanks")}</span>`})}
  catch(e){out.textContent=e.code==="quota"?t("explain_quota"):e.code==="unavailable"?t("explain_na"):t("acc_err").net}}
-async function dictionary(word,info){const w=word.toLowerCase().replace(/[^\p{L}'’-]/gu,"");const d=sheet(`<h2>${t("dict_h")}</h2><dl class="dict" id="dict"><dt>${esc(w)}</dt><dd><div class="skel" style="height:60px"></div></dd></dl><p class="small muted" id="dsrc">${t("dict_src")}</p><div class="opts" style="margin-top:10px"><button class="btn sec" id="dx">${t("explain_in")}</button></div>`);track("define",{w});
- d.querySelector("#dx").onclick=()=>explain(info?sentenceOf(info):word,word,info);
+async function dictionary(word,ctx){const w=word.toLowerCase().replace(/[^\p{L}'’-]/gu,"");const d=sheet(`<h2>${t("dict_h")}</h2><dl class="dict" id="dict"><dt>${esc(w)}</dt><dd><div class="skel" style="height:60px"></div></dd></dl><p class="small muted" id="dsrc">${t("dict_src")}</p><div class="opts" style="margin-top:10px"><button class="btn sec" id="dx">${t("explain_in")}</button></div>`);track("define",{w});
+ d.querySelector("#dx").onclick=()=>explain(ctx||word,word);
  const g=R?await glossary(R.id):{};const gw=g[w]||g[w.replace(/s$/,"")];
  if(gw){d.querySelector("#dict").innerHTML=`<dt>${esc(w)}</dt><dd>${esc(gw)}</dd>`;d.querySelector("#dsrc").textContent=t("dict_gloss");return}
  if(!navigator.onLine){d.querySelector("#dict dd").textContent=t("dict_off");return}
  try{const r=await fetch(`https://en.wiktionary.org/api/rest_v1/page/definition/${encodeURIComponent(w)}`);const j=r.ok?await r.json():null;const defs=j&&(j[R.b.lang]||j.fr||j.en||Object.values(j)[0]);
   d.querySelector("#dict").innerHTML=`<dt>${esc(w)}</dt>`+(defs?defs.slice(0,3).map(x=>`<dd><div class="pos">${esc(x.partOfSpeech||"")}</div>${(x.definitions||[]).slice(0,3).map(y=>`<div>• ${y.definition.replace(/<[^>]+>/g,"")}</div>`).join("")}</dd>`).join(""):`<dd>${t("dict_none")}</dd>`)}
  catch(e){d.querySelector("#dict dd").textContent=t("dict_none")}}
-// text-to-speech (phone voices; optional)
-function ttsToggle(cols,lang){if(!("speechSynthesis"in window)){toast(t("tts_none"));return}if(tts){speechSynthesis.cancel();tts=null;toast(t("tts_stop"));return}
- const voices=speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().startsWith(lang));const paras=[...cols.querySelectorAll("h3,p")].map(p=>p.textContent.trim()).filter(Boolean);if(!paras.length)return;
- const d=sheet(`<h2>${t("tts")}</h2><p class="small muted">${t("tts_beta")}</p><div class="tts" style="margin-top:12px"><button class="btn" id="tp">▶ ${t("tts")}</button><button class="btn sec" id="ts">■ ${t("tts_stop")}</button>${voices.length?`<select class="sel" id="tv">${voices.map((v,i)=>`<option value="${i}">${esc(v.name)}</option>`).join("")}</select>`:`<span class="small muted">${t("tts_none")}</span>`}</div>`);
- d.querySelector("#tp").onclick=()=>{speechSynthesis.cancel();let i=0;const v=voices[+(d.querySelector("#tv")||{value:0}).value];const next=()=>{if(i>=paras.length){tts=null;return}const u=new SpeechSynthesisUtterance(paras[i++]);u.lang=lang==="fr"?"fr-FR":"en-US";if(v)u.voice=v;u.rate=1;u.onend=next;tts=u;speechSynthesis.speak(u)};next();track("tts",{id:R.id});d.remove()};
- d.querySelector("#ts").onclick=()=>{speechSynthesis.cancel();tts=null;d.remove()}}
 function settings(){const opt=(k,vals)=>`<div class="opts">${vals.map(([v,n])=>`<button class="pill ${prefs[k]==v?"on":""}" data-k="${k}" data-v="${v}" aria-pressed="${prefs[k]==v}">${n}</button>`).join("")}</div>`;
  const d=sheet(`<h2>${t("settings")}</h2>
  <div class="lab">${t("size")}</div><div class="szrow"><button class="pill icon" data-k="size" data-v="${Math.max(14,prefs.size-1)}" aria-label="−">−</button><input type="range" min="14" max="28" step="1" value="${prefs.size}" id="szr" aria-label="${t("size")}"><button class="pill icon" data-k="size" data-v="${Math.min(28,prefs.size+1)}" aria-label="+">+</button><b id="szv">${prefs.size}</b></div>
@@ -401,7 +453,7 @@ function setLang(l){L=l;SSs("itanva.lang",l);document.documentElement.lang=l;$("
  $("#foot").innerHTML=`<a href="#/about">${t("about")}</a> · <a href="#/archives">${t("arch_h")}</a> · <a href="#/about">${t("legal")}</a> · <a href="https://www.gutenberg.org" rel="noopener">Project Gutenberg</a> · <a href="https://fr.wikisource.org" rel="noopener">Wikisource</a><br>© 2026 Itanva · ${t("license")} · ${t("device")}`;renderStreak();route()}
 $("#langbtn").onclick=()=>setLang(L==="fr"?"en":"fr");
 async function route(){const h=location.hash||"#/";const [path,qs]=h.slice(1).split("?");const q=new URLSearchParams(qs||"");const seg=path.split("/").filter(Boolean);
- toastEl.classList.remove("on");if(R)endSession();if(tts){speechSynthesis.cancel();tts=null}R=null;document.body.classList.remove("reading","hide","focus","selecting");if(selbar){selbar.remove();selbar=null}$("#topline").style.width=0;document.querySelectorAll(".sheet").forEach(s=>s.remove());
+ toastEl.classList.remove("on");if(R)endSession();R=null;SEL=null;document.body.classList.remove("reading","hide","focus","selmode");$("#topline").style.width=0;document.querySelectorAll(".sheet").forEach(s=>s.remove());
  document.querySelectorAll("#tabs a").forEach(a=>a.classList.toggle("on",a.dataset.tab==="#/"+(seg[0]||"")||(a.dataset.tab==="#/blog"&&seg[0]==="post")||(a.dataset.tab==="#/catalogue"&&seg[0]==="shelf")));
  track("view",{p:seg[0]||"home"});
  try{if(seg[0]==="catalogue")await catalogue(q);else if(seg[0]==="shelf")await shelfView(seg[1]);else if(seg[0]==="book")await book(seg[1]);else if(seg[0]==="read")await read(seg[1],seg[2],seg[3]);else if(seg[0]==="mine")await mine(seg[1]);else if(seg[0]==="blog")await blog();else if(seg[0]==="post")await blog(seg[1]);else if(seg[0]==="about")await about();else if(seg[0]==="archives")await archives();else await home()}

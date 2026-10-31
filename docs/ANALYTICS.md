@@ -15,7 +15,6 @@
 | `shelf` | save / unsave to a list | `k` (toread, fav), `id`, `on` |
 | `highlight` | passage highlighted or noted | `id` |
 | `define` | dictionary lookup | `w` |
-| `tts` | read-aloud started | `id` |
 | `share` | share sheet opened | `id` |
 | `book_done` | all chapters ticked or marked finished | `id`, `manual` |
 | `onboard` | onboarding completed | `n` interests, `goal` |
@@ -31,7 +30,7 @@ Reading time: `stats.days[YYYY-MM-DD].min` accumulates while the reader is open 
 - 7-day returning reader rate: readers with activity on ≥ 2 distinct days in a 7-day window / readers active in the window (device log; page analytics gives the site-level proxy).
 - Books started and completed: distinct `read` ids; `book_done` count.
 - Search usage: `search` events per session; zero-result rate (`n = 0`).
-- Feature adoption: share of readers with ≥ 1 `highlight`, `define`, `tts`, `share`, `shelf`.
+- Feature adoption: share of readers with ≥ 1 `highlight`, `define`, `explain`, `share`, `shelf`.
 
 ## Consent
 Audience measurement with a cookieless tool configured without cross-site tracking does not require prior consent (CNIL exemption, art. 82 Loi Informatique et Libertés; same approach is accepted in Côte d'Ivoire's law 2013-450). The About page states that reading data stays on the device. If a future feature sends device logs to a server (sync, accounts), that becomes opt-in and this document must be updated first.
